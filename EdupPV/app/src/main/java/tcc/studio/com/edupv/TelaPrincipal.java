@@ -1,5 +1,6 @@
 package tcc.studio.com.edupv;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -120,7 +121,10 @@ public class TelaPrincipal extends AppCompatActivity
         Fragment fragment = null;
         int id = item.getItemId();
 
-        if (id == R.id.nav_estudo) {
+        if (id ==R.id.nav_home){
+            Intent intent = new Intent(this, TelaPrincipal.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_estudo) {
             fragment = new ListagemEstudo();
         } else if (id == R.id.nav_video) {
             fragment = new ListagemVideo();

@@ -27,9 +27,16 @@ public class ListagemEstudo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //alterando titulo do fragment
         getActivity().setTitle("Conteúdo para estudo");
+
+        //instanciando o view do fragment
         View view = inflater.inflate(R.layout.fragment_listagem_estudo, container, false);
+
+        //criando objeto lista e atribuindo id a ele
         ListView lista = (ListView) view.findViewById(R.id.ListaEstudo);
+
+        //criando array list de opções
         ArrayList<opcoes> Opcoes = adicionarOpcoes();
         ArrayAdapter adapter = new opcaoAdapter(getActivity(),Opcoes);
         lista.setAdapter(adapter);
@@ -59,14 +66,12 @@ public class ListagemEstudo extends Fragment {
             }
         });
 
-
-
         return view;
     }
 
+    //chamando telas
     private void ExecutarProcedimento() {
         Toast.makeText(getActivity(),"voce cliclou em um item", Toast.LENGTH_SHORT).show();
-
     }
 
     private void Higienizacao() {
@@ -82,9 +87,14 @@ public class ListagemEstudo extends Fragment {
     }
 
     private void OrganizarMaterial() {
-        Toast.makeText(getActivity(),"voce cliclou em um item", Toast.LENGTH_SHORT).show();
+        getFragmentManager().
+                beginTransaction().
+                replace(R.id.telaBotton, new OrganizarMateriais()).addToBackStack(null).
+                commit();
     }
 
+
+    //populando lista de opções
     private ArrayList<opcoes> adicionarOpcoes() {
 
         ArrayList<opcoes> Opcoes = new ArrayList<opcoes>();
