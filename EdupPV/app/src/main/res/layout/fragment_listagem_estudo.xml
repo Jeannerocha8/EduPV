@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ListagemEstudo"
-    android:id="@+id/telaListaEstudo">
+    android:id="@+id/telaListaEstudo"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
 
     <ListView
         android:id="@+id/ListaEstudo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="572dp"
         android:background="@android:color/background_light" />
 </FrameLayout>

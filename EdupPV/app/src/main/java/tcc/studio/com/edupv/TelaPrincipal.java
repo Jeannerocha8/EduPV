@@ -2,6 +2,7 @@ package tcc.studio.com.edupv;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -15,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class TelaPrincipal extends AppCompatActivity
 
@@ -49,29 +51,39 @@ public class TelaPrincipal extends AppCompatActivity
         tutorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().
-                        beginTransaction().
-                        replace(R.id.telaBotton,new ListagemEstudo()).addToBackStack(null).
-                        commit();
+              try {
+                  getSupportFragmentManager().
+                          beginTransaction().
+                          replace(R.id.telaBotton, new ListagemEstudo()).addToBackStack(null).
+                          commit();
 
+              }catch (Exception e){
+                  e.printStackTrace();
+              }
             }
         });
 
         multimidia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().
-                        beginTransaction().
-                        replace(R.id.telaBotton,new ListagemVideo()).addToBackStack(null).
-                        commit();
-
+                try {
+                    getSupportFragmentManager().
+                            beginTransaction().
+                            replace(R.id.telaBotton, new ListagemVideo()).addToBackStack(null).
+                            commit();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
         atividades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                getSupportFragmentManager().
+                        beginTransaction().
+                        replace(R.id.telaBotton, new atividadeRN()).addToBackStack(null).
+                        commit();
             }
         });
 

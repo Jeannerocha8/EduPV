@@ -35,22 +35,86 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ScrollView
-        android:layout_width="344dp"
+        android:layout_width="match_parent"
         android:layout_height="439dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/btnAntveia"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/textoveia"
+                    android:textColor="#000" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Identificação das veias do antebraço"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#fff"/>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="218dp"
+                    android:layout_height="457dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_veia_braco" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Identificação das veias do dorso da mão"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#fff"/>
+
+                <ImageView
+                    android:layout_width="255dp"
+                    android:layout_height="386dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/img_veia_mao"
+                    />
+
+            </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
+
 
 
 </android.support.constraint.ConstraintLayout>

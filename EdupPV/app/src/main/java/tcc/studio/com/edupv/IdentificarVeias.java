@@ -34,9 +34,9 @@ public class IdentificarVeias extends Fragment {
         prox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              /*  getFragmentManager().beginTransaction().replace(R.id.telaBotton, new IdentificarVeias()).
-                        addToBackStack(null).commit();*/
-
+                getFragmentManager().beginTransaction().
+                        replace(R.id.telaBotton, new IdentificarDispositivos()).
+                        addToBackStack(null).commit();
             }
         });
 

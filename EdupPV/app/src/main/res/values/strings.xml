@@ -8,13 +8,54 @@
     <string name="action_settings">Settings</string>
 
 
-    <string name="texto1Organizacaomaterial"> Para iniciar o procedimento primero deve-se selecionar e organizar os
-    materiais necessários, de acordo com a finalidade do procedimento. Os materiais necessários para a execução do
+    <string name="texto1Organizacaomaterial"> Os materiais necessários para a execução do
         procedimento são:</string>
 
 
+    <string name="textoveia">
+        A punção venosa pode ser executada em veias do ante braço, mãos, pés, pernas,
+        pescoço e couro cabeludo. A escolha do local deve ser feita levando em consideração
+        alguns aspectos, tais como: finalidade do procedimento, idade e aspectos físicos
+        do paciente, medicamento a ser infundido, calibre do cateter indicado ao procedimento,
+        e espessura das veias.
+            A seguir é demonstrado a anatomia das mãos e do ante braço, locais geralmente
+        puncionados em adultos!
+    </string>
+
+    <string name="texto1scalp"> Este dispositivo é indicado para infusão de até 24 horas. A identificação deste dispositivo é dado por números
+        impares,quanto menos o calibre, maior é  o seu número de identificação!</string>
+
+    <string name="texto1Jelco">Recomendado para terapias intravenosas com duração média de 72 horas. Neste cateter
+o número de identificação é inverso ao calibre da agulha, ou seja, quanto menor
+for a sua identificação, maior é o seu calibre. A identificação neste dispositivo
+é disposto em números pares! </string>
+
+    <string name="jelcoLaranja">Utilizado em adolescentes e Adultos durante cirurgias para
+        infusão de liquídos. A inserção com este cateter exige veia calibrosa.  </string>
+
+    <string name="jelcocinza">Este cateter possui a mesma finalidade do jelco equivalente a numeração 14 (cor Laranja) </string>
+
+    <string name="jelcoverde">Utilizado em crianças,adolescentes e adultos, para administrar sangue,
+         hemoderivados e outras infusões viscosas.A inserção deste cateter exige veia calibrosa.</string>
+
+    <string name="jelcorosa">Pode ser utilizado em crianças, adolescentes e adultos. Este cateter é adequado para a maioria das infusões
+        venosas de sangue e hemoderivados </string>
+
+    <string name="jelcoazul"> Pode ser utilizado em bebês, crianças, adolescentes e adultos, sendo adequado para a maioria das infusões.
+        É fácil de inserir em veias pequenas e frágeis. A infusão utilizando este dispositivo deve ser lenta.</string>
+
+    <string name="jelcoamarelo"> Pode ser utilizado RN’s, bebês, crianças, adolescentes e adultos, sendo dequado para a maioria das infusões.
+        A velocidade de infusão utilizando este dispositivo deve ser lenta.
+        É ideal para veias muito finas, pequenas veias digitais ou veias internas do antebraço em idosos.</string>
+
+    <string name="scalpbege"> É o scalp mais calibroso, recomendado para utilização em adultos. Exige veia calibrosa</string>
+    <string name="scalpverde"> Scalp recomendado para utilização em adultos</string>
+    <string name="scalpazul"> Ideal para utilizar em adultos, idosos e adolescentes</string>
+    <string name="scalplaranja"> Scalp recomendado para utilizaçã em crianças, adultos e idosos. exige veia não calibrosa</string>
+    <string name="scalpcinza"> Corresponde ao Scalp de menor calibre, recomendado para utilização em crianças</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="title_activity_splash_screen">splashScreen</string>
 
 </resources>
