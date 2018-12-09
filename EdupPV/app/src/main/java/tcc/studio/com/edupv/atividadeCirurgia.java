@@ -19,48 +19,51 @@ import android.widget.LinearLayout;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class atividadeRN extends Fragment {
+
+public class atividadeCirurgia extends Fragment {
     View.DragShadowBuilder sb;
     View texto;
-    public atividadeRN() {
+
+    public atividadeCirurgia() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_atividade_rn, container, false);
+        View v = inflater.inflate(R.layout.fragment_atividade_cirurgia, container, false);
 
-        // alterado titulo da pagina
-        getActivity().setTitle("Atividade RN");
+        // alterando titulo da tela
+        getActivity().setTitle("Atividade Cirurgia");
+
         //evento de click longo nas imagens
-        v.findViewById(R.id.imgjelcoamarelo).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.imgjelcoazul).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.imgjelcocinza).setOnLongClickListener(new MyOnLongClickListener());
+        v.findViewById(R.id.imgjelcoverde).setOnLongClickListener(new MyOnLongClickListener());
+        v.findViewById(R.id.imgjelcorosa).setOnLongClickListener(new MyOnLongClickListener());
+        v.findViewById(R.id.imgjelcolaranja).setOnLongClickListener(new MyOnLongClickListener());
 
         //permitindo receber imagem
         v.findViewById(R.id.layoutbb).setOnDragListener(new MyOnDragListener(1));
 
-        Button proximo = (Button) v.findViewById(R.id.buttonProx);
-        Button anterior = (Button) v.findViewById(R.id.buttonAnt);
+        Button proximo = (Button) v.findViewById(R.id.buttonProxC);
+        Button anterior = (Button) v.findViewById(R.id.buttonAntC);
 
         proximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().
-                        beginTransaction().replace(R.id.telaBotton, new atividadeJelco()).
-                        addToBackStack(null).commit();
+
+               /* getFragmentManager().beginTransaction()
+                        .replace(R.id.telaBotton, new atividadeCirurgia()).addToBackStack(null)
+                        .commit();*/
+
             }
         });
-
 
         anterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.telaBotton, new Atividade()).addToBackStack(null)
+                        .replace(R.id.telaBotton, new atividadeJelco()).addToBackStack(null)
                         .commit();
             }
         });
@@ -77,8 +80,6 @@ public class atividadeRN extends Fragment {
 
             return(true);
         }
-
-
     }
 
     class MyOnDragListener implements View.OnDragListener {
@@ -123,7 +124,7 @@ public class atividadeRN extends Fragment {
                     View view = (View) event.getLocalState();
 
                     //verificando layout e imagem
-                    if(view.getId()==R.id.imgjelcoamarelo && num==1){
+                    if(view.getId()==R.id.imgjelcolaranja && num==1){
 
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
@@ -136,23 +137,24 @@ public class atividadeRN extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                               alerta .setMessage("O jelco amarelo é utilizado em RN, crianças e adultos, podendo ser utilizado em veias finas e frágeis " +
-                                       "sendo adequado para a maioria das infusões!")
-                                       .setCancelable(true)
-                                       .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                           @Override
-                                           public void onClick(DialogInterface dialog, int which) {
-                                           }
-                                       });
-                               AlertDialog alertDialog = alerta.create();
-                               alertDialog.show();
-                    }else if(view.getId()==R.id.imgjelcocinza && num==1)
+                        alerta .setMessage("O jelco laranja é recomendado para ser utilizado em adultos e adolescentes para grande volume de infusões" +
+                                " durante processos cirurgicos!")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if(view.getId()==R.id.imgjelcoverde && num==1)
                     {
                         //imprimindo mensagem
                         alerta.setTitle("Que pena, você errou");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("O jelco cinza não pode ser utilizado em recém nascidos, sua recomendação é para que " +
-                                "seja utilizado em adultos e adolescentes, durante procedimentos cirurgicos, exige veia calibrosa")
+                        alerta .setMessage("O jelco verde pode ser utilizado em crianças, adultos e adolescentes para infusão de hemoderivados " +
+                                "a utilização deste cateter exige veia calibrosa, porém, não é recomendado para cirurgias, onde é necessário " +
+                                "grande volume de sangue ou hemoderivados!")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -164,16 +166,16 @@ public class atividadeRN extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
 
-
                         getFragmentManager().beginTransaction()
-                                .replace(R.id.telaBotton, new atividadeRN()).addToBackStack(null)
+                                .replace(R.id.telaBotton, new atividadeCirurgia()).addToBackStack(null)
                                 .commit();
 
-                    }else if(view.getId()==R.id.imgjelcoazul && num==1) {
-                         //imprimindo mensagem
+                    }else if(view.getId()==R.id.imgjelcorosa && num==1) {
+                        //imprimindo mensagem
                         alerta.setTitle("Que pena, você errou");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("O jelco azul pode ser utilizado em bebês, mas não é recomendado para recém nascidos!")
+                        alerta .setMessage("O jelco rosa pode ser utilizado em crianças, adultos e adolescentes,sendo recomendado para a maioria das infusões " +
+                                "exceto em grandes volumes, como em cirurgias!")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -185,8 +187,9 @@ public class atividadeRN extends Fragment {
                         alertDialog.show();
 
                         getFragmentManager().beginTransaction()
-                                .replace(R.id.telaBotton, new atividadeRN()).addToBackStack(null)
+                                .replace(R.id.telaBotton, new atividadeCirurgia()).addToBackStack(null)
                                 .commit();
+
                     }else
                     {
                         alerta.setTitle("ERRO");
@@ -202,7 +205,6 @@ public class atividadeRN extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }
-
                     break;
 
                 case DragEvent.ACTION_DRAG_ENDED:

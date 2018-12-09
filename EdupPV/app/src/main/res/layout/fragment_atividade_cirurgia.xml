@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fff"
-    tools:context=".atividadeRN">
+    tools:context=".atividadeCirurgia"
+    android:background="#fff">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,16 +16,17 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="10dp"
             app:cardCornerRadius="1dp"
+            app:cardElevation="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
+            android:layout_marginBottom="5dp"
+           >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:textColor="#000"
-                android:text="Selecione o Jelco recomendado para administração de medicamentos em recém nascidos e arraste até o bebê" />
+                android:text="Selecione o Jelco recomendado para utilização em cirurgias e arraste até a figura" />
 
         </android.support.v7.widget.CardView>
 
@@ -33,8 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="182dp"
             android:layout_gravity="center"
-            app:cardCornerRadius="1dp"
-            app:cardElevation="10dp">
+            android:elevation="5dp"
+            cardCornerRadius="1dp">
 
             <LinearLayout
                 android:id="@+id/layoutbb"
@@ -48,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="156dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/recemnascido" />
+                    android:src="@drawable/cirurgia" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -58,14 +59,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center|left"
         android:layout_marginTop="65dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="1dp">
+        android:elevation="5dp"
+        cardCornerRadius="1dp">
         <ImageView
-            android:id="@+id/imgjelcoamarelo"
+            android:id="@+id/imgjelcoverde"
             android:layout_width="120dp"
             android:layout_height="150dp"
 
-            android:src="@drawable/img_jelco_amarelo"
+            android:src="@drawable/img_jelco_verde"
             />
     </android.support.v7.widget.CardView>
 
@@ -75,14 +76,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center|center_horizontal"
         android:layout_marginTop="65dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="1dp">
-    <ImageView
-        android:id="@+id/imgjelcocinza"
-        android:layout_width="120dp"
-        android:layout_height="150dp"
-        android:src="@drawable/img_jelco_cinza" />
-
+        android:elevation="5dp"
+        cardCornerRadius="1dp">
+        <ImageView
+            android:id="@+id/imgjelcorosa"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:src="@drawable/img_jelco_rosa" />
     </android.support.v7.widget.CardView>
 
 
@@ -91,20 +91,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
         android:layout_gravity="center|right"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="1dp">
+        android:elevation="5dp"
+        cardCornerRadius="1dp">
 
-    <ImageView
-        android:id="@+id/imgjelcoazul"
-        android:layout_width="120dp"
-        android:layout_height="150dp"
+        <ImageView
+            android:id="@+id/imgjelcolaranja"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
 
-        android:src="@drawable/img_jelco_azul"/>
+            android:src="@drawable/img_jelco_laranja"/>
     </android.support.v7.widget.CardView>
 
 
     <Button
-        android:id="@+id/buttonAnt"
+        android:id="@+id/buttonAntC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
@@ -113,12 +113,13 @@
         android:text="Anterior" />
 
     <Button
-        android:id="@+id/buttonProx"
+        android:id="@+id/buttonProxC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:background="@color/colorPrimary"
         android:textColor="#fff"
         android:text="Próximo" />
+
 
 </FrameLayout>

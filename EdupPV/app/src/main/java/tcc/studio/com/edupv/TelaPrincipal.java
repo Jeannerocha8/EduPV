@@ -82,7 +82,7 @@ public class TelaPrincipal extends AppCompatActivity
             public void onClick(View v) {
                 getSupportFragmentManager().
                         beginTransaction().
-                        replace(R.id.telaBotton, new atividadeRN()).addToBackStack(null).
+                        replace(R.id.telaBotton, new Atividade()).addToBackStack(null).
                         commit();
             }
         });
@@ -141,9 +141,9 @@ public class TelaPrincipal extends AppCompatActivity
         } else if (id == R.id.nav_video) {
             fragment = new ListagemVideo();
         } else if (id == R.id.nav_atividades) {
-
+            fragment = new Atividade();
         } else if (id == R.id.nav_sobreNos) {
-
+            fragment = new SobreNos();
         }
 
         if (fragment != null){

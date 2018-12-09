@@ -129,20 +129,21 @@ public class ListagemEstudo extends Fragment {
 
         ArrayList<opcoes> Opcoes = new ArrayList<opcoes>();
 
-        opcoes op = new opcoes("Organização dos materiais", "Saiba quais os materiais são necessários", R.drawable.or);
+        opcoes op = new opcoes("Organização dos materiais", "Saiba quais os materiais são necessários para executar o procedimento", R.drawable.img_orgmateriais);
         Opcoes.add(op);
 
-        op = new opcoes("Identificação das veias", "Saiba em quais veias o procedimento pode ser executado", R.drawable.iconveia);
+        op = new opcoes("Identificação das veias", "Saiba em quais veias o procedimento pode ser executado em adultos", R.drawable.img_veiaaa);
         Opcoes.add(op);
 
-        op = new opcoes("Identificação dos dispositivos", "Saiba identificar jelcos e scalps", R.drawable.cateter);
+        op = new opcoes("Identificação dos dispositivos", "Saiba identificar os Jelcos e Scalps", R.drawable.img_dispositivoident);
         Opcoes.add(op);
 
-        op = new opcoes("Higienização", "Saiba como higienizar corretamente", R.drawable.torneita);
+        op = new opcoes("Higienização", "Saiba como higienizar as mãos e a pele do        paciente", R.drawable.img_tornneirahigi);
         Opcoes.add(op);
 
-        op = new opcoes("Execucao do procedimento", "Saiba passo a passo da execução do procedimento", R.drawable.punc);
+        op = new opcoes("Execucao do procedimento", "Passo a passo de como executar o procedimento", R.drawable.img_excutarpunv);
         Opcoes.add(op);
+
         return Opcoes;
     }
 

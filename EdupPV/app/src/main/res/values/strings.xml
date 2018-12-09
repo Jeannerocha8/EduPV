@@ -23,7 +23,7 @@
     </string>
 
     <string name="texto1scalp"> Este dispositivo é indicado para infusão de até 24 horas. A identificação deste dispositivo é dado por números
-        impares,quanto menos o calibre, maior é  o seu número de identificação!</string>
+        impares,quanto menor o calibre, maior é  o seu número de identificação!</string>
 
     <string name="texto1Jelco">Recomendado para terapias intravenosas com duração média de 72 horas. Neste cateter
 o número de identificação é inverso ao calibre da agulha, ou seja, quanto menor
@@ -44,7 +44,7 @@ for a sua identificação, maior é o seu calibre. A identificação neste dispo
     <string name="jelcoazul"> Pode ser utilizado em bebês, crianças, adolescentes e adultos, sendo adequado para a maioria das infusões.
         É fácil de inserir em veias pequenas e frágeis. A infusão utilizando este dispositivo deve ser lenta.</string>
 
-    <string name="jelcoamarelo"> Pode ser utilizado RN’s, bebês, crianças, adolescentes e adultos, sendo dequado para a maioria das infusões.
+    <string name="jelcoamarelo"> Pode ser utilizado em RN’s, bebês, crianças, adolescentes e adultos, sendo dequado para a maioria das infusões.
         A velocidade de infusão utilizando este dispositivo deve ser lenta.
         É ideal para veias muito finas, pequenas veias digitais ou veias internas do antebraço em idosos.</string>
 
