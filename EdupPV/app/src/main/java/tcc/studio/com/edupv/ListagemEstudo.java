@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -39,50 +40,51 @@ public class ListagemEstudo extends Fragment {
 
         //criando array list de opções
         ArrayList<opcoes> Opcoes = adicionarOpcoes();
-        ArrayAdapter adapter = new opcaoAdapter(getActivity(),Opcoes);
+        ArrayAdapter adapter = new opcaoAdapter(getActivity(), Opcoes);
         lista.setAdapter(adapter);
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
-                        try{
+                        try {
                             OrganizarMaterial();
                             break;
-                        }catch (Error e){
-                            Toast.makeText(getContext(),"erro"+e,Toast.LENGTH_LONG);
+                        } catch (Error e) {
+                            Toast.makeText(getContext(), "erro" + e, Toast.LENGTH_LONG);
                         }
                     case 1:
-                        try{
+                        try {
                             IdentificarVeias();
                             break;
-                        }catch (Error e){
-                            Toast.makeText(getContext(),"erro"+e,Toast.LENGTH_LONG);
+                        } catch (Error e) {
+                            Toast.makeText(getContext(), "erro" + e, Toast.LENGTH_LONG);
                         }
                     case 2:
-                        try{
+                        try {
                             IdentidicarDispositivos();
                             break;
-                        }catch (Error e){
-                            Toast.makeText(getContext(),"erro"+e,Toast.LENGTH_LONG);
+                        } catch (Error e) {
+                            Toast.makeText(getContext(), "erro" + e, Toast.LENGTH_LONG);
                         }
                     case 3:
-                        try{
+                        try {
                             Higienizacao();
-                             break;
-                        }catch (Error e){
-                            Toast.makeText(getContext(),"erro"+e,Toast.LENGTH_LONG);
+                            break;
+                        } catch (Error e) {
+                            Toast.makeText(getContext(), "erro" + e, Toast.LENGTH_LONG);
                         }
                     case 4:
-                        try{
+                        try {
                             ExecutarProcedimento();
                             break;
-                        }catch (Error e){
-                            Toast.makeText(getContext(),"erro"+e,Toast.LENGTH_LONG);
+                        } catch (Error e) {
+                            Toast.makeText(getContext(), "erro" + e, Toast.LENGTH_LONG);
                         }
                     case 5:
-                             default:break;
+                    default:
+                        break;
 
                 }
             }
@@ -93,36 +95,45 @@ public class ListagemEstudo extends Fragment {
 
     //chamando telas
     private void ExecutarProcedimento() {
+        removerView();
         getFragmentManager().beginTransaction().
-                replace(R.id.telaListaEstudo, new ExecutarProcedimento()).
+                replace(R.id.frame_container, new ExecutarProcedimento()).
                 addToBackStack(null).commit();
     }
 
     private void Higienizacao() {
+        removerView();
         getFragmentManager().beginTransaction().
-                replace(R.id.telaListaEstudo, new Higienizacao()).
+                replace(R.id.frame_container, new Higienizacao()).
                 addToBackStack(null).commit();
     }
 
     private void IdentidicarDispositivos() {
+        removerView();
         getFragmentManager().beginTransaction().
-                replace(R.id.telaBotton, new IdentificarDispositivos()).
+                replace(R.id.frame_container, new IdentificarDispositivos()).
                 addToBackStack(null).commit();
     }
 
     private void IdentificarVeias() {
-       getFragmentManager().
-               beginTransaction().
-               replace(R.id.telaBotton, new IdentificarVeias()).addToBackStack(null).
-               commit();
+        removerView();
+        getFragmentManager().
+                beginTransaction().
+                replace(R.id.frame_container, new IdentificarVeias()).addToBackStack(null).
+                commit();
     }
 
     private void OrganizarMaterial() {
+        removerView();
         getFragmentManager().
                 beginTransaction().
-                replace(R.id.telaBotton, new OrganizarMateriais()).addToBackStack(null).
+                replace(R.id.frame_container, new OrganizarMateriais()).addToBackStack(null).
                 commit();
     }
+
+
+    //removendo view
+
 
     //populando lista de opções
     private ArrayList<opcoes> adicionarOpcoes() {
@@ -147,4 +158,11 @@ public class ListagemEstudo extends Fragment {
         return Opcoes;
     }
 
+
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
+    }
 }

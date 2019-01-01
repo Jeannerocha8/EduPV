@@ -22,7 +22,7 @@ import static tcc.studio.com.edupv.BD.QuizNegocio.MovieEntry.TABLE_QUEST;
 
 public class BD  extends  SQLiteOpenHelper{
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 8;
     // Database Name
     private static final String DATABASE_NAME = "edupvQuiz";
     // tasks table name
@@ -51,23 +51,23 @@ public class BD  extends  SQLiteOpenHelper{
         this.addQuestion(q1);
 
         Questao q2=new Questao("Na coleta de sangue venoso para exame,o garrote deve ser:", "Retirado após a punção da veia",
-                "Mantido durante a punção da veia", "Retirado e mantido alternada mente", "Abolido, pois não há necessidade de seu uso.",
+                "Mantido durante a punção da veia", "Retirado e mantido alternadamente", "Abolido, pois não há necessidade de seu uso.",
                 "Retirado e mantido alternada mente");
         this.addQuestion(q2);
     }
 
 
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
-        // Drop older table if existed
+        // excluindo caso a tabela exista
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUEST);
         // Create tables again
         onCreate(db);
     }
-    // Adding new question
+    // adicionando questão
     public void addQuestion(Questao quest) {
         //SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(KEY_ID, quest.getId());
+       // values.put(KEY_ID, quest.getId());
         values.put(KEY_QUES, quest.getEnunciado());
         values.put(KEY_ANSWER, quest.getResposta());
         values.put(KEY_OPT1, quest.getOpc1());
@@ -79,7 +79,8 @@ public class BD  extends  SQLiteOpenHelper{
     }
     public List<Questao> getAllQuestions() {
         List<Questao> quesList = new ArrayList<Questao>();
-        // Select All Query
+        // Selecionando todas as linhas
+
         String selectQuery = "SELECT  * FROM " + TABLE_QUEST;
         dbase=this.getReadableDatabase();
         Cursor cursor = dbase.rawQuery(selectQuery, null);

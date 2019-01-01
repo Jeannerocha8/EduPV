@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 
@@ -36,9 +37,12 @@ public class atividadeRN extends Fragment {
         // alterado titulo da pagina
         getActivity().setTitle("Atividade RN");
         //evento de click longo nas imagens
+
+
         v.findViewById(R.id.imgjelcoamarelo).setOnLongClickListener(new MyOnLongClickListener());
         v.findViewById(R.id.imgjelcoazul).setOnLongClickListener(new MyOnLongClickListener());
         v.findViewById(R.id.imgjelcocinza).setOnLongClickListener(new MyOnLongClickListener());
+
 
         //permitindo receber imagem
         v.findViewById(R.id.layoutbb).setOnDragListener(new MyOnDragListener(1));
@@ -46,11 +50,13 @@ public class atividadeRN extends Fragment {
         Button proximo = (Button) v.findViewById(R.id.buttonProx);
         Button anterior = (Button) v.findViewById(R.id.buttonAnt);
 
+
         proximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                removerView();
                 getFragmentManager().
-                        beginTransaction().replace(R.id.telaBotton, new atividadeJelco()).
+                        beginTransaction().replace(R.id.frame_container, new atividadeJelco()).
                         addToBackStack(null).commit();
             }
         });
@@ -59,12 +65,20 @@ public class atividadeRN extends Fragment {
         anterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              removerView();
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.telaBotton, new Atividade()).addToBackStack(null)
+                        .replace(R.id.frame_container, new Atividade()).addToBackStack(null)
                         .commit();
             }
         });
         return v;
+    }
+
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
     }
 
     class MyOnLongClickListener implements View.OnLongClickListener {
@@ -74,11 +88,8 @@ public class atividadeRN extends Fragment {
             View.DragShadowBuilder sb = new View.DragShadowBuilder(v);
             v.startDrag(data, sb, v, 0);
             v.setVisibility(View.INVISIBLE);
-
             return(true);
         }
-
-
     }
 
     class MyOnDragListener implements View.OnDragListener {
@@ -103,6 +114,7 @@ public class atividadeRN extends Fragment {
                         return (true);
                     }else{
                         return (false);
+
                     }
 
                 case DragEvent.ACTION_DRAG_ENTERED:
@@ -125,6 +137,7 @@ public class atividadeRN extends Fragment {
                     //verificando layout e imagem
                     if(view.getId()==R.id.imgjelcoamarelo && num==1){
 
+                        Pontuacao.pontuacao=1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -148,6 +161,7 @@ public class atividadeRN extends Fragment {
                                alertDialog.show();
                     }else if(view.getId()==R.id.imgjelcocinza && num==1)
                     {
+
                         //imprimindo mensagem
                         alerta.setTitle("Que pena, você errou");
                         alerta.setIcon(R.drawable.errado);
@@ -166,7 +180,7 @@ public class atividadeRN extends Fragment {
 
 
                         getFragmentManager().beginTransaction()
-                                .replace(R.id.telaBotton, new atividadeRN()).addToBackStack(null)
+                                .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
                                 .commit();
 
                     }else if(view.getId()==R.id.imgjelcoazul && num==1) {
@@ -185,13 +199,17 @@ public class atividadeRN extends Fragment {
                         alertDialog.show();
 
                         getFragmentManager().beginTransaction()
-                                .replace(R.id.telaBotton, new atividadeRN()).addToBackStack(null)
+                                .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
                                 .commit();
-                    }else
-                    {
-                        alerta.setTitle("ERRO");
+
+                    }else if((view.getId()==R.id.imgjelcoazul != (num== 0)) ||
+                            (view.getId()==R.id.imgjelcoazul != (num==0)) ||
+                            (view.getId()==R.id.imgjelcocinza != (num==0)) || (view.getId()==R.id.imgjelcocinza != (num==0)) ||
+                            (view.getId()==R.id.imgjelcoamarelo != (num==0))  ||(view.getId()==R.id.imgjelcoamarelo != (num==0)) ) {
+                        //imprimindo mensagem
+                        alerta.setTitle("Opção Inválida");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("Contate o desenvolvedor do sistema")
+                        alerta .setMessage("Por favor, arraste o jelco até a imagem do recém nascido")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -201,6 +219,11 @@ public class atividadeRN extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
+
+                        getFragmentManager().beginTransaction()
+                                .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
+                                .commit();
+
                     }
 
                     break;

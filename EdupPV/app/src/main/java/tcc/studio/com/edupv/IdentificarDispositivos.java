@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 
 /**
@@ -33,8 +34,9 @@ public class IdentificarDispositivos extends Fragment {
         anterio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getFragmentManager().
-                        beginTransaction().replace(R.id.telaBotton, new IdentificarVeias()).
+                        beginTransaction().replace(R.id.frame_container, new IdentificarVeias()).
                         addToBackStack(null).commit();
             }
         });
@@ -42,8 +44,9 @@ public class IdentificarDispositivos extends Fragment {
         prox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getFragmentManager().
-                        beginTransaction().replace(R.id.telaBotton, new Higienizacao())
+                        beginTransaction().replace(R.id.frame_container, new Higienizacao())
                         .addToBackStack(null).commit();
             }
         });
@@ -52,4 +55,10 @@ public class IdentificarDispositivos extends Fragment {
         return v;
     }
 
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
+    }
 }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 
 /**
@@ -34,8 +35,9 @@ public class IdentificarVeias extends Fragment {
         prox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getFragmentManager().beginTransaction().
-                        replace(R.id.telaBotton, new IdentificarDispositivos()).
+                        replace(R.id.frame_container, new IdentificarDispositivos()).
                         addToBackStack(null).commit();
             }
         });
@@ -43,12 +45,20 @@ public class IdentificarVeias extends Fragment {
         anterio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getFragmentManager().beginTransaction().
-                        replace(R.id.telaBotton, new OrganizarMateriais()).
+                        replace(R.id.frame_container, new OrganizarMateriais()).
                         addToBackStack(null).commit();
             }
         });
         return v;
     }
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
+    }
+
 
 }

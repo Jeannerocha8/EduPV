@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">edupv@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="description">Media Controls</string>
 
 
     <string name="texto1Organizacaomaterial"> Os materiais necessários para a execução do
@@ -57,5 +58,9 @@ for a sua identificação, maior é o seu calibre. A identificação neste dispo
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_splash_screen">splashScreen</string>
+    <string name="title_activity_video_reproducao">videoReproducao</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 </resources>

@@ -119,7 +119,7 @@
         android:layout_gravity="bottom|right"
         android:background="@color/colorPrimary"
         android:textColor="#fff"
-        android:text="Próximo" />
+        android:text="Finalizar" />
 
 
 </FrameLayout>

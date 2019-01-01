@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 
@@ -52,22 +53,29 @@ public class atividadeCirurgia extends Fragment {
             @Override
             public void onClick(View v) {
 
-               /* getFragmentManager().beginTransaction()
-                        .replace(R.id.telaBotton, new atividadeCirurgia()).addToBackStack(null)
-                        .commit();*/
-
+               getFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, new ResultadoAtvInterativas()).addToBackStack(null)
+                        .commit();
             }
         });
 
         anterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.telaBotton, new atividadeJelco()).addToBackStack(null)
+                        .replace(R.id.frame_container, new atividadeJelco()).addToBackStack(null)
                         .commit();
             }
         });
         return v;
+    }
+
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
     }
 
     class MyOnLongClickListener implements View.OnLongClickListener {
@@ -81,6 +89,7 @@ public class atividadeCirurgia extends Fragment {
             return(true);
         }
     }
+
 
     class MyOnDragListener implements View.OnDragListener {
         private int num;
@@ -125,6 +134,7 @@ public class atividadeCirurgia extends Fragment {
 
                     //verificando layout e imagem
                     if(view.getId()==R.id.imgjelcolaranja && num==1){
+                        Pontuacao.pontuacao= Pontuacao.pontuacao+1;
 
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
@@ -167,7 +177,7 @@ public class atividadeCirurgia extends Fragment {
                         alertDialog.show();
 
                         getFragmentManager().beginTransaction()
-                                .replace(R.id.telaBotton, new atividadeCirurgia()).addToBackStack(null)
+                                .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
                                 .commit();
 
                     }else if(view.getId()==R.id.imgjelcorosa && num==1) {
@@ -187,7 +197,7 @@ public class atividadeCirurgia extends Fragment {
                         alertDialog.show();
 
                         getFragmentManager().beginTransaction()
-                                .replace(R.id.telaBotton, new atividadeCirurgia()).addToBackStack(null)
+                                .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
                                 .commit();
 
                     }else

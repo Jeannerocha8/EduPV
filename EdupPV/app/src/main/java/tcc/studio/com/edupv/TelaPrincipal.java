@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 public class TelaPrincipal extends AppCompatActivity
@@ -26,7 +27,7 @@ public class TelaPrincipal extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final Fragment[] fragment = {null};
+
 
         setContentView(R.layout.activity_tela_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -41,58 +42,11 @@ public class TelaPrincipal extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //setando os botoes
-        Button tutorial = (Button) findViewById(R.id.btnEstudo);
-        Button multimidia = (Button) findViewById(R.id.btnVideo);
-        Button atividades = (Button) findViewById(R.id.btnAtividade);
-        Button sobrenos = (Button) findViewById(R.id.btnSobre);
-
-        //click nos botoes
-        tutorial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              try {
-                  getSupportFragmentManager().
-                          beginTransaction().
-                          replace(R.id.telaBotton, new ListagemEstudo()).addToBackStack(null).
-                          commit();
-
-              }catch (Exception e){
-                  e.printStackTrace();
-              }
-            }
-        });
-
-        multimidia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    getSupportFragmentManager().
-                            beginTransaction().
-                            replace(R.id.telaBotton, new ListagemVideo()).addToBackStack(null).
-                            commit();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        atividades.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getSupportFragmentManager().
-                        beginTransaction().
-                        replace(R.id.telaBotton, new Atividade()).addToBackStack(null).
-                        commit();
-            }
-        });
-
-        sobrenos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        if(savedInstanceState== null) {
+            getSupportFragmentManager().
+                    beginTransaction().
+                    add(R.id.frame_container, new TelaInicialFragment()).commit();
+        }
     }
 
     @Override
@@ -134,8 +88,7 @@ public class TelaPrincipal extends AppCompatActivity
         int id = item.getItemId();
 
         if (id ==R.id.nav_home){
-            Intent intent = new Intent(this, TelaPrincipal.class);
-            startActivity(intent);
+            fragment = new TelaInicialFragment();
         }else if (id == R.id.nav_estudo) {
             fragment = new ListagemEstudo();
         } else if (id == R.id.nav_video) {
@@ -147,14 +100,22 @@ public class TelaPrincipal extends AppCompatActivity
         }
 
         if (fragment != null){
+            removerView();
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.telaBotton,fragment);
+            fragmentTransaction.replace(R.id.frame_container,fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
     }
 }

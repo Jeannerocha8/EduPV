@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 /**
@@ -54,7 +55,7 @@ public class OrganizarMateriais extends Fragment {
         prox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().replace(R.id.telaBotton, new IdentificarVeias()).
+                getFragmentManager().beginTransaction().replace(R.id.frame_container, new IdentificarVeias()).
                         addToBackStack(null).commit();
 
             }
@@ -64,7 +65,7 @@ public class OrganizarMateriais extends Fragment {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().
-                        replace(R.id.telaBotton, new ListagemEstudo()).
+                        replace(R.id.frame_container, new ListagemEstudo()).
                         addToBackStack(null).commit();
             }
         });
@@ -72,6 +73,13 @@ public class OrganizarMateriais extends Fragment {
 
     }
 
+
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
+    }
 
     public static Bitmap redimensionarFromResource(Resources res, int resId,
                                                    int larguraDesejada,

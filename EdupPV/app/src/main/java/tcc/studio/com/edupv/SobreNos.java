@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -26,6 +27,15 @@ public class SobreNos extends Fragment {
         View v =  inflater.inflate(R.layout.fragment_sobre_nos, container, false);
         getActivity().setTitle("Sobre Nós");
 
+        Button inicio = (Button) v.findViewById(R.id.btnInicioSonbre);
+
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, new TelaInicialFragment()).addToBackStack(null).commit();
+            }
+        });
         return v;
     }
 

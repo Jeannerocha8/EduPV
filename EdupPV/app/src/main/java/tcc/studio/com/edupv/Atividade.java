@@ -3,12 +3,14 @@ package tcc.studio.com.edupv;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
  */
 public class Atividade extends Fragment {
 
+    String tela;
 
     public Atividade() {
         // Required empty public constructor
@@ -70,17 +73,33 @@ public class Atividade extends Fragment {
     }
 
     private void Objetivas() {
-        getFragmentManager().beginTransaction()
-                .replace(R.id.telaBotton, new atividadeObjetiva()).addToBackStack(null)
-                .commit();
+
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+
+        if(layout != null) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.frame_container, new atividadeObjetiva()).addToBackStack(null)
+                    .commit();
+        }
     }
 
     private void Interativas(){
-        getFragmentManager().beginTransaction()
-                .replace(R.id.telaBotton, new atividadeRN()).addToBackStack(null)
-                .commit();
+
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+
+        if(layout != null) {
+            removerView();
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
+                    .commit();
+        }
     }
 
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        layout.removeAllViews();
+
+    }
 
     private ArrayList<opcoes> adicionarOpcoes() {
         ArrayList<opcoes> Opcoes = new ArrayList<opcoes>();

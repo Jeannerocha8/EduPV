@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -55,8 +56,9 @@ public class Higienizacao extends Fragment {
        anterior.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+
                getFragmentManager().beginTransaction()
-                       .replace(R.id.telaBotton, new IdentificarDispositivos())
+                       .replace(R.id.frame_container, new IdentificarDispositivos())
                        .addToBackStack(null).
                        commit();
            }
@@ -65,8 +67,9 @@ public class Higienizacao extends Fragment {
        proximo.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+
                getFragmentManager().beginTransaction().
-                       replace(R.id.telaBotton, new ExecutarProcedimento()).
+                       replace(R.id.frame_container, new ExecutarProcedimento()).
                        addToBackStack(null).
                        commit();
            }
@@ -74,4 +77,10 @@ public class Higienizacao extends Fragment {
         return v;
     }
 
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
+    }
 }

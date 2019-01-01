@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,117 +8,121 @@
     android:background="#fff"
     tools:context=".atividadeRN">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#fff">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textColor="#000"
-                android:text="Selecione o Jelco recomendado para administração de medicamentos em recém nascidos e arraste até o bebê" />
+                app:cardElevation="10dp"
+                app:cardCornerRadius="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="Selecione o Jelco recomendado para administração de medicamentos em recém nascidos por 2 segundos e arraste até o bebê"
+                    android:textColor="#000" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutbb"
+                    android:layout_width="match_parent"
+                    android:layout_height="204dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="156dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/recemnascido" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginTop="110dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="1dp">
+            <ImageView
+                android:id="@+id/imgjelcoamarelo"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_jelco_amarelo"
+                />
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="182dp"
-            android:layout_gravity="center"
-            app:cardCornerRadius="1dp"
-            app:cardElevation="10dp">
-
-            <LinearLayout
-                android:id="@+id/layoutbb"
-                android:layout_width="match_parent"
-                android:layout_height="204dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="156dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/recemnascido" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|left"
-        android:layout_marginTop="65dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="1dp">
+            android:id="@+id/carCinza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_marginTop="110dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="1dp">
         <ImageView
-            android:id="@+id/imgjelcoamarelo"
+            android:id="@+id/imgjelcocinza"
             android:layout_width="120dp"
             android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_jelco_cinza" />
 
-            android:src="@drawable/img_jelco_amarelo"
-            />
-    </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/carCinza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|center_horizontal"
-        android:layout_marginTop="65dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="1dp">
-    <ImageView
-        android:id="@+id/imgjelcocinza"
-        android:layout_width="120dp"
-        android:layout_height="150dp"
-        android:src="@drawable/img_jelco_cinza" />
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:layout_gravity="center|right"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="1dp">
 
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:layout_gravity="center|right"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="1dp">
-
-    <ImageView
-        android:id="@+id/imgjelcoazul"
-        android:layout_width="120dp"
-        android:layout_height="150dp"
-
-        android:src="@drawable/img_jelco_azul"/>
-    </android.support.v7.widget.CardView>
+        <ImageView
+            android:id="@+id/imgjelcoazul"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_jelco_azul"/>
+        </android.support.v7.widget.CardView>
 
 
-    <Button
-        android:id="@+id/buttonAnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/colorPrimary"
-        android:textColor="#fff"
-        android:text="Anterior" />
+        <Button
+            android:id="@+id/buttonAnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="Anterior" />
 
-    <Button
-        android:id="@+id/buttonProx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:background="@color/colorPrimary"
-        android:textColor="#fff"
-        android:text="Próximo" />
+        <Button
+            android:id="@+id/buttonProx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="Próximo" />
 
-</FrameLayout>
+
+</android.support.v7.widget.CardView>

@@ -19,6 +19,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/btnhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Inicio"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -236,7 +248,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Com o bisel da agulha voltado para cima, aproximar a veia num ângulo entre30° e 45
+                        android:text="Com o bisel da agulha voltado para cima, aproximar a veia num ângulo entre 30° e 45°
     Diminuir o ângulo da agulha, paralelamente com a veia enquanto avança a agulha um pouco mais para dentro dela, aproximadamente 0,6 cm;"/>
 
                 </LinearLayout>

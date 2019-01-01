@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 /**
@@ -52,6 +53,7 @@ public class atividadeJelco extends Fragment {
         v.findViewById(R.id.layoutJelcoAmarelo).setOnDragListener(new MyOnDragListener(5));
 
 
+
         //localizando botão
         Button anterio = (Button) v.findViewById(R.id.buttonAnt);
         Button proximo = (Button) v.findViewById(R.id.buttonProx);
@@ -60,8 +62,9 @@ public class atividadeJelco extends Fragment {
         proximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.telaBotton, new atividadeCirurgia()).addToBackStack(null)
+                        .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
                         .commit();
             }
         });
@@ -69,12 +72,20 @@ public class atividadeJelco extends Fragment {
         anterio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.telaBotton, new atividadeRN()).addToBackStack(null)
+                        .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
                         .commit();
             }
         });
         return v;
+    }
+
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
     }
 
     class MyOnLongClickListener implements View.OnLongClickListener {
@@ -126,6 +137,9 @@ public class atividadeJelco extends Fragment {
                     View view = (View) event.getLocalState();
 
                     if(view.getId()==R.id.txt14 && num==1){
+
+                        Pontuacao.pontuacao= Pontuacao.pontuacao+1;
+
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
                         ow.removeView(view);

@@ -11,7 +11,16 @@ public class customController extends MediaController {
         super.setAnchorView(anchor);
     }
 
+
+
     public void setAnchorView(){
+
+    }
+
+    @Override
+    public void setMediaPlayer(MediaPlayerControl player) {
+        super.setMediaPlayer(player);
+
 
     }
 }

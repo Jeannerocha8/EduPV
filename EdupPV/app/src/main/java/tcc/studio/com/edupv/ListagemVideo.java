@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -75,24 +76,26 @@ public class ListagemVideo extends Fragment {
 
 
     //Metodos para click
-    private void Higienizacao() {
+    private void Higienizacao() { removerView();
         getFragmentManager().
                 beginTransaction().
-                replace(R.id.telaBotton, new ReproducaoVideo()).addToBackStack(null).
+                replace(R.id.frame_container, new ReproducaoVideo()).addToBackStack(null).
                 commit();
     }
 
     private void ManuseioJescoScalp() {
+        removerView();
         getFragmentManager().
                 beginTransaction().
-                replace(R.id.telaBotton, new ReproducaoVideo()).addToBackStack(null).
+                replace(R.id.frame_container, new ReproducaoVideo()).addToBackStack(null).
                 commit();
     }
 
     private void ExecucaoProcedimento() {
-        getFragmentManager().
+        removerView();
+           getFragmentManager().
                 beginTransaction().
-                replace(R.id.telaBotton, new ReproducaoVideo()).addToBackStack(null).
+                replace(R.id.frame_container, new ReproducaoVideo()).addToBackStack(null).
                 commit();
     }
 
@@ -112,5 +115,12 @@ public class ListagemVideo extends Fragment {
         Opcoes.add(op);
 
         return Opcoes;
+    }
+
+    private void removerView() {
+        FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
+        if (layout != null) {
+            layout.removeAllViews();
+        }
     }
 }
