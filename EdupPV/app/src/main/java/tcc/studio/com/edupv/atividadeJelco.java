@@ -51,8 +51,12 @@ public class atividadeJelco extends Fragment {
         v.findViewById(R.id.layoutJelcoVerde).setOnDragListener(new MyOnDragListener(3));
         v.findViewById(R.id.layoutJelcoCinza).setOnDragListener(new MyOnDragListener(4));
         v.findViewById(R.id.layoutJelcoAmarelo).setOnDragListener(new MyOnDragListener(5));
-
-
+        v.findViewById(R.id.layoutatvjelco).setOnDragListener(new MyOnDragListener(6));
+        v.findViewById(R.id.card14).setOnDragListener(new MyOnDragListener(7));
+        v.findViewById(R.id.card16).setOnDragListener(new MyOnDragListener(8));
+        v.findViewById(R.id.card18).setOnDragListener(new MyOnDragListener(9));
+        v.findViewById(R.id.card20).setOnDragListener(new MyOnDragListener(10));
+        v.findViewById(R.id.card24).setOnDragListener(new MyOnDragListener(11));
 
         //localizando botão
         Button anterio = (Button) v.findViewById(R.id.buttonAnt);
@@ -94,7 +98,7 @@ public class atividadeJelco extends Fragment {
             ClipData data = ClipData.newPlainText("simple_text", "text");
             View.DragShadowBuilder sb = new View.DragShadowBuilder(v);
             v.startDrag(data, sb, v, 0);
-            v.setVisibility(View.VISIBLE);
+            v.setVisibility(View.INVISIBLE);
             return(true);
         }
     }
@@ -146,8 +150,6 @@ public class atividadeJelco extends Fragment {
                         LinearLayout cont = (LinearLayout) v;
                         cont.addView(view);
 
-                        //tornando a imagem visivel
-                        view.setVisibility(View.VISIBLE);
 
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
@@ -267,15 +269,23 @@ public class atividadeJelco extends Fragment {
                                     }
                                 });
 
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
+
+
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }
                     break;
 
                 case DragEvent.ACTION_DRAG_ENDED:
-                    Log.i("Script", num + " - ACTION_DRAG_ENDED");
+
                     break;
                 }
+
+
             return true;
         }}
+
+
     }

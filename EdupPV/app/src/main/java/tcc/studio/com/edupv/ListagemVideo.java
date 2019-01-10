@@ -4,8 +4,6 @@ package tcc.studio.com.edupv;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListView;
-import android.widget.Toast;
-import android.widget.VideoView;
 
 import java.util.ArrayList;
 
@@ -76,27 +72,19 @@ public class ListagemVideo extends Fragment {
 
 
     //Metodos para click
-    private void Higienizacao() { removerView();
-        getFragmentManager().
-                beginTransaction().
-                replace(R.id.frame_container, new ReproducaoVideo()).addToBackStack(null).
-                commit();
+    private void Higienizacao() {
+        Intent intent = new Intent(getActivity(), VideoHigienizacao.class);
+        startActivity(intent);
     }
 
     private void ManuseioJescoScalp() {
-        removerView();
-        getFragmentManager().
-                beginTransaction().
-                replace(R.id.frame_container, new ReproducaoVideo()).addToBackStack(null).
-                commit();
+        Intent intent = new Intent(getActivity(), VideoManuseioJelcoScalp.class);
+        startActivity(intent);
     }
 
     private void ExecucaoProcedimento() {
-        removerView();
-           getFragmentManager().
-                beginTransaction().
-                replace(R.id.frame_container, new ReproducaoVideo()).addToBackStack(null).
-                commit();
+        Intent intent = new Intent(getActivity(), VideoExecucaoProcedimento.class);
+        startActivity(intent);
     }
 
 

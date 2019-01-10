@@ -3,37 +3,51 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#cc000000"
+    android:background="#CC000000"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="4dip"
         android:orientation="horizontal">
 
-        <ImageButton android:id="@+id/prev"
+        <ImageButton
+            android:id="@+id/prev"
             style="@android:style/MediaButton.Previous"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/description" />
 
-        <ImageButton android:id="@+id/rew"
+        <ImageButton
+            android:id="@+id/rew"
             style="@android:style/MediaButton.Rew"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/description" />
 
-        <ImageButton android:id="@+id/pause"
+        <ImageButton
+            android:id="@+id/pause"
             style="@android:style/MediaButton.Play"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/description" />
 
-        <ImageButton android:id="@+id/ffwd"
+        <ImageButton
+            android:id="@+id/ffwd"
             style="@android:style/MediaButton.Ffwd"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/description" />
 
-        <ImageButton android:id="@+id/next"
+        <ImageButton
+            android:id="@+id/next"
             style="@android:style/MediaButton.Next"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/description" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,6 +59,7 @@
             android:textStyle="bold"
             android:paddingTop="4dip"
             android:paddingLeft="4dip"
+            android:textColor="#fff"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,13 +69,14 @@
             android:id="@+id/mediacontroller_progress"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dip"
-            android:layout_weight="1"
-            android:layout_height="32dip" />
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
         <TextView android:id="@+id/time"
             android:textSize="14sp"
             android:textStyle="bold"
             android:paddingTop="4dip"
+            android:textColor="#fff"
             android:paddingRight="4dip"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
@@ -71,15 +87,16 @@
             android:layout_marginTop="-7dp"
             android:paddingTop="4dip"
             android:paddingBottom="4dip"
-          android:src="@drawable/fullscren"
             android:paddingLeft="10dip"
             android:paddingRight="4dip"
             android:layout_gravity="top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:contentDescription="@string/description" />
+            android:contentDescription="@string/description"
+            />
 
     </LinearLayout>
+
 
 </LinearLayout>

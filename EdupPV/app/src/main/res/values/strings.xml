@@ -62,5 +62,10 @@ for a sua identificação, maior é o seu calibre. A identificação neste dispo
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_reproduzir_video">Reprodução Video</string>
+    <string name="title_activity_play_video">PlayVideo</string>
+    <string name="title_activity_video_play">VideoPlay</string>
+    <string name="title_activity_tela_teste">TelaTeste</string>
+    <string name="title_activity_video_manuseio_jelco_scapl">VideoManuseioJelcoScapl</string>
 
 </resources>

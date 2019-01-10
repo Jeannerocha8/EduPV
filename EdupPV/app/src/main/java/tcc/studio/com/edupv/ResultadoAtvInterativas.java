@@ -87,7 +87,7 @@ public class ResultadoAtvInterativas extends Fragment {
 
                 break;
         }
-
+        Pontuacao.pontuacao =0;
         return v;
     }
 }

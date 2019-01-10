@@ -9,6 +9,7 @@
     android:background="#fff">
 
     <LinearLayout
+        android:id="@+id/layoutatvcirurgia"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -55,6 +56,7 @@
     </LinearLayout>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardjelcoverde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|left"
@@ -63,15 +65,15 @@
         cardCornerRadius="1dp">
         <ImageView
             android:id="@+id/imgjelcoverde"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
+            android:layout_width="110dp"
+            android:layout_height="140dp"
 
             android:src="@drawable/img_jelco_verde"
             />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/carCinza"
+        android:id="@+id/cardjelcorosa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|center_horizontal"
@@ -80,13 +82,14 @@
         cardCornerRadius="1dp">
         <ImageView
             android:id="@+id/imgjelcorosa"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
+            android:layout_width="110dp"
+            android:layout_height="140dp"
             android:src="@drawable/img_jelco_rosa" />
     </android.support.v7.widget.CardView>
 
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardlaranja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
@@ -96,8 +99,8 @@
 
         <ImageView
             android:id="@+id/imgjelcolaranja"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
+            android:layout_width="110dp"
+            android:layout_height="140dp"
 
             android:src="@drawable/img_jelco_laranja"/>
     </android.support.v7.widget.CardView>

@@ -45,6 +45,13 @@ public class atividadeCirurgia extends Fragment {
 
         //permitindo receber imagem
         v.findViewById(R.id.layoutbb).setOnDragListener(new MyOnDragListener(1));
+        v.findViewById(R.id.imgjelcoverde).setOnDragListener(new MyOnDragListener(2));
+        v.findViewById(R.id.imgjelcorosa).setOnDragListener(new MyOnDragListener(3));
+        v.findViewById(R.id.imgjelcolaranja).setOnDragListener(new MyOnDragListener(4));
+        v.findViewById(R.id.layoutatvcirurgia).setOnDragListener(new MyOnDragListener(5));
+        v.findViewById(R.id.cardjelcoverde).setOnDragListener(new MyOnDragListener(6));
+        v.findViewById(R.id.cardjelcorosa).setOnDragListener(new MyOnDragListener(7));
+        v.findViewById(R.id.cardlaranja).setOnDragListener(new MyOnDragListener(8));
 
         Button proximo = (Button) v.findViewById(R.id.buttonProxC);
         Button anterior = (Button) v.findViewById(R.id.buttonAntC);
@@ -112,7 +119,9 @@ public class atividadeCirurgia extends Fragment {
                     {
                         return (true);
                     }else{
+
                         return (false);
+
                     }
 
                 case DragEvent.ACTION_DRAG_ENTERED:
@@ -176,9 +185,8 @@ public class atividadeCirurgia extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
 
-                        getFragmentManager().beginTransaction()
-                                .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
-                                .commit();
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
 
                     }else if(view.getId()==R.id.imgjelcorosa && num==1) {
                         //imprimindo mensagem
@@ -196,15 +204,12 @@ public class atividadeCirurgia extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
 
-                        getFragmentManager().beginTransaction()
-                                .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
-                                .commit();
-
-                    }else
-                    {
-                        alerta.setTitle("ERRO");
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
+                    }else {
+                        alerta.setTitle("Opção Inválida");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("Contate o desenvolvedor do sistema")
+                        alerta.setMessage("Por favor, arraste o jelco até o procedimento cirurgico")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -214,12 +219,14 @@ public class atividadeCirurgia extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
+
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
                     }
                     break;
 
                 case DragEvent.ACTION_DRAG_ENDED:
                     Log.i("Script", num + " - ACTION_DRAG_ENDED");
-
                     break;
             }
             return true;

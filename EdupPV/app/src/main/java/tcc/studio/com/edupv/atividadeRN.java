@@ -36,20 +36,25 @@ public class atividadeRN extends Fragment {
 
         // alterado titulo da pagina
         getActivity().setTitle("Atividade RN");
+
         //evento de click longo nas imagens
-
-
         v.findViewById(R.id.imgjelcoamarelo).setOnLongClickListener(new MyOnLongClickListener());
         v.findViewById(R.id.imgjelcoazul).setOnLongClickListener(new MyOnLongClickListener());
         v.findViewById(R.id.imgjelcocinza).setOnLongClickListener(new MyOnLongClickListener());
 
-
         //permitindo receber imagem
         v.findViewById(R.id.layoutbb).setOnDragListener(new MyOnDragListener(1));
+        v.findViewById(R.id.imgjelcoamarelo).setOnDragListener(new MyOnDragListener(2));
+        v.findViewById(R.id.imgjelcoazul).setOnDragListener(new MyOnDragListener(3));
+        v.findViewById(R.id.imgjelcocinza).setOnDragListener(new MyOnDragListener(4));
+        v.findViewById(R.id.layoutatvrn).setOnDragListener(new MyOnDragListener(5));
+        v.findViewById(R.id.cardjelcoamarelo).setOnDragListener(new MyOnDragListener(6));
+        v.findViewById(R.id.cardjelcocinza).setOnDragListener(new MyOnDragListener(7));
+        v.findViewById(R.id.cardjelcoazul).setOnDragListener(new MyOnDragListener(8));
 
+        //instanciando botoes
         Button proximo = (Button) v.findViewById(R.id.buttonProx);
         Button anterior = (Button) v.findViewById(R.id.buttonAnt);
-
 
         proximo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,11 +66,11 @@ public class atividadeRN extends Fragment {
             }
         });
 
-
         anterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               removerView();
+
                 getFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, new Atividade()).addToBackStack(null)
                         .commit();
@@ -104,9 +109,8 @@ public class atividadeRN extends Fragment {
         public boolean onDrag(View v, DragEvent event) {
             int action = event.getAction();
             final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
-
+            View view = (View) event.getLocalState();
             switch (action) {
-
                 case DragEvent.ACTION_DRAG_STARTED:
                     Log.i("Script", num + " - ACTION_DRAG_STARTED");
                     if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN))
@@ -114,25 +118,18 @@ public class atividadeRN extends Fragment {
                         return (true);
                     }else{
                         return (false);
-
                     }
-
                 case DragEvent.ACTION_DRAG_ENTERED:
                     Log.i("Script", num + " - ACTION_DRAG_ENTERED");
                     break;
-
                 case DragEvent.ACTION_DRAG_LOCATION:
                     Log.i("Script", num + " - ACTION_DRAG_LOCATION");
                     break;
-
                 case DragEvent.ACTION_DRAG_EXITED:
                     Log.i("Script", num + " - ACTION_DRAG_EXITED");
                     break;
-
                 case DragEvent.ACTION_DROP:
-
                     Log.i("Script", num + " - ACTION_DROP");
-                    View view = (View) event.getLocalState();
 
                     //verificando layout e imagem
                     if(view.getId()==R.id.imgjelcoamarelo && num==1){
@@ -161,7 +158,6 @@ public class atividadeRN extends Fragment {
                                alertDialog.show();
                     }else if(view.getId()==R.id.imgjelcocinza && num==1)
                     {
-
                         //imprimindo mensagem
                         alerta.setTitle("Que pena, você errou");
                         alerta.setIcon(R.drawable.errado);
@@ -178,10 +174,8 @@ public class atividadeRN extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
 
-
-                        getFragmentManager().beginTransaction()
-                                .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
-                                .commit();
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
 
                     }else if(view.getId()==R.id.imgjelcoazul && num==1) {
                          //imprimindo mensagem
@@ -198,18 +192,13 @@ public class atividadeRN extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
 
-                        getFragmentManager().beginTransaction()
-                                .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
-                                .commit();
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
 
-                    }else if((view.getId()==R.id.imgjelcoazul != (num== 0)) ||
-                            (view.getId()==R.id.imgjelcoazul != (num==0)) ||
-                            (view.getId()==R.id.imgjelcocinza != (num==0)) || (view.getId()==R.id.imgjelcocinza != (num==0)) ||
-                            (view.getId()==R.id.imgjelcoamarelo != (num==0))  ||(view.getId()==R.id.imgjelcoamarelo != (num==0)) ) {
-                        //imprimindo mensagem
+                    }else{
                         alerta.setTitle("Opção Inválida");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("Por favor, arraste o jelco até a imagem do recém nascido")
+                        alerta .setMessage("Por favor, arraste o jelco até o bebe")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -220,17 +209,13 @@ public class atividadeRN extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
 
-                        getFragmentManager().beginTransaction()
-                                .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
-                                .commit();
-
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
                     }
-
                     break;
 
                 case DragEvent.ACTION_DRAG_ENDED:
                     Log.i("Script", num + " - ACTION_DRAG_ENDED");
-
                     break;
             }
             return true;
