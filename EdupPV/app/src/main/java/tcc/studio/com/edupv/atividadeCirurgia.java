@@ -52,7 +52,7 @@ public class atividadeCirurgia extends Fragment {
         v.findViewById(R.id.cardjelcoverde).setOnDragListener(new MyOnDragListener(6));
         v.findViewById(R.id.cardjelcorosa).setOnDragListener(new MyOnDragListener(7));
         v.findViewById(R.id.cardlaranja).setOnDragListener(new MyOnDragListener(8));
-
+        v.findViewById(R.id.atvcirurgia).setOnDragListener(new MyOnDragListener(9));
         Button proximo = (Button) v.findViewById(R.id.buttonProxC);
         Button anterior = (Button) v.findViewById(R.id.buttonAntC);
 
@@ -61,7 +61,7 @@ public class atividadeCirurgia extends Fragment {
             public void onClick(View v) {
 
                getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new ResultadoAtvInterativas()).addToBackStack(null)
+                        .replace(R.id.frame_container, new atividadeScalp()).addToBackStack(null)
                         .commit();
             }
         });

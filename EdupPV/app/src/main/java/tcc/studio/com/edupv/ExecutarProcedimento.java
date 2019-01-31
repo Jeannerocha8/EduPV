@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -28,6 +30,7 @@ public class ExecutarProcedimento extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_executar_procedimento, container, false);
 
+        setHasOptionsMenu(true);
         getActivity().setTitle("Execução do procedimento");
 
         Button anterior = (Button) v.findViewById(R.id.btnAnteriorEx);
@@ -62,5 +65,11 @@ public class ExecutarProcedimento extends Fragment {
         if (layout != null) {
             layout.removeAllViews();
         }
+    }
+
+    @Override
+    public void onCreateOptionsMenu(
+            Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_fragment, menu);
     }
 }

@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -38,7 +39,10 @@ public class ResultadoQuiz extends Fragment {
 
         int p = Pontuacao.pontuacao;
 
-        int qtd = Pontuacao.qtdQuest;
+        int qtd = 15;
+
+        float porcentagem = (p/qtd)*100;
+
         TextView t=(TextView)v.findViewById(R.id.textResult);
         Button inicio  = (Button)  v.findViewById(R.id.btninicio);
 
@@ -59,34 +63,89 @@ public class ResultadoQuiz extends Fragment {
         LayerDrawable stars = (LayerDrawable) bar.getProgressDrawable();
         stars.getDrawable(0).setColorFilter(Color.rgb(255, 219, 88), PorterDuff.Mode.SRC_ATOP);
 
+            t.setText("Você acertou " + p + " de " + qtd +" questões");
 
         switch (p)
         {
-            case 0: t.setText("Que pena, você não acertou nenhuma questão");
-                bar.setNumStars(0);
-                stars.getDrawable(0).setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+            case 0:
 
                 break;
-            case 1: t.setText("Você acertou " + p + " questão de  " + qtd );
-                bar.setNumStars( 1);
+            case 1:
+                bar.setNumStars( 2);
                 stars.getDrawable(1).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
                 break;
-            case 2: t.setText("Você acertou " + p + " questões "+ qtd);
+            case 2:
                 bar.setNumStars(2);
                 stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
             break;
-            case 3: t.setText("Você acertou " + p + " questões "+ qtd);
+            case 3:
+                bar.setNumStars(2);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 4:
+                bar.setNumStars(2);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 5:
+                bar.setNumStars(2);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 6:
+                bar.setNumStars(2);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 7:
+                bar.setNumStars(2);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 8:
                 bar.setNumStars(3);
                 stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
                 break;
-            case 4: t.setText("Você acertou " + p + " questões "+ qtd);
-                bar.setNumStars(4);
+            case 9:
+                bar.setNumStars(3);
                 stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
                 break;
+            case 10:
+                bar.setNumStars(3);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 11:
+                bar.setNumStars(3);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 12:
+                bar.setNumStars(3);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 13:
+                bar.setNumStars(5);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 14:
+                bar.setNumStars(5);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+            case 15:
+                bar.setNumStars(5);
+                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+
+                break;
+
         }
 
         return v;

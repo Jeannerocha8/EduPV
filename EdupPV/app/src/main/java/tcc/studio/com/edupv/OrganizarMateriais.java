@@ -1,12 +1,19 @@
 package tcc.studio.com.edupv;
 
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -29,6 +36,8 @@ public class OrganizarMateriais extends Fragment {
                              Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.fragment_organizar_materiais, container, false);
         // Inflate the layout for this fragment
+
+        setHasOptionsMenu(true);
 
         getActivity().setTitle("Organização do Material");
 
@@ -115,4 +124,11 @@ public class OrganizarMateriais extends Fragment {
         return fator;
     }
 
+
+
+    @Override
+    public void onCreateOptionsMenu(
+            Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_fragment, menu);
+    }
 }

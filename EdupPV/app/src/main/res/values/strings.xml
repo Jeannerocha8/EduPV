@@ -18,8 +18,7 @@
         pescoço e couro cabeludo. A escolha do local deve ser feita levando em consideração
         alguns aspectos, tais como: finalidade do procedimento, idade e aspectos físicos
         do paciente, medicamento a ser infundido, calibre do cateter indicado ao procedimento,
-        e espessura das veias.
-            A seguir é demonstrado a anatomia das mãos e do ante braço, locais geralmente
+        e espessura das veias.A seguir é demonstrado a anatomia das mãos e do ante braço, locais geralmente
         puncionados em adultos!
     </string>
 
@@ -67,5 +66,10 @@ for a sua identificação, maior é o seu calibre. A identificação neste dispo
     <string name="title_activity_video_play">VideoPlay</string>
     <string name="title_activity_tela_teste">TelaTeste</string>
     <string name="title_activity_video_manuseio_jelco_scapl">VideoManuseioJelcoScapl</string>
-
+    <string name="sobrenos">Aplicativo desenvolvido no Instituto Federal do Norte de Minas Gerais campus Januária como
+    trabalho de conclusão do curso Tecnologia em Análise e Desevolvimento de Sistemas. </string>
+    <string name="desenvolvido">Desenvolvido por: Jeanne Rocha de Almeida</string>
+    <string name="contato">Contato: jeannerocha8@gmail.com</string>
+    <string name="felipe">Orientado por: Professor Mestre Felipe Mota</string>
+    <string name="karine">Co-Orientado por: Professora Mestra Karine Fróes</string>
 </resources>

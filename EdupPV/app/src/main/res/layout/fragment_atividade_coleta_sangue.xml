@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".atividadeColetaSangue"
+    android:id="@+id/atvcoletasangue">
+
+    <!-- TODO: Update blank fragment layout -->
+  <android.support.v7.widget.CardView
+      android:id="@+id/enunciado"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="1dp"
+      android:elevation="5dp">
+      <TextView
+          android:layout_margin="4dp"
+          android:layout_marginTop="8dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Selecione os materiais necessários para coleta de sangue e arraste até a bandeja"
+          android:textColor="#000"
+          android:gravity="center"/>
+  </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="1dp"
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enunciado"
+        android:id="@+id/cardbandeija">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="140dp"
+            android:id="@+id/layoutBandeja"
+            android:orientation="horizontal"
+            android:background="@drawable/bandeja2">
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear1"
+        android:orientation="horizontal"
+        android:layout_below="@id/cardbandeija"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardluvaa"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutLuvaa">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgLuvaa"
+                    android:src="@drawable/img_luvas"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardjelcolaranjaa"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutJelcoLaranjaa">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgjelcolaranjaa"
+                    android:src="@drawable/img_jelco_laranja"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardScalpVerdeee"
+            android:layout_toRightOf="@id/cardjelcolaranja"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutScalpVerdeee">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgscalpverdeee"
+                    android:src="@drawable/img_scalps_verde"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutequipo"
+                >
+                <ImageView
+                    android:id="@+id/imgequipo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/img_equipo"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:id="@+id/linear2"
+        android:orientation="horizontal"
+        android:layout_below="@id/linear1"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardalgodao"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutalgodao">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgalgodao"
+                    android:src="@drawable/img_algodao"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardjelcoamarelo"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutjelcoamarelo">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imjelcoamarelo"
+                    android:src="@drawable/img_jelco_amarelo"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardseringa"
+            android:layout_toRightOf="@id/cardjelcolaranja"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutSeringa">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgseringa"
+                    android:src="@drawable/img_seringa"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/cardtubo">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutTubo"
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgTubo"
+                    android:src="@drawable/img_tuboensaio"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear3"
+        android:orientation="horizontal"
+        android:layout_below="@id/linear2"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardGarrote"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutGarrote">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgGarrote"
+                    android:src="@drawable/img_garrote"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardAlcool"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutAlcool">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgAlcool"
+                    android:src="@drawable/img_alcool"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/carddispositivo"
+            android:layout_toRightOf="@id/cardjelcolaranja"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutDispositivo"
+               >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgdispositivo"
+                    android:src="@drawable/img_dispconectar" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardScalpAzul"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutScalpAzul"
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgscalpazul"
+                    android:src="@drawable/img_scalps_azul"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAnteriocoleta"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:textColor="#fff"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:id="@+id/proximocoleta"
+            android:background="@color/colorPrimary"
+            android:text="Próximo"
+            android:textColor="#fff"/>
+    </FrameLayout>
+
+</RelativeLayout>

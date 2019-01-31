@@ -50,7 +50,6 @@ public class TelaPrincipal extends AppCompatActivity
         }
 
 
-
         //Pega a intent de outra activity
         Intent it = getIntent();
 

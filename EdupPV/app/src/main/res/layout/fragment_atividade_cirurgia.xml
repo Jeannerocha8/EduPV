@@ -1,128 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".atividadeCirurgia"
+    android:id="@+id/atvcirurgia"
     android:background="#fff">
 
     <LinearLayout
         android:id="@+id/layoutatvcirurgia"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="230dp"
         android:orientation="vertical">
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="1dp"
-            app:cardElevation="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-           >
+            app:cardCornerRadius="1dp"
+            app:cardElevation="5dp">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:textColor="#000"
-                android:text="Selecione o Jelco recomendado para utilização em cirurgias e arraste até a figura" />
+                android:text="Selecione o Jelco recomendado para utilização em cirurgias e arraste até a figura"
+                android:textColor="#000" />
 
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
+            android:id="@+id/cardcirurgia"
+            cardCornerRadius="1dp"
             android:layout_width="match_parent"
-            android:layout_height="182dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:elevation="5dp"
-            cardCornerRadius="1dp">
+            android:elevation="5dp">
 
             <LinearLayout
                 android:id="@+id/layoutbb"
                 android:layout_width="match_parent"
-                android:layout_height="204dp"
+                android:layout_height="162dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="156dp"
+                    android:layout_width="275dp"
+                    android:layout_height="131dp"
                     android:layout_gravity="center"
                     android:src="@drawable/cirurgia" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardjelcoverde"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|left"
-        android:layout_marginTop="65dp"
-        android:elevation="5dp"
-        cardCornerRadius="1dp">
-        <ImageView
-            android:id="@+id/imgjelcoverde"
-            android:layout_width="110dp"
-            android:layout_height="140dp"
-
-            android:src="@drawable/img_jelco_verde"
-            />
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardjelcorosa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|center_horizontal"
-        android:layout_marginTop="65dp"
-        android:elevation="5dp"
-        cardCornerRadius="1dp">
-        <ImageView
-            android:id="@+id/imgjelcorosa"
-            android:layout_width="110dp"
-            android:layout_height="140dp"
-            android:src="@drawable/img_jelco_rosa" />
-    </android.support.v7.widget.CardView>
+    <FrameLayout
+        android:layout_below="@id/layoutatvcirurgia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardjelcoverde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="5dp"
+            cardCornerRadius="1dp">
+            <ImageView
+                android:id="@+id/imgjelcoverde"
+                android:layout_width="100dp"
+                android:layout_height="140dp"
+                android:src="@drawable/img_jelco_verde"
+                />
+        </android.support.v7.widget.CardView>
 
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardlaranja"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:layout_gravity="center|right"
-        android:elevation="5dp"
-        cardCornerRadius="1dp">
-
-        <ImageView
-            android:id="@+id/imgjelcolaranja"
-            android:layout_width="110dp"
-            android:layout_height="140dp"
-
-            android:src="@drawable/img_jelco_laranja"/>
-    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardjelcorosa"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:elevation="5dp"
+            cardCornerRadius="1dp">
+            <ImageView
+                android:id="@+id/imgjelcorosa"
+                android:layout_width="100dp"
+                android:layout_height="140dp"
+                android:src="@drawable/img_jelco_rosa" />
+        </android.support.v7.widget.CardView>
 
 
-    <Button
-        android:id="@+id/buttonAntC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/colorPrimary"
-        android:textColor="#fff"
-        android:text="Anterior" />
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardlaranja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="right"
+            android:elevation="5dp"
+            cardCornerRadius="1dp">
 
-    <Button
-        android:id="@+id/buttonProxC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:background="@color/colorPrimary"
-        android:textColor="#fff"
-        android:text="Finalizar" />
+            <ImageView
+                android:id="@+id/imgjelcolaranja"
+                android:layout_width="100dp"
+                android:layout_height="140dp"
+                android:src="@drawable/img_jelco_laranja"/>
+        </android.support.v7.widget.CardView>
 
 
-</FrameLayout>
+    </FrameLayout>
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true">
+      <Button
+          android:id="@+id/buttonAntC"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="bottom"
+          android:background="@color/colorPrimary"
+          android:textColor="#fff"
+          android:text="Anterior" />
+
+      <Button
+          android:id="@+id/buttonProxC"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="bottom|right"
+          android:background="@color/colorPrimary"
+          android:textColor="#fff"
+          android:text="Próximo" />
+  </FrameLayout>
+
+
+
+</RelativeLayout>

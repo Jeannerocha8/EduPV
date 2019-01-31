@@ -1,72 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/TelaInicialFragment"
     tools:context=".TelaInicialFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-
     <ImageView
         android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/banner"
+        />
+
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="138dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo2" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_centerHorizontal="true">
 
-        <LinearLayout
-            android:layout_width="173dp"
+        <Button
+            android:id="@+id/btnEstudo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:orientation="vertical"
-
-          >
-
-            <Button
-                android:id="@+id/btnEstudo"
-                android:layout_width="match_parent"
-                android:layout_height="153dp"
-                android:layout_marginBottom="4dp"
-                android:layout_gravity="left"
-                android:background="@drawable/iconeestudo" />
-
-            <Button
-                android:id="@+id/btnAtividade"
-                android:layout_width="match_parent"
-                android:layout_height="145dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/icatividade" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="175dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/btnestudo"/>
+        <Button
+            android:id="@+id/btnVideo"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:layout_gravity="right"
-            android:orientation="vertical"
-
-            >
-
-            <Button
-                android:id="@+id/btnVideo"
-                android:layout_width="match_parent"
-                android:layout_height="153dp"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/icvideo" />
-
-            <Button
-                android:id="@+id/btnSobre"
-                android:layout_width="match_parent"
-                android:layout_height="145dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/icsobre" />
-        </LinearLayout>
+            android:layout_toRightOf="@id/btnEstudo"
+            android:background="@drawable/btnvideos"/>
 
 
-</FrameLayout>
+
+        <Button
+            android:id="@+id/btnAtividade"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnEstudo"
+            android:background="@drawable/btnatividades"></Button>
+
+        <Button
+            android:id="@+id/btnSobre"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnVideo"
+            android:layout_toRightOf="@id/btnAtividade"
+            android:background="@drawable/btnsobrenos"/>
+    </RelativeLayout>
+
+</RelativeLayout>

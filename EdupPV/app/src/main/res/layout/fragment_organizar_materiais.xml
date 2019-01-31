@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,15 +14,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="464dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="8dp"
-        android:backgroundTintMode="add"
-        android:fadeScrollbars="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+       >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,17 +38,20 @@
 
                     <TextView
                         android:id="@+id/textView3"
-                        android:layout_width="match_parent"
+
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
                         android:text="@string/texto1Organizacaomaterial"
                         android:textColor="#fff" />
 
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        >
 
                         <ImageView
                             android:id="@+id/imgBandeja"
@@ -78,15 +75,14 @@
                         android:layout_height="32dp">
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:text="1. Bandeja" />
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="40dp"
                             android:layout_marginRight="30dp"
                             android:text="2. Garrote" />
@@ -120,15 +116,14 @@
                         android:layout_height="44dp">
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:text="3. Alcool 70%" />
 
                         <TextView
-                            android:layout_width="141dp"
-                            android:layout_height="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
                             android:layout_marginRight="30dp"
                             android:text="4. Algodão" />
@@ -162,15 +157,14 @@
                         android:layout_height="44dp">
 
                         <TextView
-                            android:layout_width="122dp"
-                            android:layout_height="58dp"
-                            android:layout_marginLeft="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
                             android:text="5. Cateter venoso apropriado" />
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
                             android:layout_marginRight="30dp"
                             android:text="6. Esparadrapo" />
@@ -240,7 +234,7 @@
                             android:id="@+id/imgTubo"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:layout_marginRight="15dp"
+                            android:layout_marginRight="10dp"
                             android:src="@drawable/img_tuboensaio" />
 
                         <ImageView
@@ -261,7 +255,6 @@
                             android:layout_width="140dp"
                             android:layout_height="50dp"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="30dp"
                             android:text="8. tubos de coleta de sangue adequado ao exame" />
 
                         <TextView
@@ -345,34 +338,44 @@
 
             </android.support.v7.widget.CardView>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#fff"/>
         </LinearLayout>
 
     </ScrollView>
 
 
-    <Button
-        android:id="@+id/btnAnterior"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
-        android:text="Anterior"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_alignBottom="@id/scrollView2"
+        android:background="#fff"
+        >
+        <Button
+            android:id="@+id/btnAnterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btnProx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
-        android:text="Proximo"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/btnProx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/colorPrimary"
+            android:layout_gravity="right"
+            android:text="Proximo"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </FrameLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

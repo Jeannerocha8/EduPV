@@ -5,6 +5,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -33,6 +35,7 @@ public class Higienizacao extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_higienizacao, container, false);
 
+        setHasOptionsMenu(true);
         getActivity().setTitle("Higienização");
 
        /*ImageView gif = (ImageView) v.findViewById(R.id.imgGif);
@@ -82,5 +85,12 @@ public class Higienizacao extends Fragment {
         if (layout != null) {
             layout.removeAllViews();
         }
+    }
+
+
+    @Override
+    public void onCreateOptionsMenu(
+            Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_fragment, menu);
     }
 }

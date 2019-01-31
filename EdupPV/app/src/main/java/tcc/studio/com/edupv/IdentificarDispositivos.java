@@ -4,6 +4,8 @@ package tcc.studio.com.edupv;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -28,6 +30,7 @@ public class IdentificarDispositivos extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_identificar_dispositivos, container, false);
 
+        setHasOptionsMenu(true);
         Button anterio = (Button) v.findViewById(R.id.btnAnteriorIDV);
         Button prox = (Button) v.findViewById(R.id.btnProxIDV);
 
@@ -60,5 +63,12 @@ public class IdentificarDispositivos extends Fragment {
         if (layout != null) {
             layout.removeAllViews();
         }
+    }
+
+
+    @Override
+    public void onCreateOptionsMenu(
+            Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_fragment, menu);
     }
 }

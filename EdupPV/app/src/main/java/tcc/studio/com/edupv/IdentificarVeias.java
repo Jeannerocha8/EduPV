@@ -4,6 +4,8 @@ package tcc.studio.com.edupv;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -27,6 +29,7 @@ public class IdentificarVeias extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_identificar_veias, container, false);
 
+        setHasOptionsMenu(true);
         getActivity().setTitle("Identificar Veias");
 
         Button anterio = (Button) v.findViewById(R.id.btnAntveia);
@@ -60,5 +63,10 @@ public class IdentificarVeias extends Fragment {
         }
     }
 
+    @Override
+    public void onCreateOptionsMenu(
+            Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_fragment, menu);
+    }
 
 }

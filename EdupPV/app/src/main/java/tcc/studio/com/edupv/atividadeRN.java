@@ -51,6 +51,7 @@ public class atividadeRN extends Fragment {
         v.findViewById(R.id.cardjelcoamarelo).setOnDragListener(new MyOnDragListener(6));
         v.findViewById(R.id.cardjelcocinza).setOnDragListener(new MyOnDragListener(7));
         v.findViewById(R.id.cardjelcoazul).setOnDragListener(new MyOnDragListener(8));
+        v.findViewById(R.id.layoutatvirn).setOnDragListener(new MyOnDragListener(9));
 
         //instanciando botoes
         Button proximo = (Button) v.findViewById(R.id.buttonProx);

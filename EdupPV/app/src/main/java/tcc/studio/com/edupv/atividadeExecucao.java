@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipDescription;
 import android.content.DialogInterface;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -13,78 +12,75 @@ import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class atividadeJelco extends Fragment {
+public class atividadeExecucao extends Fragment {
 
 
-    public atividadeJelco() {
+    public atividadeExecucao() {
         // Required empty public constructor
-
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
-        View v =inflater.inflate(R.layout.fragment_atividade_jelco, container, false);
+        View v = inflater.inflate(R.layout.fragment_atividade_execucao, container, false);
 
-        //alteando titulo da tela
-        getActivity().setTitle("Atividade Jelco");
+        //alterando titulo do fragment
+        getActivity().setTitle("Atividade Execução");
 
         //habilitando movimento das imagens
-        v.findViewById(R.id.txt14).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.txt18).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.txt20).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.txt16).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.txt24).setOnLongClickListener(new MyOnLongClickListener());
+        v.findViewById(R.id.txt1).setOnLongClickListener(new atividadeExecucao.MyOnLongClickListener());
+        v.findViewById(R.id.txt2).setOnLongClickListener(new atividadeExecucao.MyOnLongClickListener());
+        v.findViewById(R.id.txt3).setOnLongClickListener(new atividadeExecucao.MyOnLongClickListener());
+        v.findViewById(R.id.txt4).setOnLongClickListener(new atividadeExecucao.MyOnLongClickListener());
+        v.findViewById(R.id.txt5).setOnLongClickListener(new atividadeExecucao.MyOnLongClickListener());
+        v.findViewById(R.id.txt6).setOnLongClickListener(new atividadeExecucao.MyOnLongClickListener());
 
         //habilitando recebimento das imagens
-        v.findViewById(R.id.layoutJelcoLaranja).setOnDragListener(new MyOnDragListener(1));
-        v.findViewById(R.id.layoutJelcoRosa).setOnDragListener(new MyOnDragListener(2));
-        v.findViewById(R.id.layoutJelcoVerde).setOnDragListener(new MyOnDragListener(3));
-        v.findViewById(R.id.layoutJelcoCinza).setOnDragListener(new MyOnDragListener(4));
-        v.findViewById(R.id.layoutJelcoAmarelo).setOnDragListener(new MyOnDragListener(5));
-        v.findViewById(R.id.layoutatvjelco).setOnDragListener(new MyOnDragListener(6));
-        v.findViewById(R.id.card14).setOnDragListener(new MyOnDragListener(7));
-        v.findViewById(R.id.card16).setOnDragListener(new MyOnDragListener(8));
-        v.findViewById(R.id.card18).setOnDragListener(new MyOnDragListener(9));
-        v.findViewById(R.id.card20).setOnDragListener(new MyOnDragListener(10));
-        v.findViewById(R.id.card24).setOnDragListener(new MyOnDragListener(11));
-
-        //localizando botão
-        Button anterio = (Button) v.findViewById(R.id.buttonAnt);
-        Button proximo = (Button) v.findViewById(R.id.buttonProx);
+        v.findViewById(R.id.layoutEtapa1).setOnDragListener(new atividadeExecucao.MyOnDragListener(1));
+        v.findViewById(R.id.layoutEtapa2).setOnDragListener(new atividadeExecucao.MyOnDragListener(2));
+        v.findViewById(R.id.layoutEtapa3).setOnDragListener(new atividadeExecucao.MyOnDragListener(3));
+        v.findViewById(R.id.layoutEtapa4).setOnDragListener(new atividadeExecucao.MyOnDragListener(4));
+        v.findViewById(R.id.layoutEtapa5).setOnDragListener(new atividadeExecucao.MyOnDragListener(5));
+        v.findViewById(R.id.layoutEtapa6).setOnDragListener(new atividadeExecucao.MyOnDragListener(6));
+        v.findViewById(R.id.cardtxt1).setOnDragListener(new atividadeExecucao.MyOnDragListener(7));
+        v.findViewById(R.id.cardtxt2).setOnDragListener(new atividadeExecucao.MyOnDragListener(8));
+        v.findViewById(R.id.cardtxt3).setOnDragListener(new atividadeExecucao.MyOnDragListener(9));
+        v.findViewById(R.id.cardtxt4).setOnDragListener(new atividadeExecucao.MyOnDragListener(10));
+        v.findViewById(R.id.cardtxt5).setOnDragListener(new atividadeExecucao.MyOnDragListener(11));
+        v.findViewById(R.id.cardtxt6).setOnDragListener(new atividadeExecucao.MyOnDragListener(12));
+        v.findViewById(R.id.layoutatvexecucao).setOnDragListener(new atividadeExecucao.MyOnDragListener(13));
 
         //evento de click no botão
-        proximo.setOnClickListener(new View.OnClickListener() {
+        v.findViewById(R.id.anterior).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
-                        .commit();
+                        .replace(R.id.frame_container, new atividadeScalp())
+                        .addToBackStack(null).commit();
             }
         });
 
-        anterio.setOnClickListener(new View.OnClickListener() {
+        v.findViewById(R.id.proximo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
-                        .commit();
+                        .replace(R.id.frame_container, new atividadeColetaSangue())
+                        .addToBackStack(null).commit();
             }
         });
+
         return v;
     }
+
 
     private void removerView() {
         FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.frame_container);
@@ -100,18 +96,19 @@ public class atividadeJelco extends Fragment {
             View.DragShadowBuilder sb = new View.DragShadowBuilder(v);
             v.startDrag(data, sb, v, 0);
             v.setVisibility(View.INVISIBLE);
+
             return(true);
         }
     }
 
+
     class MyOnDragListener implements View.OnDragListener {
         private int num;
-        final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
 
         public MyOnDragListener(int num){
             super();
             this.num = num;
-            }
+        }
 
         @Override
         public boolean onDrag(View v, DragEvent event) {
@@ -119,61 +116,45 @@ public class atividadeJelco extends Fragment {
             final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
 
             switch (action) {
+
                 case DragEvent.ACTION_DRAG_STARTED:
                     Log.i("Script", num + " - ACTION_DRAG_STARTED");
-                    if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
+                    if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN))
+                    {
                         return (true);
                     }else{
+
                         return (false);
+
                     }
 
                 case DragEvent.ACTION_DRAG_ENTERED:
                     Log.i("Script", num + " - ACTION_DRAG_ENTERED");
                     break;
+
                 case DragEvent.ACTION_DRAG_LOCATION:
                     Log.i("Script", num + " - ACTION_DRAG_LOCATION");
                     break;
+
                 case DragEvent.ACTION_DRAG_EXITED:
                     Log.i("Script", num + " - ACTION_DRAG_EXITED");
                     break;
+
                 case DragEvent.ACTION_DROP:
 
                     Log.i("Script", num + " - ACTION_DROP");
                     View view = (View) event.getLocalState();
 
-                    if(view.getId()==R.id.txt14 && num==1){
-
+                    //verificando layout e imagem
+                    if(view.getId()==R.id.txt1 && num==1){
                         Pontuacao.pontuacao= Pontuacao.pontuacao+1;
 
                         //adicionando imagem ao layout
-                        ViewGroup ow = (ViewGroup) view.getParent();
-                        ow.removeView(view);
-                        LinearLayout cont = (LinearLayout) v;
-                        cont.addView(view);
-                        cont.setBackgroundColor(Color.parseColor("#67ae72"));
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
 
-
-                        //Imprimindo mensagem com Alerta
-                        alerta.setTitle("Parabéns, você acertou");
-                        alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 14 possui a cor laranja, é indicado para ser utilizado em adultos e adolescentes durante cirurgias!")
-                                .setCancelable(true)
-                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                });
-                        AlertDialog alertDialog = alerta.create();
-                        alertDialog.show();
-
-                    }else if (view.getId()==R.id.txt18 && num==3)
-                    {
-                        //adicionando imagem ao layout
-                        ViewGroup ow = (ViewGroup) view.getParent();
-                        ow.removeView(view);
-                        LinearLayout cont = (LinearLayout) v;
-                        cont.setBackgroundColor(Color.parseColor("#67ae72"));
-                        cont.addView(view);
 
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
@@ -181,8 +162,7 @@ public class atividadeJelco extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 18 possui a cor verde, é indicado para ser utilizado em crianças, adultos e adolescentes para administrar sangue e " +
-                                "hemoderivados!")
+                        alerta .setMessage("")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -191,22 +171,21 @@ public class atividadeJelco extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else if (view.getId()==R.id.txt20 && num==2){
-
+                    }else if (view.getId()==R.id.txt2 && num==2){
                         //adicionando imagem ao layout
-                        ViewGroup ow = (ViewGroup) view.getParent();
-                        ow.removeView(view);
-                        LinearLayout cont = (LinearLayout) v;
-                        cont.addView(view);
-                        cont.setBackgroundColor(Color.parseColor("#67ae72"));
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
 
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 20 possui a cor rosa, este cateter é recomendado para a maioria das infusões venosas de sangue, para crianças " +
-                                "adultos e adolescentes!")
+                        alerta .setMessage("")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -215,21 +194,21 @@ public class atividadeJelco extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    } else if (view.getId()==R.id.txt16 && num==4){
-
+                    }else if (view.getId()==R.id.txt3 && num==3){
                         //adicionando imagem ao layout
-                        ViewGroup ow = (ViewGroup) view.getParent();
-                        ow.removeView(view);
-                        LinearLayout cont = (LinearLayout) v;
-                        cont.setBackgroundColor(Color.parseColor("#67ae72"));
-                        cont.addView(view);
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
 
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 16 possui a cor cinza, e assim como o jelco 14 é recomendado para ser utilizado durante processos cirurgicos")
+                        alerta .setMessage("")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -238,23 +217,21 @@ public class atividadeJelco extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-
-                    }else if (view.getId()==R.id.txt24 && num==5){
-
+                    }else if (view.getId()==R.id.txt4 && num==4){
                         //adicionando imagem ao layout
-                        ViewGroup ow = (ViewGroup) view.getParent();
-                        ow.removeView(view);
-                        LinearLayout cont = (LinearLayout) v;
-                        cont.setBackgroundColor(Color.parseColor("#67ae72"));
-                        cont.addView(view);
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
 
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 24 possui a cor amarela, este cateter é recomendado para infusões em recém nascidos, crianças, adolescentes e adultos " +
-                                "a infusão com este cateter deve ser lenta!")
+                        alerta .setMessage("")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -263,36 +240,73 @@ public class atividadeJelco extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else {
-                        //imprimindo mensagem
-                        alerta.setTitle("Que pena, você errou");
+                    }else if (view.getId()==R.id.txt5 && num==5){
+                        //adicionando imagem ao layout
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
+
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Parabéns, você acertou");
+                        alerta.setIcon(R.drawable.certo);
+                        alerta .setMessage("")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if (view.getId()==R.id.txt6 && num==6){
+                        //adicionando imagem ao layout
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
+
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Parabéns, você acertou");
+                        alerta.setIcon(R.drawable.certo);
+                        alerta .setMessage("")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else{
+
+                        view.setVisibility(View.VISIBLE);
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Que pena, você Errou");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("A numeração não corresponde ao jelco")
+                        alerta .setMessage("")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-
                                     }
                                 });
-
-                        //tornando a imagem visivel
-                        view.setVisibility(View.VISIBLE);
-
-
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }
-                    break;
 
                 case DragEvent.ACTION_DRAG_ENDED:
-
+                    Log.i("Script", num + " - ACTION_DRAG_ENDED");
                     break;
-                }
-
-
+            }
             return true;
         }}
 
-
-    }
+}

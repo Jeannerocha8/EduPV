@@ -3,34 +3,29 @@ package tcc.studio.com.edupv;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.res.ColorStateList;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.util.Collection;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
 
 import tcc.studio.com.edupv.BD.BD;
-
-import static android.content.Context.LOCATION_SERVICE;
-import static android.content.Context.MODE_PRIVATE;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,18 +33,16 @@ import static android.content.Context.MODE_PRIVATE;
 public class atividadeObjetiva extends Fragment {
     List<Questao> quesList;
     int score=0 ;
+    int proximo;
     int questaon=0;
     int qid=0;
+    boolean verificar;
     Questao currentQ;
     TextView txtQuestion, ponto, numquestao;
     RadioButton rd1, rd2, rd3, rd4, answer;
-    Button butNext;
+    Button butNext, btnResponder;
     RadioGroup grp;
     Fragment fragment;
-
-
-
-
 
     public atividadeObjetiva() {
         // Required empty public constructor
@@ -60,7 +53,6 @@ public class atividadeObjetiva extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_atividade_objetiva, container, false);
-
 
         //alterando titulo da Pagina
         getActivity().setTitle("Atividade Objetiva");
@@ -76,6 +68,7 @@ public class atividadeObjetiva extends Fragment {
         ponto.setText("Pontos: " + score);
         numquestao.setText("Questao" + questaon+"/ 2");
         butNext=(Button)v.findViewById(R.id.button1);
+        btnResponder =(Button) v.findViewById(R.id.btnresponder);
         grp = (RadioGroup) v.findViewById(R.id.radioGroup1);
 
 
@@ -87,30 +80,62 @@ public class atividadeObjetiva extends Fragment {
         //chamando metodo questão
         setQuestionView();
 
+
+        btnResponder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rd1.isChecked()||rd2.isChecked()||rd3.isChecked()||rd4.isChecked()){
+
+                    VerificarResposta();
+                    verificar = true;
+
+                } else{
+                    verificar = false;
+                    final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
+                    alerta.setTitle("Erro");
+                    alerta.setIcon(R.drawable.errado);
+                    alerta.setMessage("Por favor, selecione uma opção para continuar! ")
+                            .setCancelable(true)
+                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+                }
+            }
+        });
+
         //evento de click no botão proximo
         butNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                    if(rd1.isChecked()||rd2.isChecked()||rd3.isChecked()||rd4.isChecked()){
-
-                        VerificarResposta();
-
-                    } else{
-                        final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
-                        alerta.setTitle("Erro");
-                        alerta.setIcon(R.drawable.errado);
-                        alerta.setMessage("Por favor, selecione uma opção para continuar! ")
-                                .setCancelable(true)
-                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-
+                if(verificar==true){
+                    setQuestionView();
+                }else{
+                    final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
+                    alerta.setTitle("Erro");
+                    alerta.setIcon(R.drawable.errado);
+                    alerta.setMessage("Por favor, Responda a questão para continuar! ")
+                            .setCancelable(true)
+                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
                                     }
-                                });
-                        AlertDialog alertDialog = alerta.create();
-                        alertDialog.show();
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
                     }
+
+                if (qid < 15) {
+                    butNext.setText("Próximo");
+
+                } else {
+                    butNext.setText("Finalizar");
+                }
+
             }
         });
         return v;
@@ -124,11 +149,11 @@ public class atividadeObjetiva extends Fragment {
 
             //incrementando ponto e numero da questão
             score = score + 1;
+            qid = qid ++;
 
             //setando questao
             ponto.setText("Pontos: " + score);
         }
-
         MostrarSolucao();
     }
 
@@ -148,26 +173,9 @@ public class atividadeObjetiva extends Fragment {
             } else {
                 Toast.makeText(getActivity(), "Erro, contate o desenvolvedor do sistema", Toast.LENGTH_LONG);
             }
-
-            if (qid < 2) {
-                butNext.setText("Próximo");
-
-            } else {
-                butNext.setText("Finalizar");
-            }
-
         }
-
-        new CountDownTimer(1000, 1000) {
-            public void onTick(long millisUntilFinished) {
-
-            }
-
-            public void onFinish() {
-                setQuestionView();
-            }
-        }.start();
     }
+
 
     private void LimparOP(){
         grp.clearCheck();
@@ -177,10 +185,15 @@ public class atividadeObjetiva extends Fragment {
         rd4.setTextColor(Color.BLACK);
     }
 
+         //return (( Integer ) lista.get ( 0 )) .intValue () ;
+
     private void setQuestionView(){
         LimparOP();
+        verificar=false;
+        //Random rand = new Random();
 
-        if(qid<2){
+
+        if(qid<15){
             currentQ = quesList.get(qid);
             txtQuestion.setText(currentQ.getEnunciado());
             rd1.setText(currentQ.getOpc1());
@@ -189,7 +202,7 @@ public class atividadeObjetiva extends Fragment {
             rd4.setText(currentQ.getOpc4());
             qid++;
             questaon++;
-            numquestao.setText("Questao " + questaon+"/ 2");
+            numquestao.setText("Questao " + questaon+"/ 15");
         }else {
             Finalizar();
         }
@@ -197,7 +210,7 @@ public class atividadeObjetiva extends Fragment {
 
     private void Finalizar() {
         removerView();
-        Pontuacao.qtdQuest = 2;
+        Pontuacao.qtdQuest = 15;
         Pontuacao.pontuacao = score;
         butNext.setText("finalizar");
         getFragmentManager().

@@ -17,47 +17,46 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class atividadeJelco extends Fragment {
+public class atividadeScalp extends Fragment {
 
 
-    public atividadeJelco() {
+    public atividadeScalp() {
         // Required empty public constructor
-
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
-        View v =inflater.inflate(R.layout.fragment_atividade_jelco, container, false);
+        View v =inflater.inflate(R.layout.fragment_atividade_scalp, container, false);
 
         //alteando titulo da tela
-        getActivity().setTitle("Atividade Jelco");
+        getActivity().setTitle("Atividade Scapl");
 
         //habilitando movimento das imagens
-        v.findViewById(R.id.txt14).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.txt18).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.txt20).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.txt16).setOnLongClickListener(new MyOnLongClickListener());
-        v.findViewById(R.id.txt24).setOnLongClickListener(new MyOnLongClickListener());
+        v.findViewById(R.id.txt19).setOnLongClickListener(new atividadeScalp.MyOnLongClickListener());
+        v.findViewById(R.id.txt21).setOnLongClickListener(new atividadeScalp.MyOnLongClickListener());
+        v.findViewById(R.id.txt23).setOnLongClickListener(new atividadeScalp.MyOnLongClickListener());
+        v.findViewById(R.id.txt25).setOnLongClickListener(new atividadeScalp.MyOnLongClickListener());
+        v.findViewById(R.id.txt27).setOnLongClickListener(new atividadeScalp.MyOnLongClickListener());
 
         //habilitando recebimento das imagens
-        v.findViewById(R.id.layoutJelcoLaranja).setOnDragListener(new MyOnDragListener(1));
-        v.findViewById(R.id.layoutJelcoRosa).setOnDragListener(new MyOnDragListener(2));
-        v.findViewById(R.id.layoutJelcoVerde).setOnDragListener(new MyOnDragListener(3));
-        v.findViewById(R.id.layoutJelcoCinza).setOnDragListener(new MyOnDragListener(4));
-        v.findViewById(R.id.layoutJelcoAmarelo).setOnDragListener(new MyOnDragListener(5));
-        v.findViewById(R.id.layoutatvjelco).setOnDragListener(new MyOnDragListener(6));
-        v.findViewById(R.id.card14).setOnDragListener(new MyOnDragListener(7));
-        v.findViewById(R.id.card16).setOnDragListener(new MyOnDragListener(8));
-        v.findViewById(R.id.card18).setOnDragListener(new MyOnDragListener(9));
-        v.findViewById(R.id.card20).setOnDragListener(new MyOnDragListener(10));
-        v.findViewById(R.id.card24).setOnDragListener(new MyOnDragListener(11));
+        v.findViewById(R.id.layoutScalpBege).setOnDragListener(new atividadeScalp.MyOnDragListener(1));
+        v.findViewById(R.id.layoutScalpCinza).setOnDragListener(new atividadeScalp.MyOnDragListener(2));
+        v.findViewById(R.id.layoutScalpLaranja).setOnDragListener(new atividadeScalp.MyOnDragListener(3));
+        v.findViewById(R.id.layoutScalpVerde).setOnDragListener(new atividadeScalp.MyOnDragListener(4));
+        v.findViewById(R.id.layoutScaplAzul).setOnDragListener(new atividadeScalp.MyOnDragListener(5));
+        v.findViewById(R.id.layoutatvjelco).setOnDragListener(new atividadeScalp.MyOnDragListener(6));
+        v.findViewById(R.id.card14).setOnDragListener(new atividadeScalp.MyOnDragListener(7));
+        v.findViewById(R.id.card16).setOnDragListener(new atividadeScalp.MyOnDragListener(8));
+        v.findViewById(R.id.card18).setOnDragListener(new atividadeScalp.MyOnDragListener(9));
+        v.findViewById(R.id.card20).setOnDragListener(new atividadeScalp.MyOnDragListener(10));
+        v.findViewById(R.id.card24).setOnDragListener(new atividadeScalp.MyOnDragListener(11));
 
         //localizando botão
         Button anterio = (Button) v.findViewById(R.id.buttonAnt);
@@ -69,7 +68,7 @@ public class atividadeJelco extends Fragment {
             public void onClick(View v) {
 
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
+                        .replace(R.id.frame_container, new atividadeExecucao()).addToBackStack(null)
                         .commit();
             }
         });
@@ -79,7 +78,7 @@ public class atividadeJelco extends Fragment {
             public void onClick(View v) {
 
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
+                        .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
                         .commit();
             }
         });
@@ -100,7 +99,7 @@ public class atividadeJelco extends Fragment {
             View.DragShadowBuilder sb = new View.DragShadowBuilder(v);
             v.startDrag(data, sb, v, 0);
             v.setVisibility(View.INVISIBLE);
-            return(true);
+            return (true);
         }
     }
 
@@ -108,10 +107,10 @@ public class atividadeJelco extends Fragment {
         private int num;
         final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
 
-        public MyOnDragListener(int num){
+        public MyOnDragListener(int num) {
             super();
             this.num = num;
-            }
+        }
 
         @Override
         public boolean onDrag(View v, DragEvent event) {
@@ -123,7 +122,7 @@ public class atividadeJelco extends Fragment {
                     Log.i("Script", num + " - ACTION_DRAG_STARTED");
                     if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
                         return (true);
-                    }else{
+                    } else {
                         return (false);
                     }
 
@@ -141,9 +140,9 @@ public class atividadeJelco extends Fragment {
                     Log.i("Script", num + " - ACTION_DROP");
                     View view = (View) event.getLocalState();
 
-                    if(view.getId()==R.id.txt14 && num==1){
+                    if (view.getId() == R.id.txt19 && num == 1) {
 
-                        Pontuacao.pontuacao= Pontuacao.pontuacao+1;
+                        Pontuacao.pontuacao = Pontuacao.pontuacao + 1;
 
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
@@ -156,7 +155,7 @@ public class atividadeJelco extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 14 possui a cor laranja, é indicado para ser utilizado em adultos e adolescentes durante cirurgias!")
+                        alerta.setMessage("O Scalp 19 corresponde a cor Bege!")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -166,8 +165,7 @@ public class atividadeJelco extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
 
-                    }else if (view.getId()==R.id.txt18 && num==3)
-                    {
+                    } else if (view.getId() == R.id.txt21 && num == 4) {
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
                         ow.removeView(view);
@@ -181,8 +179,7 @@ public class atividadeJelco extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 18 possui a cor verde, é indicado para ser utilizado em crianças, adultos e adolescentes para administrar sangue e " +
-                                "hemoderivados!")
+                        alerta.setMessage("O Scalp de numeração 21 possui a cor verde")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -191,7 +188,7 @@ public class atividadeJelco extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else if (view.getId()==R.id.txt20 && num==2){
+                    } else if (view.getId() == R.id.txt23 && num == 5) {
 
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
@@ -205,8 +202,7 @@ public class atividadeJelco extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 20 possui a cor rosa, este cateter é recomendado para a maioria das infusões venosas de sangue, para crianças " +
-                                "adultos e adolescentes!")
+                        alerta.setMessage("O Scalp de numeração 23 possui a cor Azul")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -215,7 +211,7 @@ public class atividadeJelco extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    } else if (view.getId()==R.id.txt16 && num==4){
+                    } else if (view.getId() == R.id.txt25 && num == 3) {
 
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
@@ -229,7 +225,7 @@ public class atividadeJelco extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 16 possui a cor cinza, e assim como o jelco 14 é recomendado para ser utilizado durante processos cirurgicos")
+                        alerta.setMessage("O Scalp de numeração 25 possui a cor Laranja")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -239,7 +235,7 @@ public class atividadeJelco extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
 
-                    }else if (view.getId()==R.id.txt24 && num==5){
+                    } else if (view.getId() == R.id.txt27 && num == 2) {
 
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
@@ -253,8 +249,7 @@ public class atividadeJelco extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco de numeração 24 possui a cor amarela, este cateter é recomendado para infusões em recém nascidos, crianças, adolescentes e adultos " +
-                                "a infusão com este cateter deve ser lenta!")
+                        alerta.setMessage("O Scalp de numeração 27 possui a cor Cinza")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -263,11 +258,11 @@ public class atividadeJelco extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else {
+                    } else {
                         //imprimindo mensagem
                         alerta.setTitle("Que pena, você errou");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("A numeração não corresponde ao jelco")
+                        alerta.setMessage("A numeração não corresponde ao jelco")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -278,8 +273,6 @@ public class atividadeJelco extends Fragment {
 
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
-
-
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }
@@ -288,11 +281,8 @@ public class atividadeJelco extends Fragment {
                 case DragEvent.ACTION_DRAG_ENDED:
 
                     break;
-                }
-
-
+            }
             return true;
-        }}
-
-
+        }
     }
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,42 +8,14 @@
     tools:context=".IdentificarDispositivos">
 
 
-    <Button
-        android:id="@+id/btnAnteriorIDV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
-        android:text="Anterior"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btnProxIDV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
-        android:text="Proximo"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <ScrollView
+        android:id="@+id/ScrollView"
         android:layout_width="match_parent"
-        android:layout_height="447dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnAnteriorIDV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:layout_marginBottom="8dp">
 
 
         <LinearLayout
@@ -83,14 +55,14 @@
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="165dp"
+                android:layout_height="wrap_content"
                 app:cardCornerRadius="1dp"
                 app:cardElevation="5dp"
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="127dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -113,8 +85,8 @@
                             android:src="@drawable/img_jelco_laranja" />
 
                         <TextView
-                            android:layout_width="204dp"
-                            android:layout_height="155dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
                             android:text="@string/jelcoLaranja" />
@@ -134,7 +106,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="119dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -176,7 +148,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="154dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -258,7 +230,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="167dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -354,7 +326,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="78dp"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/texto1scalp"
                         android:textColor="#000" />
@@ -370,7 +342,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="124dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -411,7 +383,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="124dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -452,7 +424,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="124dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -493,7 +465,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="124dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -534,7 +506,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="124dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -568,6 +540,36 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#fff"/>
         </LinearLayout>
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_alignParentBottom="true"
+       >
+        <Button
+            android:id="@+id/btnAnteriorIDV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:textColor="@android:color/background_light"
+             />
+
+        <Button
+            android:layout_gravity="right"
+            android:id="@+id/btnProxIDV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Proximo"
+            android:textColor="@android:color/background_light"
+           />
+    </FrameLayout>
+</RelativeLayout>

@@ -53,14 +53,13 @@ public class FullScreenMediaController extends MediaController {
 
         float f = 28;
 
-
         if("y".equals(isFullScreen)){
             fullScreen.setImageResource(R.drawable.fullscreenexit);
-            fullScreen.setBackgroundColor(Color.parseColor("#373435"));
+            fullScreen.setBackgroundColor(Color.TRANSPARENT);
             ((Activity) getContext()).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }else{
             fullScreen.setImageResource(R.drawable.iconfullscreen);
-            fullScreen.setBackgroundColor(Color.parseColor("#373435"));
+            fullScreen.setBackgroundColor(Color.TRANSPARENT);
             ((Activity) getContext()).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
 
@@ -81,7 +80,6 @@ public class FullScreenMediaController extends MediaController {
                 }else{
 
                     intent.putExtra("fullScreenInd", "y");
-
                 }
                 ((Activity)getContext()).startActivity(intent);
             }

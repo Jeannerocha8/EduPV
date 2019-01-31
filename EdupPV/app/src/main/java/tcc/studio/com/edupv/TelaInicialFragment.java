@@ -27,6 +27,7 @@ public class TelaInicialFragment extends Fragment {
         // Inflate the layout for this fragment
             View v =  inflater.inflate(R.layout.fragment_tela_inicial, container, false);
 
+            getActivity().setTitle("EDUPV");
         //setando os botoes
         Button tutorial = (Button) v.findViewById(R.id.btnEstudo);
         Button multimidia = (Button) v.findViewById(R.id.btnVideo);

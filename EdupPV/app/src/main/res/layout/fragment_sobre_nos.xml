@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="1dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="4dp"
             android:elevation="7dp">
 
             <LinearLayout
@@ -33,12 +33,64 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Aplicativo desenvolvido no IFNMG camous Januária como Trabalho de Conclusão de Curso do curso Tecnologia em Análise e Desenvolvimento de Sistemas
-
-    Desenvolvido Por: Jeanne Rocha de Almeida
-    Orientado por: Prof° Metre Felipe Mota
-    Co-Orientado por: Prof° Mestra Karine Fróes" />
+                    android:text="@string/sobrenos" />
             </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1dp"
+            android:layout_margin="4dp"
+            android:layout_marginTop="8dp"
+            android:elevation="7dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/desenvolvido" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contato"
+                    />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="1dp"
+            android:layout_marginTop="8dp"
+            android:elevation="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/felipe" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1dp"
+           android:layout_margin="4dp"
+            android:elevation="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/karine" />
 
         </android.support.v7.widget.CardView>
 
