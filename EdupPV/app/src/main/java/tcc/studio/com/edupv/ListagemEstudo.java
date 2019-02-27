@@ -152,7 +152,7 @@ public class ListagemEstudo extends Fragment {
         op = new opcoes("Higienização", "Saiba como higienizar as mãos e a pele do paciente", R.drawable.img_tornneirahigi);
         Opcoes.add(op);
 
-        op = new opcoes("Execucao do procedimento", "Passo a passo de como executar o procedimento", R.drawable.img_excutarpunv);
+        op = new opcoes("Execução do procedimento", "Passo a passo de como executar o procedimento", R.drawable.img_excutarpunv);
         Opcoes.add(op);
 
         return Opcoes;

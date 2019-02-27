@@ -14,16 +14,16 @@
 
 
     <string name="textoveia">
-        A punção venosa pode ser executada em veias do ante braço, mãos, pés, pernas,
+        A punção venosa pode ser executada em veias do antebraço, mãos, pés, pernas,
         pescoço e couro cabeludo. A escolha do local deve ser feita levando em consideração
         alguns aspectos, tais como: finalidade do procedimento, idade e aspectos físicos
         do paciente, medicamento a ser infundido, calibre do cateter indicado ao procedimento,
-        e espessura das veias.A seguir é demonstrado a anatomia das mãos e do ante braço, locais geralmente
+        e espessura das veias.A seguir é demonstrado a anatomia das mãos e do antebraço, locais geralmente
         puncionados em adultos!
     </string>
 
-    <string name="texto1scalp"> Este dispositivo é indicado para infusão de até 24 horas. A identificação deste dispositivo é dado por números
-        impares,quanto menor o calibre, maior é  o seu número de identificação!</string>
+    <string name="texto1scalp"> Este dispositivo é indicado para infusão com duração de até 24 horas. A identificação deste dispositivo é dado por números
+        ímpares,quanto menor o calibre, maior é  o seu número de identificação!</string>
 
     <string name="texto1Jelco">Recomendado para terapias intravenosas com duração média de 72 horas. Neste cateter
 o número de identificação é inverso ao calibre da agulha, ou seja, quanto menor
@@ -31,7 +31,7 @@ for a sua identificação, maior é o seu calibre. A identificação neste dispo
 é disposto em números pares! </string>
 
     <string name="jelcoLaranja">Utilizado em adolescentes e Adultos durante cirurgias para
-        infusão de liquídos. A inserção com este cateter exige veia calibrosa.  </string>
+        infusão de líquidos. A inserção com este cateter exige veia calibrosa.  </string>
 
     <string name="jelcocinza">Este cateter possui a mesma finalidade do jelco equivalente a numeração 14 (cor Laranja). </string>
 
@@ -44,15 +44,15 @@ for a sua identificação, maior é o seu calibre. A identificação neste dispo
     <string name="jelcoazul"> Pode ser utilizado em bebês, crianças, adolescentes e adultos, sendo adequado para a maioria das infusões.
         É fácil de inserir em veias pequenas e frágeis. A infusão utilizando este dispositivo deve ser lenta.</string>
 
-    <string name="jelcoamarelo"> Pode ser utilizado em recém-nascidos, bebês, crianças, adolescentes e adultos, sendo dequado para a maioria das infusões.
+    <string name="jelcoamarelo"> Pode ser utilizado em recém-nascidos, bebês, crianças, adolescentes e adultos, sendo adequado para a maioria das infusões.
         A velocidade de infusão utilizando este dispositivo deve ser lenta.
         É ideal para veias muito finas, pequenas veias digitais ou veias internas do antebraço em idosos.</string>
 
-    <string name="scalpbege"> É o scalp mais calibroso, recomendado para utilização em adultos. Exige veia calibrosa</string>
+    <string name="scalpbege"> É o scalp mais calibroso, recomendado para utilização em adultos. Exige veia calibrosa.</string>
     <string name="scalpverde"> Scalp recomendado para utilização em adultos.</string>
     <string name="scalpazul"> Ideal para utilizar em adultos, idosos e adolescentes.</string>
-    <string name="scalplaranja"> Scalp recomendado para utilizaçã em crianças, adultos e idosos. Exige veia não calibrosa.</string>
-    <string name="scalpcinza"> Corresponde ao Scalp de menor calibre, recomendado para utilização em crianças.</string>
+    <string name="scalplaranja"> Scalp recomendado para utilização em crianças, adultos e idosos. Exige veia não calibrosa.</string>
+    <string name="scalpcinza"> Corresponde ao Scalp de menor calibre, recomendado para a maioria dos pacientes, inclusive crianças.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

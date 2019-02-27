@@ -107,7 +107,7 @@ public class Atividade extends Fragment {
         opcoes op = new opcoes("Objetivas", "Resolva questões fechadas sobre punção venosa", R.drawable.objetiva);
         Opcoes.add(op);
 
-        op = new opcoes("Interativas", "Resolva exercicios interativos para fixar o              conteúdo", R.drawable.interativa);
+        op = new opcoes("Interativas", "Resolva exercícios interativos para fixar o              conteúdo", R.drawable.interativa);
         Opcoes.add(op);
 
         return Opcoes;

@@ -39,7 +39,7 @@ public class ResultadoQuiz extends Fragment {
 
         int p = Pontuacao.pontuacao;
 
-        int qtd = 15;
+        int qtd = 14;
 
         float porcentagem = (p/qtd)*100;
 
@@ -60,15 +60,21 @@ public class ResultadoQuiz extends Fragment {
         bar.setNumStars(5);
         bar.setStepSize(0.5f);
 
+        // adicionando estrelas
         LayerDrawable stars = (LayerDrawable) bar.getProgressDrawable();
         stars.getDrawable(0).setColorFilter(Color.rgb(255, 219, 88), PorterDuff.Mode.SRC_ATOP);
 
-            t.setText("Você acertou " + p + " de " + qtd +" questões");
+        //adicionando mensagem
+        t.setText("Você acertou " + p + " de 14 questões");
 
-        switch (p)
+
+
+       switch (p)
         {
             case 0:
-
+                t.setText("Que pena, você não acertou nenhuma questão");
+                bar.setNumStars( 0);
+                stars.getDrawable(1).setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
                 break;
             case 1:
                 bar.setNumStars( 2);
@@ -136,11 +142,6 @@ public class ResultadoQuiz extends Fragment {
 
                 break;
             case 14:
-                bar.setNumStars(5);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
-
-                break;
-            case 15:
                 bar.setNumStars(5);
                 stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 

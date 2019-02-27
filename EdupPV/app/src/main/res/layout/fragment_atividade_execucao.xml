@@ -20,7 +20,7 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Arraste os numéros a sequência correspondentes, considere que a etapa de lavar as mãso e colocar as luvas ja foi executada."
+            android:text="Arraste os números a sequência correspondentes, considere que a etapa de lavar as mãos e colocar as luvas já foi executada."
             android:textColor="#000"/>
     </android.support.v7.widget.CardView>
 

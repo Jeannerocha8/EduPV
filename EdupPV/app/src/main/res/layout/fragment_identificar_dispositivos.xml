@@ -156,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
-                        android:text="Jelco verde: 18"
+                        android:text="Jelco Verde: 18"
                         android:textColor="#fff" />
 
                     <LinearLayout

@@ -36,7 +36,9 @@ public class atividadeObjetiva extends Fragment {
     int proximo;
     int questaon=0;
     int qid=0;
+    int verificaResposta=0;
     boolean verificar;
+    boolean respostaverificar;
     Questao currentQ;
     TextView txtQuestion, ponto, numquestao;
     RadioButton rd1, rd2, rd3, rd4, answer;
@@ -85,10 +87,9 @@ public class atividadeObjetiva extends Fragment {
             @Override
             public void onClick(View v) {
                 if(rd1.isChecked()||rd2.isChecked()||rd3.isChecked()||rd4.isChecked()){
-
+                    verificaResposta = verificaResposta + 1;
                     VerificarResposta();
                     verificar = true;
-
                 } else{
                     verificar = false;
                     final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
@@ -129,31 +130,41 @@ public class atividadeObjetiva extends Fragment {
                     alertDialog.show();
                     }
 
-                if (qid < 15) {
+                if (qid < 14) {
                     butNext.setText("Próximo");
 
                 } else {
                     butNext.setText("Finalizar");
                 }
-
             }
         });
         return v;
     }
 
     private void VerificarResposta() {
+
         //pegando a resposta do usuario
         answer = (RadioButton) getActivity().findViewById(grp.getCheckedRadioButtonId());
+
+        //verificando a resposta
 
         if (currentQ.getResposta().equals(answer.getText().toString())) {
 
             //incrementando ponto e numero da questão
-            score = score + 1;
+
+            if (verificaResposta == 1) {
+                score = score + 1;
+            }else{
+                score=score+0;
+            }
+
+
             qid = qid ++;
 
-            //setando questao
+            //exibindo os pontos
             ponto.setText("Pontos: " + score);
         }
+
         MostrarSolucao();
     }
 
@@ -176,7 +187,6 @@ public class atividadeObjetiva extends Fragment {
         }
     }
 
-
     private void LimparOP(){
         grp.clearCheck();
         rd1.setTextColor(Color.BLACK);
@@ -185,15 +195,12 @@ public class atividadeObjetiva extends Fragment {
         rd4.setTextColor(Color.BLACK);
     }
 
-         //return (( Integer ) lista.get ( 0 )) .intValue () ;
-
     private void setQuestionView(){
         LimparOP();
         verificar=false;
-        //Random rand = new Random();
+        verificaResposta=0;
 
-
-        if(qid<15){
+        if(qid<14){
             currentQ = quesList.get(qid);
             txtQuestion.setText(currentQ.getEnunciado());
             rd1.setText(currentQ.getOpc1());
@@ -202,7 +209,7 @@ public class atividadeObjetiva extends Fragment {
             rd4.setText(currentQ.getOpc4());
             qid++;
             questaon++;
-            numquestao.setText("Questao " + questaon+"/ 15");
+            numquestao.setText("Questao " + questaon+"/ 14");
         }else {
             Finalizar();
         }

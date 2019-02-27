@@ -38,9 +38,12 @@ public class ResultadoAtvInterativas extends Fragment {
 
         int p = Pontuacao.pontuacao;
 
-        int qtd = 4;
+        int qtd = 7;
+        float porcentagem=0 ;
 
-        float porcentagem = (p/qtd)*100;
+        
+
+       
 
 
         TextView t=(TextView)v.findViewById(R.id.textResult);
@@ -63,40 +66,49 @@ public class ResultadoAtvInterativas extends Fragment {
         LayerDrawable stars = (LayerDrawable) bar.getProgressDrawable();
         stars.getDrawable(0).setColorFilter(Color.rgb(255, 219, 88), PorterDuff.Mode.SRC_ATOP);
 
-        t.setText("Você acertou " + p + " de " + qtd +" questões");
+
+
+            t.setText("Você acertou " + p + "de 7 questões");
+
+
+
+
 
        switch (p) {
            case 0:
-               t.setText("Que pena, você não acertou nenhuma questão");
+
                bar.setNumStars(0);
                stars.getDrawable(0).setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
 
                break;
            case 1:
-               t.setText("Você acertou " + p + " questão de  " + qtd );
+
                bar.setNumStars(1);
                stars.getDrawable(1).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
                break;
            case 2:
-               t.setText("Você acertou " + p + " questões de " + qtd );
+
                bar.setNumStars(2);
                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
                break;
            case 3:
-               t.setText("Você acertou " + p + " questões de" + qtd);
+
                bar.setNumStars(3);
                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
                break;
            case 4:
-               t.setText("Você acertou " + p + " questões de" + qtd );
+
                bar.setNumStars(4);
                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
                break;
+
        }
+
+
         Pontuacao.pontuacao =0;
         return v;
     }

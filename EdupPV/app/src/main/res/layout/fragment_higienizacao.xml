@@ -93,7 +93,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Aplique na palma da mão uma quantidade suficiente de sabonete liquido, de forma que cubra toda a superfície das mãos."/>
+                        android:text="Aplique na palma da mão uma quantidade suficiente de sabonete líquido, de forma que cubra toda a superfície das mãos."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -255,7 +255,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Esfregar o punho esquerdo, com auxilio da palma da mão, utilizando movimento circular."/>
+                        android:text="Esfregar o punho esquerdo, com auxílio da palma da mão, utilizando movimento circular."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -282,7 +282,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Enxaguar as mãos retirando os residuos de sabonete, evitando contato direto das mãos com a torneira."/>
+                        android:text="Enxaguar as mãos retirando os resíduos de sabonete, evitando contato direto das mãos com a torneira."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -420,7 +420,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="Proximo"
+            android:text="Próximo"
             android:textColor="@android:color/background_light"
             />
     </FrameLayout>
