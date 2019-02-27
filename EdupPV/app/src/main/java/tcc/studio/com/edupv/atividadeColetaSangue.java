@@ -205,7 +205,7 @@ public class atividadeColetaSangue extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("")
+                        alerta .setMessage("Tanto o scalp verde(número 21) quanto azul (número 23)  são recomendados para coleta de sangue")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -325,13 +325,72 @@ public class atividadeColetaSangue extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else{
+                    }else if (view.getId()== R.id.imgjelcolaranjaa){
 
                         view.setVisibility(View.VISIBLE);
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Que pena, você Errou");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("")
+                        alerta .setMessage("Os jelcos são recomendados apenas para terapias intravenosas com duração média de 72 horas!!!")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if (view.getId()== R.id.imjelcoamarelo){
+
+                        view.setVisibility(View.VISIBLE);
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Que pena, você Errou");
+                        alerta.setIcon(R.drawable.errado);
+                        alerta .setMessage("Os jelcos são recomendados apenas para terapias intravenosas com duração média de 72 horas!!!")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if (view.getId()== R.id.imgequipo){
+
+                        view.setVisibility(View.VISIBLE);
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Que pena, você Errou");
+                        alerta.setIcon(R.drawable.errado);
+                        alerta .setMessage("O equipo é utilizado para administração de medicamentos, como por exemplo o soro!")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if (view.getId()== R.id.imgdispositivo){
+
+                        view.setVisibility(View.VISIBLE);
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Que pena, você Errou");
+                        alerta.setIcon(R.drawable.errado);
+                        alerta .setMessage("Este dispositivo é recomendado aplicação de medicamentos em terapias intra-venosas contínuas e intermitentes")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else
+                    {
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Erro");
+                        alerta.setIcon(R.drawable.errado);
+                        alerta .setMessage("contate o desenvolvedor do sistema!")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override

@@ -66,7 +66,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Abra a torneira e em seguida molhe as mão sem encostar na pia"/>
+                        android:text="Abra a torneira e em seguida molhe as mão sem encostar na pia."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -93,7 +93,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Aplique na palma da mão uma quantidade suficiente de sabonete liquido, de forma que cubra toda a superfície das mãos"/>
+                        android:text="Aplique na palma da mão uma quantidade suficiente de sabonete liquido, de forma que cubra toda a superfície das mãos."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -120,7 +120,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ensaboar as palmas das mãos, friccionando-as entre si"/>
+                        android:text="Ensaboar as palmas das mãos, friccionando-as entre si."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -146,7 +146,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Esfregar a palma da mão direita contra o dorso da mão esquerda entrelaçando os dedos, e vice-versa"/>
+                        android:text="Esfregar a palma da mão direita contra o dorso da mão esquerda entrelaçando os dedos, e vice-versa."/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -174,7 +174,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Esfregue o dorso dos dedos de uma mão oposta, segurando os dedos com movimento de vai-e-vem e vice-versa"/>
+                        android:text="Esfregue o dorso dos dedos de uma mão oposta, segurando os dedos com movimento de vai-e-vem e vice-versa."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -201,7 +201,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Esfregar o polegar direito, com auxilio da palma da mão esqueda, utilizando movimento circular"/>
+                        android:text="Esfregar o polegar direito, com auxilio da palma da mão esqueda, utilizando movimento circular."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -228,7 +228,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Friccionar as polpas digitais e unhas da mão contra a palma da outra mão, fechada em concha, fazendo movimento circular"/>
+                        android:text="Friccionar as polpas digitais e unhas da mão contra a palma da outra mão, fechada em concha, fazendo movimento circular."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -255,7 +255,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Esfregar o punho esquerdo, com auxilio da palma da mão, utilizando movimento circular"/>
+                        android:text="Esfregar o punho esquerdo, com auxilio da palma da mão, utilizando movimento circular."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -282,7 +282,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Enxaguar as mãos retirando os residuos de sabonete, evitando contato direto das mãos com a torneira"/>
+                        android:text="Enxaguar as mãos retirando os residuos de sabonete, evitando contato direto das mãos com a torneira."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -329,7 +329,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Higienização do paciente"
+                        android:text="Antissepsia do local a ser puncionado"
                         android:background="@color/colorPrimaryDark"
                         android:textColor="#fff"
                         android:gravity="center"
@@ -361,8 +361,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" Fazer antissepsia do local da punção.
-Primeiro, do centro do local de perfuração para fora, em sentido espiral "/>
+                        android:text="Realizar a antissepsia do local a ser puncionado com álcool 70. Primeiro do centro da inserção do cateter, em sentido espiral (do centro para fora). "/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -390,8 +389,7 @@ Primeiro, do centro do local de perfuração para fora, em sentido espiral "/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="e após, de baixo para cima, forçando uma vascularização local. Não tocar o local da punção
-                        após a antissepsia"/>
+                        android:text="E após, de baixo para cima, forçando uma vascularização local. Não tocar o local da punção após a antissepsia."/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 

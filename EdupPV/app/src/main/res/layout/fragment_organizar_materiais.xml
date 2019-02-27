@@ -46,6 +46,28 @@
                         android:text="@string/texto1Organizacaomaterial"
                         android:textColor="#fff" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginRight="30dp"
+                            android:text="1. Bandeja" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="45dp"
+                            android:text="2. Garrote" />
+                    </LinearLayout>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -57,7 +79,6 @@
                             android:id="@+id/imgBandeja"
                             android:layout_width="150dp"
                             android:layout_height="124dp"
-                            android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
                             android:src="@drawable/bandeja" />
 
@@ -69,36 +90,35 @@
                             android:src="@drawable/img_garrote" />
                     </LinearLayout>
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="32dp">
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
-                            android:text="1. Bandeja" />
+                            android:text="3. Alcool 70%" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="40dp"
+                            android:layout_marginLeft="50dp"
                             android:layout_marginRight="30dp"
-                            android:text="2. Garrote" />
+                            android:text="4. Algodão" />
 
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:id="@+id/imgAlcool"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:layout_marginLeft="15dp"
+
                             android:layout_marginRight="15dp"
                             android:src="@drawable/img_alcool" />
 
@@ -113,27 +133,28 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="44dp">
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="30dp"
-                            android:text="3. Alcool 70%" />
+                            android:text="5. Cateter venoso apropriado" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
                             android:layout_marginRight="30dp"
-                            android:text="4. Algodão" />
+                            android:text="6. Esparadrapo" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
 
                         <ImageView
                             android:id="@+id/imgCateter"
@@ -152,26 +173,20 @@
 
                     </LinearLayout>
 
+
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="44dp">
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="30dp"
-                            android:text="5. Cateter venoso apropriado" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
                             android:layout_marginLeft="30dp"
                             android:layout_marginRight="30dp"
-                            android:text="6. Esparadrapo" />
+                            android:text="7. Luvas" />
 
                     </LinearLayout>
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -186,18 +201,7 @@
                             android:src="@drawable/img_luvas" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="27dp">
 
-                        <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginRight="30dp"
-                            android:text="7. Luvas" />
-
-                    </LinearLayout>
                 </LinearLayout>
 
 
@@ -225,10 +229,31 @@
                         android:text=" Conforme a indicação da punção acrescentar:"
                         android:textColor="#fff" />
 
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="8. tubos de coleta de sangue adequado ao exame" />
+
+                        <TextView
+                            android:layout_width="149dp"
+                            android:layout_height="94dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="30dp"
+                            android:text="9. Dispositivo a ser conectado no cateter(torneirinha, tubo extensor, tubo em Y)" />
+
+                    </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
 
                         <ImageView
                             android:id="@+id/imgTubo"
@@ -249,27 +274,28 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="91dp">
-
+                        android:layout_height="wrap_content">
                         <TextView
-                            android:layout_width="140dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="10dp"
-                            android:text="8. tubos de coleta de sangue adequado ao exame" />
+                            android:layout_width="138dp"
+                            android:layout_height="72dp"
+
+                            android:layout_marginRight="30dp"
+                            android:text="10. Equipo para sistema de infusão e o frasco da solução" />
 
                         <TextView
                             android:layout_width="149dp"
-                            android:layout_height="94dp"
+                            android:layout_height="58dp"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="30dp"
-                            android:text="9. Dispositivo a ser conectado no cateter(torneirinha, tubo extensor, tubo em Y)" />
+                            android:text="11. Seringa contendo medicamento" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
 
                         <ImageView
                             android:id="@+id/imgEquipo"
@@ -290,25 +316,16 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="85dp">
-
-
-                        <TextView
-                            android:layout_width="138dp"
-                            android:layout_height="72dp"
-
-                            android:layout_marginRight="30dp"
-                            android:text="10. Equipo para sistema de infusão e o frasco da solução" />
+                        android:layout_height="35dp">
 
                         <TextView
-                            android:layout_width="149dp"
-                            android:layout_height="58dp"
-                            android:layout_marginLeft="15dp"
+                            android:layout_width="132dp"
+                            android:layout_height="44dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_marginRight="30dp"
-                            android:text="11. Seringa contendo medicamento" />
+                            android:text="12. Material para salinizar cateter" />
 
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -322,18 +339,7 @@
                             android:src="@drawable/img_salinizar" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="44dp">
 
-                        <TextView
-                            android:layout_width="132dp"
-                            android:layout_height="44dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="30dp"
-                            android:text="12. Material para salinizar cateter" />
-
-                    </LinearLayout>
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
