@@ -93,13 +93,13 @@ public class ListagemVideo extends Fragment {
 
         ArrayList<opcoes> Opcoes = new ArrayList<opcoes>();
 
-        opcoes op = new opcoes("Higienização", "Saiba como higienizar corretamente", R.drawable.img_tornneirahigi);
+        opcoes op = new opcoes("Higienização", "Veja na prática como higienizar as mãos e a pele do paciente.", R.drawable.img_tornneirahigi);
         Opcoes.add(op);
 
-        op = new opcoes("Manuseio Jelco e Scalp", "Dicas de como manusear os dispositivos", R.drawable.img_dispositivoident);
+        op = new opcoes("Manuseio Jelco e Scalp", "Dicas de como manusear os dispositivos.", R.drawable.img_dispositivoident);
         Opcoes.add(op);
 
-        op = new opcoes("Execucao do procedimento", "Saiba passo a passo da execução do procedimento", R.drawable.img_excutarpunv);
+        op = new opcoes("Execucao do procedimento", "Veja na prática como realizar a execução do procedimento.", R.drawable.img_excutarpunv);
         Opcoes.add(op);
 
         return Opcoes;

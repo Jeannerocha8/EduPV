@@ -20,7 +20,7 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Arraste os números a sequência correspondentes, considere que a etapa de lavar as mãos e colocar as luvas já foi executada."
+            android:text="Coloque os números na sequência correspondente para a realização de uma punção venosa. Considere que as etapas de lavar as mãos e colocar as luvas já foram executadas."
             android:textColor="#000"/>
     </android.support.v7.widget.CardView>
 

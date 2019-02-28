@@ -29,13 +29,19 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@drawable/btnestudo"/>
+
         <Button
             android:id="@+id/btnVideo"
-            android:layout_margin="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="151dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_toRightOf="@id/btnEstudo"
-            android:background="@drawable/btnvideos"/>
+            android:background="@drawable/btnvideocorrecao" />
 
 
 

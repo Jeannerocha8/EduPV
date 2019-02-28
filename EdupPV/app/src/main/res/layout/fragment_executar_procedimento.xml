@@ -103,12 +103,12 @@
                       <TextView
                           android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:text="Escolher a veia a ser puncionada e garrotear o local! Atenção: não deixar o local garroteado por mais tempo do que o necessário"/>
+                          android:text="esolha a veia do paciente e garroteie o local a ser puncionado (em adultos: aproximadamente 5 a 10 cm do local da punção venosa), a fim
+de proporcionar a dilatação da veia."/>
 
                   </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -135,6 +135,43 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:gravity="center"
+                            android:text="Solicite ao paciente que permaneça imovel."/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#fff"
+                        android:text="4° Passo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
@@ -143,7 +180,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Higienizar o local a ser puncionado"/>
+                            android:text="Faça antissepsia do local com algodão embebido em alcool 70%, em movimentos circulares, do centro para fora."/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -165,7 +202,7 @@
                         android:gravity="center"
                         android:background="@color/colorPrimary"
                         android:textColor="#fff"
-                        android:text="4° Passo"/>
+                        android:text="5° Passo"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -180,7 +217,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Utilizar a mão não dominante e ancorar a veia, deixando a pele esticada, logo abaixo do local da punção"/>
+                            android:text="Tracione a pele para baixo, com o polegar, abaixo do local a ser puncionado."/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -204,7 +241,7 @@
                     android:gravity="center"
                     android:background="@color/colorPrimary"
                     android:textColor="#fff"
-                    android:text="5° Passo"/>
+                    android:text="6° Passo"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -219,12 +256,86 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Com o bisel da agulha voltado para cima, aproximar a veia num ângulo entre 30° e 45°
-    Diminuir o ângulo da agulha, paralelamente com a veia enquanto avança a agulha um pouco mais para dentro dela, aproximadamente 0,6 cm;"/>
+                        android:text="Com o bisel da agulha voltado para cima, aproximar a veia num ângulo entre 30° e 45°, a uma distância de um centímetro do local a ser perfurado.
+    Diminua o ângulo da agulha, paralelamente com a veia enquanto avança a agulha um pouco mais para dentro dela, aproximadamente 0,6 cm."/>
 
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#fff"
+                        android:text="7° Passo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:gravity="center"
+                            android:text="Abra o cateter e observe o fluxo sanguíneo em seu interior."/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#fff"
+                        android:text="8° Passo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/imgpuncao5"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solte o garrote e observe se há sinais de infiltração, extravasamento do líquido infundido ou hematoma no local da punção, além de queixas de dor ou desconforto."/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
 
             <android.support.v7.widget.CardView
@@ -244,7 +355,7 @@
                         android:gravity="center"
                         android:background="@color/colorPrimary"
                         android:textColor="#fff"
-                        android:text="6° Passo"/>
+                        android:text="9° Passo"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -254,16 +365,218 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/imgpuncao5"/>
+                            android:src="@drawable/nv1"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Soltar o garrote"/>
+                            android:text="Fixe o dispositivo com o esparadrapo ou adesivo hipoalergênico."/>
 
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/nv2"/>
+
+                        <ImageView
+                            android:layout_gravity="right"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/nv3"/>
+
+                    </FrameLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#fff"
+                        android:text="10° Passo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Deixe o paciente confortável."/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#fff"
+                        android:text="11° Passo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Descarte o material perfurocortante em recipiente adequado."/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#fff"
+                        android:text="12° Passo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Retire as luvas do procedimento."/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#fff"
+                        android:text="13° Passo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Higieniza as mãos."/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="1dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:textColor="#fff"
+                        android:text="14° Passo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Faça anotações quanto á punção, em impresso próprio, especificando o local da punção e o cateter utilizado."/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -291,7 +604,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="@color/colorPrimary"
-            android:text="Inicio"
+            android:text="Início"
             android:textColor="@android:color/background_light" />
     </FrameLayout>
 </RelativeLayout>

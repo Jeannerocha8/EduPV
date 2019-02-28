@@ -55,7 +55,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-
                             android:layout_marginRight="30dp"
                             android:text="1. Bandeja" />
 
@@ -92,7 +91,8 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -133,7 +133,8 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -142,9 +143,9 @@
                             android:text="5. Cateter venoso apropriado" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="115dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
+
                             android:layout_marginRight="30dp"
                             android:text="6. Esparadrapo" />
 
@@ -241,8 +242,8 @@
                             android:text="8. tubos de coleta de sangue adequado ao exame" />
 
                         <TextView
-                            android:layout_width="149dp"
-                            android:layout_height="94dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="30dp"
                             android:text="9. Dispositivo a ser conectado no cateter(torneirinha, tubo extensor, tubo em Y)" />
@@ -274,11 +275,11 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp">
                         <TextView
                             android:layout_width="138dp"
                             android:layout_height="72dp"
-
                             android:layout_marginRight="30dp"
                             android:text="10. Equipo para sistema de infusão e o frasco da solução" />
 
@@ -316,7 +317,8 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="35dp">
+                        android:layout_height="35dp"
+                        android:layout_margin="8dp">
 
                         <TextView
                             android:layout_width="132dp"
@@ -376,7 +378,7 @@
 
             android:background="@color/colorPrimary"
             android:layout_gravity="right"
-            android:text="Proximo"
+            android:text="Próximo"
             android:textColor="@android:color/background_light"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
