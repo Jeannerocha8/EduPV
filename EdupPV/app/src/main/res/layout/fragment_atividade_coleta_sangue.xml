@@ -39,6 +39,7 @@
             android:orientation="horizontal"
             android:background="@drawable/bandeja2">
 
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
 

@@ -38,7 +38,7 @@ public class ResultadoAtvInterativas extends Fragment {
 
         int p = Pontuacao.pontuacao;
 
-        int qtd = 7;
+        int qtd = 8;
         float porcentagem=0 ;
 
         
@@ -68,7 +68,7 @@ public class ResultadoAtvInterativas extends Fragment {
 
 
 
-            t.setText("Você acertou " + p + "de 7 questões");
+            t.setText("Você acertou " + p + " de 7 questões");
 
 
 

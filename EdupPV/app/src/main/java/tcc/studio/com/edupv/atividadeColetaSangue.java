@@ -7,6 +7,7 @@ import android.content.ClipDescription;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Layout;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
@@ -14,17 +15,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class atividadeColetaSangue extends Fragment {
 
-
     public atividadeColetaSangue() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,7 +63,6 @@ public class atividadeColetaSangue extends Fragment {
         v.findViewById(R.id.layoutDispositivo).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(13));
         v.findViewById(R.id.layoutScalpAzul).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(14));
 
-
         //evento de click nos botoes
         v.findViewById(R.id.btnAnteriocoleta).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +76,7 @@ public class atividadeColetaSangue extends Fragment {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new ResultadoAtvInterativas()).addToBackStack(null).commit();
+                        .replace(R.id.frame_container, new atividadeIdentificacaoVeias()).addToBackStack(null).commit();
             }
         });
 
@@ -221,7 +218,7 @@ public class atividadeColetaSangue extends Fragment {
                         LinearLayout container = (LinearLayout) v;
                         container.addView(view);
 
-
+                        
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
 

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".atividadeIdentiVeiaMao"
+    android:id="@+id/atvmao">
+
+    <LinearLayout
+        android:id="@+id/layoutatvmao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Selecione o nome das veias e arraste até o local correspondente a sua identificação"
+            android:gravity="center"
+            android:textColor="#000"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardatvveiamao"
+        android:layout_width="match_parent"
+        android:layout_height="243dp"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:id="@+id/layoutatvveiamao"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/frameopc1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/identveia1mao"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"></LinearLayout>
+
+
+
+            </FrameLayout>
+
+
+
+            <FrameLayout
+                android:id="@+id/frameopc2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="97dp"
+                    android:layout_height="239dp"
+                    android:layout_gravity="top|center"
+                    android:src="@drawable/veiamaoatv" />
+
+                <LinearLayout
+                    android:id="@+id/identveia2mao"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"></LinearLayout>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/frameopc3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/identveia3mao"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/identveia4mao"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="80dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"></LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/opc1"
+        android:layout_width="316dp"
+        android:layout_height="39dp"
+        android:layout_below="@id/layoutatvmao"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardcefalicamao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="1dp">
+
+            <TextView
+                android:id="@+id/cefalicamao"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Cefálica"
+                android:textColor="#000"
+                android:textSize="14dp"></TextView>
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardmetacarpiais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+          android:layout_marginRight="30dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="1dp">
+
+            <TextView
+                android:id="@+id/metacarpiais"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Metacarpiais"
+                android:textColor="#000"
+                android:textSize="14dp" />
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/opc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/opc1"
+        android:layout_margin="4dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardbasilicamao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1dp"
+            android:layout_gravity="right"
+            android:elevation="8dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/basilicamao"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="Basílica"
+                android:textColor="#000"
+                android:textSize="14dp"
+                android:gravity="center"/>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardarcovenoso"
+            app:cardCornerRadius="1dp"
+            android:layout_marginLeft="20dp"
+            android:elevation="8dp"
+            >
+            <TextView
+                android:id="@+id/arcovenoso"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:textColor="#000"
+                android:text="Arco venoso dorsal"
+                android:textSize="14dp"
+                android:gravity="center"/>
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/framebotao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnanterioridentmao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/btnproxidentmao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/colorPrimary"
+            android:text="próximo"
+            android:textColor="#fff"/>
+    </FrameLayout>
+
+</RelativeLayout>
