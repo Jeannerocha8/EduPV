@@ -403,8 +403,7 @@ public class atividadeColetaSangue extends Fragment {
                     break;
             }
             return true;
-        }}
-
-
+        }
+    }
 
 }

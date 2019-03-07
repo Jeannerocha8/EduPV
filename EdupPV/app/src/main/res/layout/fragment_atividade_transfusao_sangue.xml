@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutatvtransfsangue"
+    tools:context=".atividadeTransfusaoSangue">
+
+    <LinearLayout
+        android:id="@+id/layoutatvtransfusao"
+        android:layout_width="match_parent"
+        android:layout_height="214dp"
+        android:layout_marginBottom="8dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="Arraste até a imagem os três Jelcos recomendados para transfusão sanguínea."
+                android:textColor="#000" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardbb"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="1dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:id="@+id/layouttransf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/transfusaosangue" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear1"
+        android:orientation="horizontal"
+        android:layout_below="@id/layoutatvtransfusao"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardjelcoazultransf"
+            android:elevation="8dp"
+            app:cardCornerRadius="1dp"
+            android:layout_below="@id/cardbandeija"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutJelcoAzultransf">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgjelcoazultransf"
+                    android:src="@drawable/img_jelco_azul"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardjelcolaranjatransf"
+            android:elevation="8dp"
+            app:cardCornerRadius="1dp"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutJelcoLaranjaa">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgjelcolaranjatransf"
+                    android:src="@drawable/img_jelco_laranja"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            app:cardCornerRadius="1dp"
+            android:id="@+id/cardjelcoverdetransf"
+            android:layout_toRightOf="@id/cardjelcolaranja"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutScalpVerdeee">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgjelcoverdetransf"
+                    android:src="@drawable/img_jelco_verde"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear2"
+        android:orientation="horizontal"
+        android:layout_below="@id/linear1"
+        android:gravity="center">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardjelcocinzatransf"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="1dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutjelcocinzatransf"
+            >
+            <ImageView
+                android:id="@+id/imgjelcocinzatransf"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:src="@drawable/img_jelco_cinza"/>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardjelcorosatransf"
+            android:elevation="8dp"
+            app:cardCornerRadius="1dp"
+            android:layout_margin="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutjelcorosatransf">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgjelcorosatransf"
+                    android:src="@drawable/img_jelco_rosa"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardjelcoamarelotransf"
+            android:layout_toRightOf="@id/cardjelcoamarelotransf"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="1dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutjelcoamarelotransf">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/imgjelcoamarelotransf"
+                    android:src="@drawable/img_jelco_amarelo"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAnteriotransf"
+            android:background="@color/colorPrimary"
+            android:text="Anterior"
+            android:textColor="#fff"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:id="@+id/proximotransf"
+            android:background="@color/colorPrimary"
+            android:text="Próximo"
+            android:textColor="#fff"/>
+    </FrameLayout>
+</RelativeLayout>
