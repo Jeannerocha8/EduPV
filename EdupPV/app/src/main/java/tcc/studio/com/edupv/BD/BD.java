@@ -22,7 +22,7 @@ import static tcc.studio.com.edupv.BD.QuizNegocio.MovieEntry.TABLE_QUEST;
 
 public class BD  extends  SQLiteOpenHelper{
 
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
     // Database Name
     private static final String DATABASE_NAME = "bdedupv";
     // tasks table name
@@ -56,113 +56,104 @@ public class BD  extends  SQLiteOpenHelper{
                 "Todas as afirmativas acima estão corretas.");
         this.addQuestion(q1);
 
-        Questao q2=new Questao("Cabe    ao    enfermeiro    conhecimento, habilidade    e    prática    no procedimento adequado de inserção do Cateter Central de Inserção Periférica (CCIP).  Para tanto," +
-                " assinale as veias mais indicadas como primeiras escolhas na punção venosa.       ",
-                "Jugular externa e cefálica.",
-                "Cefálica e basílica.",
-                "Jugular interna e basílica.",
-                "Cefálica e pulmonar.",
-                "Jugular interna e basílica.");
-        this.addQuestion(q2);
 
-
-        Questao q3=new Questao("Assinale a alternativa correta, identificando as veias superficiais do dorso da mão.              ",
+        Questao q2=new Questao("Assinale a alternativa correta, identificando as veias superficiais do dorso da mão.              ",
                 "Metacarpianas, basílica",
                 "Digitais, metacarpianas.",
                 "Digitais cefálicas.",
                 "Metacarpianas, antecubital",
                 "Metacarpianas, basílica");
-        this.addQuestion(q3);
+        this.addQuestion(q2);
 
-        Questao q4=new Questao("Identifique, nas   opções   abaixo, o   que   o   enfermeiro   leva   em consideração ao selecionar uma região de punção:       ",
+        Questao q3=new Questao("Identifique, nas   opções   abaixo, o   que   o profissional de  enfermagem   leva   em consideração ao selecionar uma região de punção:       ",
                 "A fossa antecubital deve ser a primeira opção",
                 "Utilizar primeiro o local mais distal do braço ou da mão",
                 "Posicionar em 45º ângulo para punção",
                 "Utilizar a veia jugular externa para inserção de cateteres periféricos.",
                 "Utilizar primeiro o local mais distal do braço ou da mão");
-        this.addQuestion(q4);
+        this.addQuestion(q3);
 
-        Questao q5=new Questao("Sobre a seleção dos sítios de inserção no cuidado de enfermagem, o profissional de enfermagem tem a responsabilidade de:               ",
+        Questao q4=new Questao("Sobre a seleção do sitio de inserção de cateter periférico, o profissional da saúde tem a responsabilidade de:               ",
                 "Realizar uma assistência de qualidade, a fim de evitar ou minimizar potenciais complicações tendo em vista a segurança dos clientes.",
                 "Ter conhecimento dos cuidados necessários para a inserção e manutenção dos cateteres vasculares, riscos e complicações.",
                 "Atuar com outros profissionais na construção e implantação dos protocolos: médico, farmacêutico, CCIH e a direção da Instituição.",
                 "Todas as opções estão corretas.",
                 "Todas as opções estão corretas.");
-        this.addQuestion(q5);
+        this.addQuestion(q4);
 
-        Questao q6=new Questao("É correto ressaltar a importância de cuidados na seleção das veias. Dentre esses, destaca-se:                       ",
+        Questao q5=new Questao("Quanto aos cuidados na seleção das veias para punção venosa destaca-se:                       ",
                 "O profissional de enfermagem não precisa ter habilidade para inserir o cateter",
                 "O conforto do cliente é considerado em segundo plano",
                 "O tamanho do vaso e sua condição prioritariamente",
                 "A rede venosa deve ser examinada apenas pela observação",
                 "O tamanho do vaso e sua condição prioritariamente");
-        this.addQuestion(q6);
+        this.addQuestion(q5);
 
-        Questao q7=new Questao("Ao realizar uma punção venosa, o uso de luvas de procedimentos é obrigatório para prevenir contaminação do:                        ",
+        Questao q6=new Questao("Ao realizar uma punção venosa, o uso de luvas de procedimentos é obrigatório para prevenir contaminação do:                        ",
                 "Ambiente",
                 "Paciente",
                 "Material Utilizado",
                 "Profissional",
                 "Profissional");
-        this.addQuestion(q7);
+        this.addQuestion(q6);
 
-        Questao q8=new Questao("A realização da punção venosa é uma técnica importante que requer conhecimento e habilidade. Assinale a alternativa correta em relação ao assunto.   ",
+        Questao q7=new Questao("A realização da punção venosa é uma técnica importante que requer conhecimento e habilidade. Assinale a alternativa correta em relação ao assunto.   ",
                 "Sempre utilizar luvas estéreis durante a punção venosa periférica, pois trata-se de um procedimento de assepsia cirúrgica",
                 "As veias de membros inferiores para punção podem ser utilizadas uma vez que não há risco de embolias e tromboflebites.",
                 "É indicado desconectar o equipo de soro para troca de roupas, banho, transporte do paciente, entre outros",
                 "Os locais de escolha para a punção devem respeitar os vasos distais e depois proximais",
                 "Os locais de escolha para a punção devem respeitar os vasos distais e depois proximais");
-        this.addQuestion(q8);
+        this.addQuestion(q7);
 
 
-        Questao q9=new Questao("Na coleta de sangue venoso para exame, o garrote deve ser:             ",
+        Questao q8=new Questao("Na coleta de sangue venoso para exame, o garrote deve ser:             ",
                 "Mantido durante a punção da veia",
                 "Retirado e mantido alternadamente",
                 "Retirado após a punção da veia",
                 "Abolido, pois não há necessidade de seu uso.",
                 "Retirado após a punção da veia");
-        this.addQuestion(q9);
+        this.addQuestion(q8);
 
-        Questao q10=new Questao("Sobre as medidas que facilitam o aparecimento da veia na punção venosa, marque V para as afirmativas verdadeiras e F para as falsas." +
+        Questao q9=new Questao("Sobre as medidas que facilitam o aparecimento da veia na punção venosa, marque V para as afirmativas verdadeiras e F para as falsas." +
                 "      ( ) Massagem local.     ( ) Compressas quentes.     ( ) Abrir e fechar a mão.     ( ) Pancadas sobre a veia. A sequência está correta em: ",
                 "V, F, V, F",
                 "F, V, F, V",
                 "V, V, V, F",
                 "V, V, F, F",
                 "V, V, V, F");
-        this.addQuestion(q10);
+        this.addQuestion(q9);
 
-        Questao q11=new Questao("Marque a alternativa que indica as principais complicações da punção venosa:    ",
+        Questao q10=new Questao("Marque a alternativa que indica as principais complicações da punção venosa:    ",
                 "tromboflebite, sangramento e infiltração.",
                 "infiltração, extravasamento e flebite.",
                 "Infecção, sepse e obstrução.",
                 "formação de hematomas, sangramento e flebite.",
                 "infiltração, extravasamento e flebite.");
-        this.addQuestion(q11);
+        this.addQuestion(q10);
 
-        Questao q12=new Questao("Imediatamente após o contato direto com sangue nas mãos, durante punção venosa em paciente sem histórico de doença infecciosa, feita inadvertidamente sem luvas, cabe ao profissional de saúde:",
+        Questao q11=new Questao("Imediatamente após o contato direto com sangue nas mãos, durante punção venosa em paciente sem histórico de doença infecciosa, feita inadvertidamente sem luvas, cabe ao profissional de saúde:",
                 "aplicar nas mãos preparação alcóolica gel a 70% por 10 segundos.",
                 "fazer antissepsia das mãos com solução gel de Triclosan a 5%.",
                 "higienizar as mãos com água e sabão.",
                 "aplicar nas mãos solução à base de PVPI e aguardar a ação por 5 minutos.",
                 "higienizar as mãos com água e sabão.");
-        this.addQuestion(q12);
+        this.addQuestion(q11);
 
-        Questao q13=new Questao("Qual a posição adequada do bisel da agulha na realização da punção venosa no dorso da mão direita, com técnica asséptica e escolha do cateter?    ",
+        Questao q12=new Questao("Qual a posição adequada do bisel da agulha na realização da punção venosa no dorso da mão direita, com técnica asséptica e escolha do cateter?    ",
                 "O bisel da agulha deverá estar ângulo de 90 graus.",
                 "O bisel da agulha deverá estar voltado para cima.",
                 "O bisel da agulha deverá estar voltado para baixo.",
                 "O bisel da agulha deverá estar esterilizado.",
                 "O bisel da agulha deverá estar voltado para cima.");
-        this.addQuestion(q13);
+        this.addQuestion(q12);
 
-        Questao q14=new Questao("Ao utilizar álcool a 70% antes da realização de uma punção venosa, o profissional de enfermagem está realizando um processo de:       ",
+        Questao q13=new Questao("Ao utilizar álcool a 70% antes da realização de uma punção venosa, o profissional de enfermagem está realizando um processo de:       ",
                 "assepsia.",
                 "desinfecção.",
                 "esterilização.",
                 "antissepsia.",
                 "antissepsia.");
-        this.addQuestion(q14);
+        this.addQuestion(q13);
     }
 
 

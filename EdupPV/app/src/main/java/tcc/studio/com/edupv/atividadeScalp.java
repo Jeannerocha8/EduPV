@@ -23,7 +23,7 @@ import android.widget.LinearLayout;
  */
 public class atividadeScalp extends Fragment {
 
-
+    int contador =0;
     public atividadeScalp() {
         // Required empty public constructor
     }
@@ -67,9 +67,27 @@ public class atividadeScalp extends Fragment {
             @Override
             public void onClick(View v) {
 
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new atividadeExecucao()).addToBackStack(null)
-                        .commit();
+                if (contador==5){
+                    Pontuacao.pontuacao = Pontuacao.pontuacao +1;
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.frame_container, new atividadeExecucao()).addToBackStack(null)
+                            .commit();
+                }else{
+                    final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
+                    //Imprimindo mensagem com Alerta
+                    alerta.setTitle("ATENÇÃO");
+                    alerta.setIcon(R.drawable.atencao);
+                    alerta .setMessage("Por favor, arraste todas as numerações aos Scalps correspondentes para continuar")
+                            .setCancelable(true)
+                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+                }
+
             }
         });
 
@@ -142,7 +160,7 @@ public class atividadeScalp extends Fragment {
 
                     if (view.getId() == R.id.txt19 && num == 1) {
 
-                        Pontuacao.pontuacao = Pontuacao.pontuacao + 1;
+                        contador = contador +1;
 
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
@@ -166,6 +184,7 @@ public class atividadeScalp extends Fragment {
                         alertDialog.show();
 
                     } else if (view.getId() == R.id.txt21 && num == 4) {
+                        contador = contador +1;
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
                         ow.removeView(view);
@@ -189,7 +208,7 @@ public class atividadeScalp extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     } else if (view.getId() == R.id.txt23 && num == 5) {
-
+                        contador = contador +1;
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
                         ow.removeView(view);
@@ -212,7 +231,7 @@ public class atividadeScalp extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     } else if (view.getId() == R.id.txt25 && num == 3) {
-
+                        contador = contador +1;
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
                         ow.removeView(view);
@@ -236,7 +255,7 @@ public class atividadeScalp extends Fragment {
                         alertDialog.show();
 
                     } else if (view.getId() == R.id.txt27 && num == 2) {
-
+                        contador = contador +1;
                         //adicionando imagem ao layout
                         ViewGroup ow = (ViewGroup) view.getParent();
                         ow.removeView(view);

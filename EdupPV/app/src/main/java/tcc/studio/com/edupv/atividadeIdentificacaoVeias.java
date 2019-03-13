@@ -23,6 +23,7 @@ import android.widget.TextView;
  */
 public class atividadeIdentificacaoVeias extends Fragment {
 
+    int contador = 0;
 
     public atividadeIdentificacaoVeias() {
         // Required empty public constructor
@@ -75,6 +76,7 @@ public class atividadeIdentificacaoVeias extends Fragment {
         v.findViewById(R.id.btnanteriorident).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, new atividadeColetaSangue()).addToBackStack(null)
                         .commit();
@@ -86,9 +88,29 @@ public class atividadeIdentificacaoVeias extends Fragment {
         v.findViewById(R.id.btnproxident).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new atividadeIdentiVeiaMao()).addToBackStack(null)
-                        .commit();
+                if (contador == 5){
+                    Pontuacao.pontuacao=Pontuacao.pontuacao+1;
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.frame_container, new atividadeIdentiVeiaMao()).addToBackStack(null)
+                            .commit();
+
+                }else{
+
+                    final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
+                    //Imprimindo mensagem com Alerta
+                    alerta.setTitle("ATENÇÃO");
+                    alerta.setIcon(R.drawable.atencao);
+                    alerta .setMessage("Por favor, arraste todos os nomes as suas respectivas veias para continuar")
+                            .setCancelable(true)
+                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+                }
+
             }
         });
         return v;
@@ -154,7 +176,8 @@ public class atividadeIdentificacaoVeias extends Fragment {
                     //verificando layout e imagem
                     if (view.getId()==R.id.ceacessora && num==2){
 
-                        Pontuacao.pontuacao=Pontuacao.pontuacao+1;
+                        contador=contador+1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -180,6 +203,7 @@ public class atividadeIdentificacaoVeias extends Fragment {
 
                     }else if (view.getId()==R.id.cubitalMediana && num==4){
 
+                        contador=contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -204,6 +228,7 @@ public class atividadeIdentificacaoVeias extends Fragment {
                         alertDialog.show();
                     }else if (view.getId()==R.id.antebraquial && num==5){
 
+                        contador=contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -228,6 +253,7 @@ public class atividadeIdentificacaoVeias extends Fragment {
                         alertDialog.show();
                     }else if (view.getId()==R.id.basilica && num==3){
 
+                        contador=contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -252,6 +278,7 @@ public class atividadeIdentificacaoVeias extends Fragment {
                         alertDialog.show();
                     }else if (view.getId()==R.id.cefalica && num==1){
 
+                        contador=contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);

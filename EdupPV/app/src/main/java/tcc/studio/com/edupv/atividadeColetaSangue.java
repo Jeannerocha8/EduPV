@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
  */
 public class atividadeColetaSangue extends Fragment {
 
+    int contador =0;
     public atividadeColetaSangue() {
         // Required empty public constructor
     }
@@ -36,10 +37,8 @@ public class atividadeColetaSangue extends Fragment {
         //habilitando movimento das imagens
         v.findViewById(R.id.imgLuvaa).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
         v.findViewById(R.id.imgjelcolaranjaa).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
-        v.findViewById(R.id.imgscalpverdeee).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
         v.findViewById(R.id.imgequipo).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
         v.findViewById(R.id.imgalgodao).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
-        v.findViewById(R.id.imjelcoamarelo).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
         v.findViewById(R.id.imgseringa).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
         v.findViewById(R.id.imgTubo).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
         v.findViewById(R.id.imgGarrote).setOnLongClickListener(new atividadeColetaSangue.MyOnLongClickListener());
@@ -52,10 +51,8 @@ public class atividadeColetaSangue extends Fragment {
         v.findViewById(R.id.atvcoletasangue).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(2));
         v.findViewById(R.id.layoutLuvaa).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(3));
         v.findViewById(R.id.layoutJelcoLaranjaa).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(4));
-        v.findViewById(R.id.layoutScalpVerdeee).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(5));
         v.findViewById(R.id.layoutequipo).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(6));
         v.findViewById(R.id.layoutalgodao).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(7));
-        v.findViewById(R.id.layoutjelcoamarelo).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(8));
         v.findViewById(R.id.layoutSeringa).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(9));
         v.findViewById(R.id.layoutTubo).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(10));
         v.findViewById(R.id.layoutGarrote).setOnDragListener(new atividadeColetaSangue.MyOnDragListener(11));
@@ -75,8 +72,27 @@ public class atividadeColetaSangue extends Fragment {
         v.findViewById(R.id.proximocoleta).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new atividadeIdentificacaoVeias()).addToBackStack(null).commit();
+
+                if (contador ==7){
+                    Pontuacao.pontuacao=Pontuacao.pontuacao+1;
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.frame_container, new atividadeIdentificacaoVeias()).addToBackStack(null).commit();
+                }else {
+                    final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
+                    //Imprimindo mensagem com Alerta
+                    alerta.setTitle("ATENÇÃO");
+                    alerta.setIcon(R.drawable.atencao);
+                    alerta .setMessage("Esta faltando material, pense mais um pouco!")
+                            .setCancelable(true)
+                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+                }
+
             }
         });
 
@@ -142,8 +158,8 @@ public class atividadeColetaSangue extends Fragment {
 
                     //verificando layout e imagem
                     if(view.getId()==R.id.imgLuvaa && num==1){
-                        Pontuacao.pontuacao= Pontuacao.pontuacao+1;
 
+                        contador = contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -167,6 +183,8 @@ public class atividadeColetaSangue extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.imgseringa && num==1){
+
+                        contador = contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -188,37 +206,16 @@ public class atividadeColetaSangue extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else if (view.getId()==R.id.imgscalpverdeee && num==1){
-                        //adicionando imagem ao layout
-                        ViewGroup owner = (ViewGroup) view.getParent();
-                        owner.removeView(view);
-                        LinearLayout container = (LinearLayout) v;
-                        container.addView(view);
 
-
-                        //tornando a imagem visivel
-                        view.setVisibility(View.VISIBLE);
-
-                        //Imprimindo mensagem com Alerta
-                        alerta.setTitle("Parabéns, você acertou");
-                        alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("Tanto o scalp verde(número 21) quanto azul (número 23)  são recomendados para coleta de sangue")
-                                .setCancelable(true)
-                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                });
-                        AlertDialog alertDialog = alerta.create();
-                        alertDialog.show();
                     }else if (view.getId()==R.id.imgscalpazul && num==1){
+                        contador = contador+1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
                         LinearLayout container = (LinearLayout) v;
                         container.addView(view);
 
-                        
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
 
@@ -235,6 +232,8 @@ public class atividadeColetaSangue extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.imgGarrote && num==1){
+                        contador = contador+1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -257,6 +256,8 @@ public class atividadeColetaSangue extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.imgalgodao && num==1){
+                        contador = contador+1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -279,6 +280,8 @@ public class atividadeColetaSangue extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.imgAlcool && num==1){
+                        contador = contador+1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -301,6 +304,8 @@ public class atividadeColetaSangue extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.imgTubo && num==1){
+                        contador = contador+1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -322,22 +327,7 @@ public class atividadeColetaSangue extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else if (view.getId()== R.id.imgjelcolaranjaa){
-
-                        view.setVisibility(View.VISIBLE);
-                        //Imprimindo mensagem com Alerta
-                        alerta.setTitle("Que pena, você Errou");
-                        alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("Os jelcos são recomendados apenas para terapias intravenosas com duração média de 72 horas!!!")
-                                .setCancelable(true)
-                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                });
-                        AlertDialog alertDialog = alerta.create();
-                        alertDialog.show();
-                    }else if (view.getId()== R.id.imjelcoamarelo){
+                    }else if (view.getId()== R.id.imgjelcolaranjaa&& num==1){
 
                         view.setVisibility(View.VISIBLE);
                         //Imprimindo mensagem com Alerta

@@ -64,8 +64,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/layoutLuvaa">
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgLuvaa"
                     android:src="@drawable/img_luvas"/>
             </LinearLayout>
@@ -82,29 +82,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/layoutJelcoLaranjaa">
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgjelcolaranjaa"
                     android:src="@drawable/img_jelco_laranja"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cardScalpVerdeee"
-            android:layout_toRightOf="@id/cardjelcolaranja"
-            android:layout_below="@id/cardbandeija"
-            android:layout_margin="8dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/layoutScalpVerdeee">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:id="@+id/imgscalpverdeee"
-                    android:src="@drawable/img_scalps_verde"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -121,8 +102,8 @@
                 >
                 <ImageView
                     android:id="@+id/imgequipo"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/img_equipo"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -147,29 +128,13 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/layoutalgodao">
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgalgodao"
                     android:src="@drawable/img_algodao"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cardjelcoamarelo"
-            android:layout_margin="8dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/layoutjelcoamarelo">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:id="@+id/imjelcoamarelo"
-                    android:src="@drawable/img_jelco_amarelo"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
@@ -183,8 +148,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/layoutSeringa">
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgseringa"
                     android:src="@drawable/img_seringa"/>
             </LinearLayout>
@@ -202,8 +167,8 @@
                 android:id="@+id/layoutTubo"
                 >
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgTubo"
                     android:src="@drawable/img_tuboensaio"/>
             </LinearLayout>
@@ -229,8 +194,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/layoutGarrote">
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgGarrote"
                     android:src="@drawable/img_garrote"/>
             </LinearLayout>
@@ -247,8 +212,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/layoutAlcool">
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgAlcool"
                     android:src="@drawable/img_alcool"/>
             </LinearLayout>
@@ -268,8 +233,8 @@
                >
 
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgdispositivo"
                     android:src="@drawable/img_dispconectar" />
             </LinearLayout>
@@ -288,8 +253,8 @@
                 android:id="@+id/layoutScalpAzul"
                 >
                 <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:id="@+id/imgscalpazul"
                     android:src="@drawable/img_scalps_azul"/>
             </LinearLayout>

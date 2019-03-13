@@ -20,7 +20,7 @@ import android.widget.LinearLayout;
  */
 public class atividadeTransfusaoSangue extends Fragment {
 
-
+    int contador = 0;
     public atividadeTransfusaoSangue() {
         // Required empty public constructor
     }
@@ -69,9 +69,27 @@ public class atividadeTransfusaoSangue extends Fragment {
         v.findViewById(R.id.proximotransf).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new ResultadoAtvInterativas()).addToBackStack(null)
-                        .commit();
+                if (contador==2){
+                    Pontuacao.pontuacao=Pontuacao.pontuacao+1;
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.frame_container, new atividadeEscolhaAngulo()).addToBackStack(null)
+                            .commit();
+                }else{
+                    final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
+                    //Imprimindo mensagem com Alerta
+                    alerta.setTitle("ATENÇÃO");
+                    alerta.setIcon(R.drawable.atencao);
+                    alerta .setMessage("Por favor, arraste todos os jelcos recomendados para continuar")
+                            .setCancelable(true)
+                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+                }
+
             }
         });
 
@@ -136,7 +154,7 @@ public class atividadeTransfusaoSangue extends Fragment {
 
                     //verificando layout e imagem
                    if (view.getId()==R.id.imgjelcorosatransf && num==1){
-                        Pontuacao.pontuacao= Pontuacao.pontuacao+1;
+                       contador = contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -147,10 +165,9 @@ public class atividadeTransfusaoSangue extends Fragment {
                         view.setVisibility(View.VISIBLE);
 
                         //Imprimindo mensagem com Alerta
-                        alerta.setTitle("Este Jelco corresponde ao número 20, e é recomendado para transfusão sanguínea, lembre-se de atentar-se para as\" +\n" +
-                                "                                \"caracteristicas fisicas do paciente ao escolher este jelco");
+                        alerta.setTitle("Parabéns, você acertou!");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("")
+                        alerta .setMessage("Este Jelco corresponde ao número 20, e é recomendado para transfusão sanguínea, lembre-se de atentar-se para as caracteristicas fisicas do paciente ao escolher este jelco")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
@@ -160,6 +177,7 @@ public class atividadeTransfusaoSangue extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.imgjelcoazultransf && num==1){
+                       contador = contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -175,31 +193,6 @@ public class atividadeTransfusaoSangue extends Fragment {
                         alerta.setIcon(R.drawable.certo);
                         alerta .setMessage("Este Jelco corresponde ao número 20, e é recomendado para transfusão sanguínea, lembre-se de atentar-se para as"
                                 +"caracteristicas fisicas do paciente ao escolher este jelco")
-                                .setCancelable(true)
-                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                });
-                        AlertDialog alertDialog = alerta.create();
-                        alertDialog.show();
-
-                    }else if (view.getId()==R.id.imgjelcoamarelotransf && num==1){
-                        //adicionando imagem ao layout
-                        ViewGroup owner = (ViewGroup) view.getParent();
-                        owner.removeView(view);
-                        LinearLayout container = (LinearLayout) v;
-                        container.addView(view);
-
-
-                        //tornando a imagem visivel
-                        view.setVisibility(View.VISIBLE);
-
-                        //Imprimindo mensagem com Alerta
-                        alerta.setTitle("Parabéns, você acertou");
-                        alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("Este Jelco corresponde ao número 20, e é recomendado para transfusão sanguínea, lembre-se de atentar-se para as" +
-                                " caracteristicas fisicas do paciente ao escolher este jelco")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override

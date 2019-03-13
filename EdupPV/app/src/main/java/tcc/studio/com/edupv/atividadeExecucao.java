@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
  */
 public class atividadeExecucao extends Fragment {
 
+    int contador = 0;
 
     public atividadeExecucao() {
         // Required empty public constructor
@@ -72,9 +73,28 @@ public class atividadeExecucao extends Fragment {
         v.findViewById(R.id.proximo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, new atividadeColetaSangue())
-                        .addToBackStack(null).commit();
+
+                if(contador==6){
+                    Pontuacao.pontuacao = Pontuacao.pontuacao+1;
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.frame_container, new atividadeColetaSangue())
+                            .addToBackStack(null).commit();
+                }else{
+                    final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
+                    //Imprimindo mensagem com Alerta
+                    alerta.setTitle("ATENÇÃO");
+                    alerta.setIcon(R.drawable.atencao);
+                    alerta .setMessage("Por favor, arraste todas as numerações para a sequência correspondente para continuar")
+                            .setCancelable(true)
+                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                    AlertDialog alertDialog = alerta.create();
+                    alertDialog.show();
+                }
+
             }
         });
 
@@ -147,7 +167,8 @@ public class atividadeExecucao extends Fragment {
 
                     //verificando layout e imagem
                     if(view.getId()==R.id.txt1 && num==1){
-                        Pontuacao.pontuacao= Pontuacao.pontuacao+1;
+
+                        contador = contador +1;
 
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
@@ -172,6 +193,7 @@ public class atividadeExecucao extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.txt2 && num==2){
+                        contador = contador +1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -195,6 +217,9 @@ public class atividadeExecucao extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.txt3 && num==3){
+
+                        contador = contador +1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -218,6 +243,9 @@ public class atividadeExecucao extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.txt4 && num==4){
+
+                        contador = contador +1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -241,6 +269,9 @@ public class atividadeExecucao extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.txt5 && num==5){
+
+                        contador = contador +1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -264,6 +295,9 @@ public class atividadeExecucao extends Fragment {
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
                     }else if (view.getId()==R.id.txt6 && num==6){
+
+                        contador = contador +1;
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);

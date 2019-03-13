@@ -4,9 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".atividadeAnguloAngulha"
-    android:id="@+id/atvanguloagulha">
-
+    tools:context=".atividadeEscolhaAngulo"
+    android:id="@+id/atividadeescolhaangulo">
     <android.support.v7.widget.CardView
         android:id="@+id/enunciado"
         android:layout_margin="4dp"
@@ -26,6 +25,7 @@
 
     <android.support.v7.widget.CardView
         app:cardCornerRadius="1dp"
+        android:layout_margin="4dp"
         android:elevation="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,11 +33,15 @@
         android:id="@+id/cardimgpuncao">
         <LinearLayout
             android:layout_gravity="center"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:id="@+id/layoutpuncao"
-            android:orientation="horizontal"
-            android:background="@drawable/imgpuncao3">
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/imgpuncao3"/>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
@@ -67,12 +71,6 @@
                     android:layout_height="90dp"
                     android:id="@+id/imgintravenosa"
                     android:src="@drawable/intravenosa"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="30°"
-                    android:layout_gravity="center"
-                    android:textColor="#000"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -91,16 +89,8 @@
                     android:layout_height="90dp"
                     android:id="@+id/imgintradermica"
                     android:src="@drawable/intradermica"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="10°"
-                    android:layout_gravity="center"
-                    android:textColor="#000"/>
             </LinearLayout>
-
         </android.support.v7.widget.CardView>
-
     </LinearLayout>
 
     <LinearLayout
@@ -127,12 +117,6 @@
                     android:layout_height="90dp"
                     android:id="@+id/imgintramuscular"
                     android:src="@drawable/intramuscular"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="90°"
-                    android:layout_gravity="center"
-                    android:textColor="#000"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -152,15 +136,9 @@
                     android:layout_height="100dp"
                     android:id="@+id/imgsubcutanea"
                     android:src="@drawable/subcutanea"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="45°"
-                    android:layout_gravity="center"
-                    android:textColor="#000"/>
+
             </LinearLayout>
         </android.support.v7.widget.CardView>
-
     </LinearLayout>
 
 
@@ -185,5 +163,6 @@
             android:text="Próximo"
             android:textColor="#fff"/>
     </FrameLayout>
+
 
 </RelativeLayout>

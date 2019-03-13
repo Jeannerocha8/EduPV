@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".atividadeHigiene1"
+    android:id="@+id/atvhigiene1">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardtex1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="1dp"
+        android:elevation="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:layout_margin="4dp">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coloque os números na sequência correspondente para a realização da higienização das mãos."
+            android:textColor="#000"/>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/cardtex1"
+        android:id="@+id/cardtxt1"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardtxt1"
+        android:id="@+id/cardtxt2"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="top"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardtxt3"
+        android:layout_below="@id/cardtxt2"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="5dp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardtxt3"
+        android:id="@+id/cardtxt4"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="top|left"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardtxt4"
+        android:id="@+id/cardtxt5"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="top|left"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+
+        <TextView
+            android:id="@+id/txt5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="#000"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/cardtex1"
+        android:id="@+id/cardimgmao5"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:id="@+id/layoutmao5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgmao5"
+                android:layout_gravity="center"
+                android:layout_width="255dp"
+                android:layout_height="60dp"
+                android:src="@drawable/imgmao5" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardimgmao5"
+        android:id="@+id/cardimgmao1"
+        android:layout_marginTop="5dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/layoutmao1"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imgmao1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/imgmao1" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardimgmao1"
+        android:id="@+id/cardimgmao3"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layoutmao3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgmao3"
+                android:layout_gravity="center"
+                android:layout_width="255dp"
+                android:layout_height="60dp"
+                android:src="@drawable/imgmao3" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardimgmao4"
+        android:layout_below="@id/cardimgmao3"
+        android:layout_alignParentRight="true"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layoutmao4"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgmao4"
+                android:layout_gravity="center"
+                android:layout_width="255dp"
+                android:layout_height="60dp"
+                android:src="@drawable/imgmao4" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardimgmao4"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/cardimgmao2"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layoutmao2"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imgmao2"
+                android:layout_gravity="center"
+                android:layout_width="255dp"
+                android:layout_height="60dp"
+                android:src="@drawable/imgmao2" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/anteriorhigiene1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="Anterior" />
+
+        <Button
+            android:id="@+id/proximohigiene1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="Próximo" />
+
+    </FrameLayout>
+
+</RelativeLayout>
