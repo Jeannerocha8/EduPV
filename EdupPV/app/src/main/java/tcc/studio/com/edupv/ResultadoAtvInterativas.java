@@ -38,7 +38,7 @@ public class ResultadoAtvInterativas extends Fragment {
 
         int p = Pontuacao.pontuacao;
 
-        int qtd = 10;
+        int qtd = 13;
         float porcentagem= 0 ;
 
         
@@ -67,7 +67,7 @@ public class ResultadoAtvInterativas extends Fragment {
         stars.getDrawable(0).setColorFilter(Color.rgb(255, 219, 88), PorterDuff.Mode.SRC_ATOP);
 
         //setando texto
-        t.setText("Você acertou " + p + " de 10 questões");
+        t.setText("Você acertou " + p + " de "+ qtd +" questões");
 
        switch (p) {
            case 0:

@@ -19,10 +19,11 @@ import android.widget.LinearLayout;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class atividadeHigiene2 extends Fragment {
+public class atividadeTerapiaIntravenosa3dias extends Fragment {
 
-int contador =0;
-    public atividadeHigiene2() {
+    int contador = 0;
+
+    public atividadeTerapiaIntravenosa3dias() {
         // Required empty public constructor
     }
 
@@ -31,36 +32,41 @@ int contador =0;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_atividade_higiene2, container, false);
+        View v =  inflater.inflate(R.layout.fragment_atividade_terapia_intravenosa3dias, container, false);
 
-        getActivity().setTitle("Atividade Higienização 2");
+        // alterando titulo da pagina
+
+        getActivity().setTitle("Atividade Terapia Intravenosa");
 
 
-        Button anterior = (Button) v.findViewById(R.id.anteriorhigiene2);
-        Button proximo = (Button) v.findViewById(R.id.proximohigiene2);
-
+        Button anterior = (Button) v.findViewById(R.id.Anterioterapia);
+        Button proximo = (Button) v.findViewById(R.id.proximoterapia);
 
 
         anterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().replace(R.id.frame_container, new atividadeHigiene1())
-                        .addToBackStack(null).commit();
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, new atividadeHigiene2()).addToBackStack(null).commit();
             }
         });
+
 
         proximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (contador==5){
-                    getFragmentManager().beginTransaction().replace(R.id.frame_container, new atividadeTerapiaIntravenosa3dias())
-                            .addToBackStack(null).commit();
+
+                if (contador == 8 ){
+                    Pontuacao.pontuacao=Pontuacao.pontuacao+1;
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.frame_container, new ResultadoAtvInterativas()).addToBackStack(null).commit();
                 }else{
                     final AlertDialog.Builder alerta = new AlertDialog.Builder(getActivity());
+
                     //Imprimindo mensagem com Alerta
                     alerta.setTitle("ATENÇÃO");
                     alerta.setIcon(R.drawable.atencao);
-                    alerta .setMessage("Arraste todos os numeros as etapas correspondentes para prosseguir")
+                    alerta .setMessage("Esta faltando material, pense mais um pouco!")
                             .setCancelable(true)
                             .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                 @Override
@@ -74,25 +80,35 @@ int contador =0;
         });
 
         //habilitando movimento das imagens
-        v.findViewById(R.id.txt1).setOnLongClickListener(new atividadeHigiene2.MyOnLongClickListener());
-        v.findViewById(R.id.txt2).setOnLongClickListener(new atividadeHigiene2.MyOnLongClickListener());
-        v.findViewById(R.id.txt3).setOnLongClickListener(new atividadeHigiene2.MyOnLongClickListener());
-        v.findViewById(R.id.txt4).setOnLongClickListener(new atividadeHigiene2.MyOnLongClickListener());
-        v.findViewById(R.id.txt5).setOnLongClickListener(new atividadeHigiene2.MyOnLongClickListener());
+        v.findViewById(R.id.imgLuvaa).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgjelcoverde).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgequipo).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgalgodao).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgseringa).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgTubo).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgGarrote).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgAlcool).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgdispositivo).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgscalpazul).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+        v.findViewById(R.id.imgEsparadrapo).setOnLongClickListener(new atividadeTerapiaIntravenosa3dias.MyOnLongClickListener());
+
 
         //habilitando recebimento das imagens
-        v.findViewById(R.id.layoutmao6).setOnDragListener(new atividadeHigiene2.MyOnDragListener(1));
-        v.findViewById(R.id.layoutmao7).setOnDragListener(new atividadeHigiene2.MyOnDragListener(2));
-        v.findViewById(R.id.layoutmao8).setOnDragListener(new atividadeHigiene2.MyOnDragListener(3));
-        v.findViewById(R.id.layoutmao10).setOnDragListener(new atividadeHigiene2.MyOnDragListener(4));
-        v.findViewById(R.id.layoutmao11).setOnDragListener(new atividadeHigiene2.MyOnDragListener(5));
-        v.findViewById(R.id.cardimgmao6).setOnDragListener(new atividadeHigiene2.MyOnDragListener(6));
-        v.findViewById(R.id.cardimgmao7).setOnDragListener(new atividadeHigiene2.MyOnDragListener(7));
-        v.findViewById(R.id.cardimgmao8).setOnDragListener(new atividadeHigiene2.MyOnDragListener(8));
-        v.findViewById(R.id.cardimgmao10).setOnDragListener(new atividadeHigiene2.MyOnDragListener(9));
-        v.findViewById(R.id.cardimgmao11).setOnDragListener(new atividadeHigiene2.MyOnDragListener(10));
-        v.findViewById(R.id.atvhigiene2).setOnDragListener(new atividadeHigiene2.MyOnDragListener(11));
-        return v;
+        v.findViewById(R.id.layoutBandeja).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(1));
+        v.findViewById(R.id.atvTerapiaIntravenosa).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(2));
+        v.findViewById(R.id.layoutLuvaa).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(3));
+        v.findViewById(R.id.layoutJelcoVerde).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(4));
+        v.findViewById(R.id.layoutequipo).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(6));
+        v.findViewById(R.id.layoutalgodao).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(7));
+        v.findViewById(R.id.layoutSeringa).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(9));
+        v.findViewById(R.id.layoutTubo).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(10));
+        v.findViewById(R.id.layoutGarrote).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(11));
+        v.findViewById(R.id.layoutAlcool).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(12));
+        v.findViewById(R.id.layoutDispositivo).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(13));
+        v.findViewById(R.id.layoutScalpAzul).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(14));
+        v.findViewById(R.id.layoutEsparadrapo).setOnDragListener(new atividadeTerapiaIntravenosa3dias.MyOnDragListener(15));
+
+        return  v;
     }
 
     class MyOnLongClickListener implements View.OnLongClickListener {
@@ -102,12 +118,9 @@ int contador =0;
             View.DragShadowBuilder sb = new View.DragShadowBuilder(v);
             v.startDrag(data, sb, v, 0);
             v.setVisibility(View.INVISIBLE);
-
             return(true);
         }
     }
-
-
 
 
     class MyOnDragListener implements View.OnDragListener {
@@ -154,59 +167,9 @@ int contador =0;
                     View view = (View) event.getLocalState();
 
                     //verificando layout e imagem
-                    if(view.getId()==R.id.txt1 && num==1){
+                    if(view.getId()==R.id.imgLuvaa && num==1){
 
-                        contador = contador +1;
-
-                        //adicionando imagem ao layout
-                        ViewGroup owner = (ViewGroup) view.getParent();
-                        owner.removeView(view);
-                        LinearLayout container = (LinearLayout) v;
-                        container.addView(view);
-
-
-                        //tornando a imagem visivel
-                        view.setVisibility(View.VISIBLE);
-
-                        //Imprimindo mensagem com Alerta
-                        alerta.setTitle("Parabéns, você acertou");
-                        alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("")
-                                .setCancelable(true)
-                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                });
-                        AlertDialog alertDialog = alerta.create();
-                        alertDialog.show();
-                    }else if (view.getId()==R.id.txt2 && num==2){
-                        contador = contador +1;
-                        //adicionando imagem ao layout
-                        ViewGroup owner = (ViewGroup) view.getParent();
-                        owner.removeView(view);
-                        LinearLayout container = (LinearLayout) v;
-                        container.addView(view);
-
-
-                        //tornando a imagem visivel
-                        view.setVisibility(View.VISIBLE);
-
-                        //Imprimindo mensagem com Alerta
-                        alerta.setTitle("Parabéns, você acertou");
-                        alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("")
-                                .setCancelable(true)
-                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                });
-                        AlertDialog alertDialog = alerta.create();
-                        alertDialog.show();
-                    }else if (view.getId()==R.id.txt3 && num==3){
-
-                        contador = contador +1;
+                        contador = contador+1;
 
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
@@ -230,16 +193,14 @@ int contador =0;
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else if (view.getId()==R.id.txt4 && num==4){
+                    }else if (view.getId()==R.id.imgequipo && num==1){
 
-                        contador = contador +1;
-
+                        contador = contador+1;
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
                         LinearLayout container = (LinearLayout) v;
                         container.addView(view);
-
 
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
@@ -256,16 +217,15 @@ int contador =0;
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else if (view.getId()==R.id.txt5 && num==5){
 
-                        contador = contador +1;
+                    }else if (view.getId()==R.id.imgjelcoverde && num==1){
+                        contador = contador+1;
 
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
                         LinearLayout container = (LinearLayout) v;
                         container.addView(view);
-
 
                         //tornando a imagem visivel
                         view.setVisibility(View.VISIBLE);
@@ -282,13 +242,126 @@ int contador =0;
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else{
+                    }else if (view.getId()==R.id.imgGarrote && num==1){
+                        contador = contador+1;
+
+                        //adicionando imagem ao layout
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
+
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Parabéns, você acertou");
+                        alerta.setIcon(R.drawable.certo);
+                        alerta .setMessage("")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if (view.getId()==R.id.imgalgodao && num==1){
+                        contador = contador+1;
+
+                        //adicionando imagem ao layout
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
+
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Parabéns, você acertou");
+                        alerta.setIcon(R.drawable.certo);
+                        alerta .setMessage("")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if (view.getId()==R.id.imgAlcool && num==1){
+                        contador = contador+1;
+
+                        //adicionando imagem ao layout
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
+
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Parabéns, você acertou");
+                        alerta.setIcon(R.drawable.certo);
+                        alerta .setMessage("")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if (view.getId()==R.id.imgEsparadrapo && num==1){
+                        contador = contador+1;
+
+                        //adicionando imagem ao layout
+                        ViewGroup owner = (ViewGroup) view.getParent();
+                        owner.removeView(view);
+                        LinearLayout container = (LinearLayout) v;
+                        container.addView(view);
+
+                        //tornando a imagem visivel
+                        view.setVisibility(View.VISIBLE);
+
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Parabéns, você acertou");
+                        alerta.setIcon(R.drawable.certo);
+                        alerta .setMessage("")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else if (view.getId()== R.id.imgdispositivo&& num==1){
+
+                        contador = contador+1;
 
                         view.setVisibility(View.VISIBLE);
                         //Imprimindo mensagem com Alerta
-                        alerta.setTitle("Que pena, você Errou");
+                        alerta.setTitle("Parabéns, você acertou");
+                        alerta.setIcon(R.drawable.certo);
+                        alerta .setMessage("")
+                                .setCancelable(true)
+                                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                });
+                        AlertDialog alertDialog = alerta.create();
+                        alertDialog.show();
+                    }else
+                    {
+                        view.setVisibility(View.VISIBLE);
+                        //Imprimindo mensagem com Alerta
+                        alerta.setTitle("Que pena, você errou!");
                         alerta.setIcon(R.drawable.errado);
-                        alerta .setMessage("")
+                        alerta .setMessage("Este material não é utilizado para esta finalidade")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
