@@ -142,7 +142,8 @@ public class atividadeCirurgia extends Fragment {
                     View view = (View) event.getLocalState();
 
                     //verificando layout e imagem
-                    if(view.getId()==R.id.imgjelcolaranja && num==1){
+                    if(view.getId()==R.id.imgjelcoverde && num==1){
+
                         Pontuacao.pontuacao= Pontuacao.pontuacao+1;
 
                         //adicionando imagem ao layout
@@ -156,7 +157,7 @@ public class atividadeCirurgia extends Fragment {
                         //Imprimindo mensagem com Alerta
                         alerta.setTitle("Parabéns, você acertou");
                         alerta.setIcon(R.drawable.certo);
-                        alerta .setMessage("O jelco laranja é recomendado para ser utilizado em adultos e adolescentes para grande volume de infusões" +
+                        alerta .setMessage("O jelco verde é recomendado para ser utilizado em adultos e adolescentes para grande volume de infusões" +
                                 " durante processos cirurgicos!")
                                 .setCancelable(true)
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
@@ -166,7 +167,7 @@ public class atividadeCirurgia extends Fragment {
                                 });
                         AlertDialog alertDialog = alerta.create();
                         alertDialog.show();
-                    }else if(view.getId()==R.id.imgjelcoverde && num==1)
+                    }else if(view.getId()==R.id.imgjelcolaranja && num==1)
                     {
                         //imprimindo mensagem
                         alerta.setTitle("Que pena, você errou");

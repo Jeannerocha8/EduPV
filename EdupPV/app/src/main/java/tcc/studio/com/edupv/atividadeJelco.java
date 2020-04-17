@@ -92,16 +92,12 @@ public class atividadeJelco extends Fragment {
                     AlertDialog alertDialog = alerta.create();
                     alertDialog.show();
                 }
-
             }
         });
 
         anterio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
                 getFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, new atividadeRN()).addToBackStack(null)
                         .commit();

@@ -365,7 +365,7 @@ de proporcionar a dilatação da veia."/>
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/nv1"/>
+                            android:src="@drawable/nv2"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -388,14 +388,10 @@ de proporcionar a dilatação da veia."/>
                     android:orientation="vertical">
 
                     <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
                         android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/nv2"/>
 
                         <ImageView
                             android:layout_gravity="right"

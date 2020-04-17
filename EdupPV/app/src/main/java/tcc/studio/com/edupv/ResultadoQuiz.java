@@ -22,11 +22,9 @@ import android.widget.Toast;
  */
 public class ResultadoQuiz extends Fragment {
 
-
     public ResultadoQuiz() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,6 +40,7 @@ public class ResultadoQuiz extends Fragment {
         int qtd = 14;
 
         float porcentagem = (p/qtd)*100;
+
 
         TextView t=(TextView)v.findViewById(R.id.textResult);
         Button inicio  = (Button)  v.findViewById(R.id.btninicio);
@@ -67,88 +66,82 @@ public class ResultadoQuiz extends Fragment {
         //adicionando mensagem
         t.setText("Você acertou " + p + " de 14 questões");
 
+       switch (p) {
+           case 0:
+               t.setText("Que pena, você não acertou nenhuma questão");
+               bar.setNumStars(0);
+               stars.getDrawable(1).setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
+               break;
+           case 1:
+               bar.setNumStars(2);
+               stars.getDrawable(1).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
+               break;
+           case 2:
+               bar.setNumStars(2);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-       switch (p)
-        {
-            case 0:
-                t.setText("Que pena, você não acertou nenhuma questão");
-                bar.setNumStars( 0);
-                stars.getDrawable(1).setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-                break;
-            case 1:
-                bar.setNumStars( 2);
-                stars.getDrawable(1).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 3:
+               bar.setNumStars(2);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 2:
-                bar.setNumStars(2);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 4:
+               bar.setNumStars(2);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-            break;
-            case 3:
-                bar.setNumStars(2);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 5:
+               bar.setNumStars(2);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 4:
-                bar.setNumStars(2);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 6:
+               bar.setNumStars(2);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 5:
-                bar.setNumStars(2);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 7:
+               bar.setNumStars(2);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 6:
-                bar.setNumStars(2);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 8:
+               bar.setNumStars(3);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 7:
-                bar.setNumStars(2);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 9:
+               bar.setNumStars(3);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 8:
-                bar.setNumStars(3);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 10:
+               bar.setNumStars(3);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 9:
-                bar.setNumStars(3);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 11:
+               bar.setNumStars(3);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 10:
-                bar.setNumStars(3);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 12:
+               bar.setNumStars(3);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+           case 13:
+               bar.setNumStars(5);
+               stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 
-                break;
-            case 11:
-                bar.setNumStars(3);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+               break;
+       }
 
-                break;
-            case 12:
-                bar.setNumStars(3);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
-
-                break;
-            case 13:
-                bar.setNumStars(5);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
-
-                break;
-            case 14:
-                bar.setNumStars(5);
-                stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
-
-                break;
-
-        }
-
+        atividadeObjetiva.qid=0;
+        Pontuacao.pontuacao=0;
+        atividadeObjetiva.score=0;
+        atividadeObjetiva.questaon=0;
         return v;
     }
 }

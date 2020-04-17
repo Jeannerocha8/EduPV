@@ -32,10 +32,10 @@ import tcc.studio.com.edupv.BD.BD;
  */
 public class atividadeObjetiva extends Fragment {
     List<Questao> quesList;
-    int score=0 ;
+    public static  int score=0 ;
     int proximo;
-    int questaon=0;
-    int qid=0;
+    public static int questaon=0;
+    public static int qid=0;
     int verificaResposta=0;
     boolean verificar;
     boolean respostaverificar;
@@ -130,7 +130,7 @@ public class atividadeObjetiva extends Fragment {
                     alertDialog.show();
                     }
 
-                if (qid < 14) {
+                if (qid < 13) {
                     butNext.setText("Próximo");
 
                 } else {
@@ -200,7 +200,7 @@ public class atividadeObjetiva extends Fragment {
         verificar=false;
         verificaResposta=0;
 
-        if(qid<14){
+        if(qid<13){
             currentQ = quesList.get(qid);
             txtQuestion.setText(currentQ.getEnunciado());
             rd1.setText(currentQ.getOpc1());
@@ -209,7 +209,7 @@ public class atividadeObjetiva extends Fragment {
             rd4.setText(currentQ.getOpc4());
             qid++;
             questaon++;
-            numquestao.setText("Questao " + questaon+"/ 14");
+            numquestao.setText("Questao " + questaon+"/ 13");
         }else {
             Finalizar();
         }
@@ -217,7 +217,7 @@ public class atividadeObjetiva extends Fragment {
 
     private void Finalizar() {
         removerView();
-        Pontuacao.qtdQuest = 15;
+        Pontuacao.qtdQuest = 13;
         Pontuacao.pontuacao = score;
         butNext.setText("finalizar");
         getFragmentManager().

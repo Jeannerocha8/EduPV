@@ -27,7 +27,6 @@ public class atividadeRN extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -70,8 +69,7 @@ public class atividadeRN extends Fragment {
         anterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              removerView();
-
+                removerView();
                 getFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, new Atividade()).addToBackStack(null)
                         .commit();
@@ -135,7 +133,13 @@ public class atividadeRN extends Fragment {
                     //verificando layout e imagem
                     if(view.getId()==R.id.imgjelcoamarelo && num==1){
 
-                        Pontuacao.pontuacao=1;
+                        if(VerificaResolucao.resolucao==1){
+                            Pontuacao.pontuacao=Pontuacao.pontuacao+0;
+
+                        }else{
+                            Pontuacao.pontuacao=Pontuacao.pontuacao+1;
+                        }
+
                         //adicionando imagem ao layout
                         ViewGroup owner = (ViewGroup) view.getParent();
                         owner.removeView(view);
@@ -168,7 +172,6 @@ public class atividadeRN extends Fragment {
                                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-
                                     }
                                 });
 

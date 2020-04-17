@@ -56,9 +56,6 @@ public class ListagemVideo extends Fragment {
                         Higienizacao();
                         break;
                     case 1:
-                        ManuseioJescoScalp();
-                        break;
-                    case 2:
                         ExecucaoProcedimento();
                         break;
                     case 3:
@@ -77,11 +74,6 @@ public class ListagemVideo extends Fragment {
         startActivity(intent);
     }
 
-    private void ManuseioJescoScalp() {
-        Intent intent = new Intent(getActivity(), VideoManuseioJelcoScalp.class);
-        startActivity(intent);
-    }
-
     private void ExecucaoProcedimento() {
         Intent intent = new Intent(getActivity(), VideoExecucaoProcedimento.class);
         startActivity(intent);
@@ -93,13 +85,10 @@ public class ListagemVideo extends Fragment {
 
         ArrayList<opcoes> Opcoes = new ArrayList<opcoes>();
 
-        opcoes op = new opcoes("Higienização", "Veja na prática como higienizar as mãos e a pele do paciente.", R.drawable.img_tornneirahigi);
+        opcoes op = new opcoes("Organização de materiais", "Veja quais materiais utilizados para puncionar veias.", R.drawable.img_orgmateriais);
         Opcoes.add(op);
 
-        op = new opcoes("Manuseio Jelco e Scalp", "Dicas de como manusear os dispositivos.", R.drawable.img_dispositivoident);
-        Opcoes.add(op);
-
-        op = new opcoes("Execucao do procedimento", "Veja na prática como realizar a execução do procedimento.", R.drawable.img_excutarpunv);
+        op = new opcoes("Identificação dos dispositivos", "Veja na prática como identificar os dispositivos.", R.drawable.img_dispositivo);
         Opcoes.add(op);
 
         return Opcoes;

@@ -89,7 +89,7 @@ public class VideoManuseioJelcoScalp extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.palavras);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.materiais);
         videoView.setVideoURI(videoUri);
         mediaController = new FullScreenMediaController(this);
         mediaController.setAnchorView(this.videoView);

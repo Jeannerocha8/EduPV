@@ -66,7 +66,7 @@ public class atividadeScalp extends Fragment {
         proximo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                VerificaResolucao.resolucao=0;
                 if (contador==5){
                     Pontuacao.pontuacao = Pontuacao.pontuacao +1;
                     getFragmentManager().beginTransaction()
@@ -94,7 +94,7 @@ public class atividadeScalp extends Fragment {
         anterio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                VerificaResolucao.resolucao=1;
                 getFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, new atividadeCirurgia()).addToBackStack(null)
                         .commit();

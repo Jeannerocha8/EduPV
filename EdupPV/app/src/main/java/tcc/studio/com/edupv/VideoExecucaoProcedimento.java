@@ -31,7 +31,7 @@ public class VideoExecucaoProcedimento extends AppCompatActivity {
 
         videoView = findViewById(R.id.videoView);
 
-        setTitle("Execução do Procedimento");
+        setTitle("Identificação dos Jelcos e Scalps");
 
 
 
@@ -68,6 +68,7 @@ public class VideoExecucaoProcedimento extends AppCompatActivity {
 
     private void ChamarProximaTela() {
         Intent intent = new Intent(this, TelaPrincipal.class);
+        intent.putExtra("video", "video");
         startActivity(intent);
     }
 
@@ -82,7 +83,8 @@ public class VideoExecucaoProcedimento extends AppCompatActivity {
     }
 
     private void chamarTelaAnterior() {
-        Intent intent = new Intent(this, VideoManuseioJelcoScalp.class);
+        Intent intent = new Intent(this, VideoHigienizacao.class);
+        intent.putExtra("video", "video");
         startActivity(intent);
 
     }
@@ -90,13 +92,12 @@ public class VideoExecucaoProcedimento extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.palavras);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.materiais);
         videoView.setVideoURI(videoUri);
         mediaController = new FullScreenMediaController(this);
         mediaController.setAnchorView(this.videoView);
         videoView.setMediaController(this.mediaController);
         videoView.start();
-
     }
 
 }

@@ -12,8 +12,8 @@
         <activity
             android:name=".TelaPrincipal"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,14 +28,16 @@
         <activity
             android:name=".VideoHigienizacao"
             android:parentActivityName=".TelaPrincipal" />
-
         <activity
             android:name=".VideoExecucaoProcedimento"
             android:parentActivityName=".TelaPrincipal" />
-
         <activity
             android:name=".VideoManuseioJelcoScalp"
             android:parentActivityName=".TelaPrincipal" />
+        <activity
+            android:name=".VideoOrgMateriais"
+            android:label="@string/title_activity_video_org_materiais"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

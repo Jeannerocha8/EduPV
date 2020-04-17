@@ -14,8 +14,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-
             </FrameLayout>
 
                 <LinearLayout
@@ -28,7 +26,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity=""
                         android:text="Descrição: "
-                        android:layout_marginTop="210dp"
+                        android:layout_marginTop="220dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
                         android:textColor="#000"

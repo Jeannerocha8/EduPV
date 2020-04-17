@@ -38,10 +38,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="20dp"
-                    android:text="@string/jelcoamarelo"/>
-
+                    android:text="Este vídeo tem como finalidade demonstrar quais os materiais necessários para execução de uma punção venosa.
+De acordo com a finalidade do procedimento lembrar  de adicionar os itens recomendados."/>
             </LinearLayout>
-
 
     <FrameLayout
         android:layout_width="match_parent"

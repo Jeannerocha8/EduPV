@@ -41,7 +41,8 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
                         android:layout_marginTop="20dp"
-                        android:text="@string/jelcoamarelo"/>
+                        android:text="Veja na prática como identificar os Jelcos e Scalps e como abrilos de forma correta.
+atenção: os dispositivos abertos estão expostos apenas para demonstração!"/>
 
                 </LinearLayout>
 

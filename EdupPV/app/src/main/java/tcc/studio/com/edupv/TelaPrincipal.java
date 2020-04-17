@@ -19,6 +19,10 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import java.util.List;
+
+import tcc.studio.com.edupv.BD.BD;
+
 public class TelaPrincipal extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -72,6 +76,7 @@ public class TelaPrincipal extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+
         }
     }
 

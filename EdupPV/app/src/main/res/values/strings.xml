@@ -72,4 +72,6 @@ for a sua identificação, maior é o seu calibre. A identificação neste dispo
     <string name="contato">Contato: jeannerocha8@gmail.com</string>
     <string name="felipe">Orientado por: Professor Mestre Felipe Mota</string>
     <string name="karine">Co-Orientado por: Professora Mestra Karine Fróes</string>
+    <string name="title_activity_video_org_materiais">VideoOrgMateriais</string>
+    <string name="title_activity_video_identificacao_cateter">VideoIdentificacaoCateter</string>
 </resources>

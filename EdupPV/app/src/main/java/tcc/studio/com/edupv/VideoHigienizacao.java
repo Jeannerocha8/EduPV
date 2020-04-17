@@ -31,7 +31,7 @@ public class VideoHigienizacao extends AppCompatActivity {
 
         videoView = findViewById(R.id.videoView);
 
-        setTitle("Higienização");
+        setTitle("Organização do Material");
 
 
 
@@ -67,7 +67,8 @@ public class VideoHigienizacao extends AppCompatActivity {
     }
 
     private void chamarProximaTela() {
-        Intent intent = new Intent(this, VideoManuseioJelcoScalp.class);
+        Intent intent = new Intent(this, VideoExecucaoProcedimento.class);
+        intent.putExtra("video", "video");
         startActivity(intent);
     }
 
@@ -93,7 +94,7 @@ public class VideoHigienizacao extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.palavras);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.orgmateriais);
         videoView.setVideoURI(videoUri);
         mediaController = new FullScreenMediaController(this);
         mediaController.setAnchorView(this.videoView);
